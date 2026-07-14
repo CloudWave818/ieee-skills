@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Reviewer"
+  short_description: "Review IEEE papers for technical and format risks."
+  default_prompt: "Use $ieee-reviewer to evaluate this manuscript like an IEEE reviewer."

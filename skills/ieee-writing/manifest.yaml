@@ -1,0 +1,83 @@
+name: ieee-writing
+version: 0.2.0
+description: >
+  Declarative router for IEEE manuscript drafting. SKILL.md uses this file to
+  load only the fragments needed for the current writing request.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-engineering-logic.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  venue_type:
+    detect: |
+      Detect the target IEEE venue type. Use transaction for IEEE Transactions;
+      journal for full journal articles; letter for IEEE Letters; conference for
+      conference papers; magazine for IEEE Magazine-style articles; generic if
+      not stated.
+    values:
+      transaction: static/fragments/venue/transaction.md
+      journal: static/fragments/venue/journal.md
+      letter: static/fragments/venue/letter.md
+      conference: static/fragments/venue/conference.md
+      magazine: static/fragments/venue/magazine.md
+      generic: static/fragments/venue/generic.md
+    default: generic
+    multi: false
+
+  section:
+    detect: |
+      Identify which manuscript section(s) the user wants drafted or rebuilt.
+      Multiple sections may be loaded when explicitly requested.
+    values:
+      title: static/fragments/section/title.md
+      abstract: static/fragments/section/abstract.md
+      introduction: static/fragments/section/introduction.md
+      related-work: static/fragments/section/related-work.md
+      method: static/fragments/section/method.md
+      experiments: static/fragments/section/experiments.md
+      conclusion: static/fragments/section/conclusion.md
+    multi: true
+
+  language:
+    detect: |
+      Use zh-to-en when the source material is Chinese, mixed Chinese-English,
+      or Chinese-influenced draft prose. Otherwise use en.
+    values:
+      en: static/fragments/language/en.md
+      zh-to-en: static/fragments/language/zh-to-en.md
+    default: en
+    multi: false
+
+  domain:
+    detect: |
+      Detect the technical domain from the object, methods, venue, and
+      keywords. Use general-engineering when uncertain.
+    values:
+      ai-ml: static/fragments/domain/ai-ml.md
+      communications: static/fragments/domain/communications.md
+      control: static/fragments/domain/control.md
+      signal-processing: static/fragments/domain/signal-processing.md
+      power-energy: static/fragments/domain/power-energy.md
+      circuits: static/fragments/domain/circuits.md
+      robotics: static/fragments/domain/robotics.md
+      embedded-systems: static/fragments/domain/embedded-systems.md
+      general-engineering: static/fragments/domain/general-engineering.md
+    default: general-engineering
+    multi: false
+
+references:
+  on_demand:
+    - condition: official IEEE source basis, peer-review axes, author tools, graphics, or submission fit
+      path: ../_shared/references/ieee-official-source-basis.md
+    - condition: paper-level structure or section sequence
+      path: ../_shared/references/ieee-paper-structure.md
+    - condition: experiment design or result-section evidence planning
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: figure, table, caption, or visual-evidence requirements
+      path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: style, Chinese-to-English repair, or contribution wording
+      path: ../_shared/references/ieee-style-guide.md

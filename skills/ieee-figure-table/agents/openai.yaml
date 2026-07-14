@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Figure Table"
+  short_description: "Improve IEEE figures, tables, captions, and layout."
+  default_prompt: "Use $ieee-figure-table to audit my paper figures and result tables."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE LaTeX"
+  short_description: "Fix IEEEtran LaTeX, BibTeX, figures, and tables."
+  default_prompt: "Use $ieee-latex to diagnose and fix this IEEEtran LaTeX issue."

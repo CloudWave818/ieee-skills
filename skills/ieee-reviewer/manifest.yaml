@@ -1,0 +1,86 @@
+name: ieee-reviewer
+version: 0.2.0
+description: >
+  Declarative router for IEEE-style review. SKILL.md loads official review
+  gates, venue expectations, domain gates, and scope-specific checks.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-reviewer-criteria.md
+  - ../_shared/references/ieee-engineering-logic.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+  - static/gates/scope.md
+  - static/gates/novelty.md
+  - static/gates/validity.md
+  - static/gates/data.md
+  - static/gates/clarity.md
+  - static/gates/compliance.md
+  - static/gates/advancement.md
+
+axes:
+  venue_type:
+    detect: |
+      Detect the target IEEE venue type. Use generic if no target is stated.
+    values:
+      transaction: static/fragments/venue/transaction.md
+      journal: static/fragments/venue/journal.md
+      letter: static/fragments/venue/letter.md
+      conference: static/fragments/venue/conference.md
+      magazine: static/fragments/venue/magazine.md
+      generic: static/fragments/venue/generic.md
+    default: generic
+    multi: false
+
+  review_scope:
+    detect: |
+      Identify what material is being reviewed.
+    values:
+      full-manuscript: static/fragments/review_scope/full-manuscript.md
+      abstract-intro: static/fragments/review_scope/abstract-intro.md
+      method: static/fragments/review_scope/method.md
+      experiments: static/fragments/review_scope/experiments.md
+      figures-tables: static/fragments/review_scope/figures-tables.md
+      rebuttal-readiness: static/fragments/review_scope/rebuttal-readiness.md
+    default: full-manuscript
+    multi: false
+
+  domain:
+    detect: |
+      Detect the technical domain from manuscript facts. Use general-engineering
+      when uncertain.
+    values:
+      ai-ml: static/fragments/domain/ai-ml.md
+      communications: static/fragments/domain/communications.md
+      control: static/fragments/domain/control.md
+      signal-processing: static/fragments/domain/signal-processing.md
+      power-energy: static/fragments/domain/power-energy.md
+      circuits: static/fragments/domain/circuits.md
+      robotics: static/fragments/domain/robotics.md
+      embedded-systems: static/fragments/domain/embedded-systems.md
+      general-engineering: static/fragments/domain/general-engineering.md
+    default: general-engineering
+    multi: false
+
+  strictness:
+    detect: |
+      Use quick for a short scan, standard by default, harsh for strict
+      pre-submission or likely-rejection audit.
+    values:
+      quick: static/fragments/strictness/quick.md
+      standard: static/fragments/strictness/standard.md
+      harsh: static/fragments/strictness/harsh.md
+    default: standard
+    multi: false
+
+references:
+  on_demand:
+    - condition: experiment adequacy or baseline fairness
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: figure/table first impression
+      path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: official IEEE source basis
+      path: ../_shared/references/ieee-official-source-basis.md
+    - condition: full manuscript structure
+      path: ../_shared/references/ieee-paper-structure.md

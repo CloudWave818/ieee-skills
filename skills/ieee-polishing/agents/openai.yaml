@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Polishing"
+  short_description: "Polish technical manuscripts into IEEE style."
+  default_prompt: "Use $ieee-polishing to improve this paragraph for an IEEE journal paper."

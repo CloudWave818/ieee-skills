@@ -1,0 +1,77 @@
+name: ieee-figure-table
+version: 0.2.0
+description: >
+  Declarative router for IEEE figure, table, caption, and result-presentation
+  auditing. SKILL.md loads visual-type, check-type, failure-mode, and stage fragments.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-figure-table-standards.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/first-impression.md
+  - static/core/output-format.md
+
+axes:
+  visual_type:
+    detect: |
+      Detect the figure or table type. Use generic when uncertain.
+    values:
+      line-plot: static/fragments/visual_type/line-plot.md
+      bar-chart: static/fragments/visual_type/bar-chart.md
+      scatter: static/fragments/visual_type/scatter.md
+      confusion-matrix: static/fragments/visual_type/confusion-matrix.md
+      comparison-table: static/fragments/visual_type/comparison-table.md
+      ablation-table: static/fragments/visual_type/ablation-table.md
+      architecture-diagram: static/fragments/visual_type/architecture-diagram.md
+      algorithm-flowchart: static/fragments/visual_type/algorithm-flowchart.md
+      multi-panel: static/fragments/visual_type/multi-panel.md
+      generic: static/fragments/visual_type/generic.md
+    default: generic
+    multi: false
+
+  check_type:
+    detect: |
+      Detect what kind of check is needed. Multiple values may apply.
+    values:
+      readability: static/fragments/check_type/readability.md
+      accessibility: static/fragments/check_type/accessibility.md
+      caption: static/fragments/check_type/caption.md
+      layout: static/fragments/check_type/layout.md
+      evidence-mapping: static/fragments/check_type/evidence-mapping.md
+      statistical-presentation: static/fragments/check_type/statistical-presentation.md
+    multi: true
+
+  failure_mode:
+    detect: |
+      Detect visual or table failure modes. Multiple values may apply.
+    values:
+      blurry-figure: static/fragments/failure_mode/blurry-figure.md
+      bad-axis: static/fragments/failure_mode/bad-axis.md
+      overlapping-legend: static/fragments/failure_mode/overlapping-legend.md
+      misleading-scale: static/fragments/failure_mode/misleading-scale.md
+      inconsistent-precision: static/fragments/failure_mode/inconsistent-precision.md
+      weak-caption: static/fragments/failure_mode/weak-caption.md
+      unreadable-two-column: static/fragments/failure_mode/unreadable-two-column.md
+    multi: true
+
+  stage:
+    detect: |
+      Detect whether the user wants an audit, redesign advice, captions, or
+      LaTeX placement/layout help.
+    values:
+      audit: static/fragments/stage/audit.md
+      redesign: static/fragments/stage/redesign.md
+      caption-writing: static/fragments/stage/caption-writing.md
+      latex-placement: static/fragments/stage/latex-placement.md
+    default: audit
+    multi: false
+
+references:
+  on_demand:
+    - condition: experimental-result interpretation or claim-evidence mapping
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: IEEEtran float placement or LaTeX sizing
+      path: ../_shared/references/ieee-latex-guidelines.md
+    - condition: reviewer first-impression severity
+      path: ../_shared/references/ieee-reviewer-criteria.md

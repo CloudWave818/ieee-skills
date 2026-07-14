@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Experiment"
+  short_description: "Design and audit IEEE-style experimental validation."
+  default_prompt: "Use $ieee-experiment to check whether my experiments are sufficient for IEEE review."

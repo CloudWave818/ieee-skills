@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Paper Reader"
+  short_description: "Extract IEEE paper contributions, methods, and experiments."
+  default_prompt: "Use $ieee-paper-reader to summarize this IEEE paper for implementation and review."

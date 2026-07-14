@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Citation"
+  short_description: "Check IEEE references, BibTeX, and citation positioning."
+  default_prompt: "Use $ieee-citation to clean and verify my IEEE references."

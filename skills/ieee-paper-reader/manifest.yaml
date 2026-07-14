@@ -1,0 +1,91 @@
+name: ieee-paper-reader
+version: 0.2.0
+description: >
+  Declarative router for reading IEEE-style papers for literature review,
+  implementation, replication, reviewer assessment, citation positioning, and
+  quick technical summary.
+
+always_load:
+  - ../_shared/references/ieee-engineering-logic.md
+  - ../_shared/references/ieee-paper-structure.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  reading_purpose:
+    detect: |
+      Detect why the user is reading the paper.
+    values:
+      literature-review: static/fragments/reading_purpose/literature-review.md
+      implementation: static/fragments/reading_purpose/implementation.md
+      replication: static/fragments/reading_purpose/replication.md
+      reviewer-assessment: static/fragments/reading_purpose/reviewer-assessment.md
+      citation-positioning: static/fragments/reading_purpose/citation-positioning.md
+      quick-summary: static/fragments/reading_purpose/quick-summary.md
+    default: quick-summary
+    multi: false
+
+  input_scope:
+    detect: |
+      Detect how much of the paper is available.
+    values:
+      full-paper: static/fragments/input_scope/full-paper.md
+      abstract-only: static/fragments/input_scope/abstract-only.md
+      introduction-related-work: static/fragments/input_scope/introduction-related-work.md
+      method-only: static/fragments/input_scope/method-only.md
+      experiments-only: static/fragments/input_scope/experiments-only.md
+      figures-tables: static/fragments/input_scope/figures-tables.md
+      excerpt: static/fragments/input_scope/excerpt.md
+    default: excerpt
+    multi: false
+
+  paper_type:
+    detect: |
+      Detect technical paper type.
+    values:
+      algorithmic: static/fragments/paper_type/algorithmic.md
+      system: static/fragments/paper_type/system.md
+      hardware: static/fragments/paper_type/hardware.md
+      control: static/fragments/paper_type/control.md
+      communications: static/fragments/paper_type/communications.md
+      signal-processing: static/fragments/paper_type/signal-processing.md
+      survey: static/fragments/paper_type/survey.md
+      general: static/fragments/paper_type/general.md
+    default: general
+    multi: false
+
+  extraction_focus:
+    detect: |
+      Detect what information should be extracted. Multiple values may apply.
+    values:
+      contribution: static/fragments/extraction_focus/contribution.md
+      method-pipeline: static/fragments/extraction_focus/method-pipeline.md
+      equations: static/fragments/extraction_focus/equations.md
+      experiments: static/fragments/extraction_focus/experiments.md
+      limitations: static/fragments/extraction_focus/limitations.md
+      reproducibility: static/fragments/extraction_focus/reproducibility.md
+      related-work: static/fragments/extraction_focus/related-work.md
+    multi: true
+
+  output_depth:
+    detect: |
+      Use brief for quick takeaways, standard by default, deep for detailed
+      implementation/replication/review tasks.
+    values:
+      brief: static/fragments/output_depth/brief.md
+      standard: static/fragments/output_depth/standard.md
+      deep: static/fragments/output_depth/deep.md
+    default: standard
+    multi: false
+
+references:
+  on_demand:
+    - condition: experiment extraction or critique
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: reviewer assessment
+      path: ../_shared/references/ieee-reviewer-criteria.md
+    - condition: figure/table interpretation
+      path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: citation positioning
+      path: ../_shared/references/ieee-paper-structure.md

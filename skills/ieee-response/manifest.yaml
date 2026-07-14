@@ -1,0 +1,98 @@
+name: ieee-response
+version: 0.2.0
+description: >
+  Declarative router for IEEE response letters, rebuttals, and point-by-point
+  reviewer replies. SKILL.md loads comment-type, action-type, stage, evidence,
+  and tone fragments.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-reviewer-criteria.md
+  - ../_shared/references/ieee-style-guide.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/response-pattern.md
+  - static/core/output-format.md
+
+axes:
+  comment_type:
+    detect: |
+      Classify the reviewer/editor comment. Multiple types may apply across
+      different comments; for a single comment choose the dominant type.
+    values:
+      novelty: static/fragments/comment_type/novelty.md
+      scope: static/fragments/comment_type/scope.md
+      method: static/fragments/comment_type/method.md
+      experiment: static/fragments/comment_type/experiment.md
+      baseline: static/fragments/comment_type/baseline.md
+      figure-table: static/fragments/comment_type/figure-table.md
+      citation: static/fragments/comment_type/citation.md
+      writing: static/fragments/comment_type/writing.md
+      format: static/fragments/comment_type/format.md
+      limitation: static/fragments/comment_type/limitation.md
+      technical-error: static/fragments/comment_type/technical-error.md
+    multi: true
+
+  action_type:
+    detect: |
+      Decide what manuscript action is required to answer the comment.
+      Multiple actions may apply.
+    values:
+      add-experiment: static/fragments/action_type/add-experiment.md
+      add-explanation: static/fragments/action_type/add-explanation.md
+      revise-text: static/fragments/action_type/revise-text.md
+      correct-error: static/fragments/action_type/correct-error.md
+      add-citation: static/fragments/action_type/add-citation.md
+      improve-figure-table: static/fragments/action_type/improve-figure-table.md
+      acknowledge-limitation: static/fragments/action_type/acknowledge-limitation.md
+      disagree-with-evidence: static/fragments/action_type/disagree-with-evidence.md
+    multi: true
+
+  response_stage:
+    detect: |
+      Detect whether this is a rebuttal, major revision, minor revision,
+      resubmission, or cover letter.
+    values:
+      rebuttal: static/fragments/response_stage/rebuttal.md
+      major-revision: static/fragments/response_stage/major-revision.md
+      minor-revision: static/fragments/response_stage/minor-revision.md
+      resubmission: static/fragments/response_stage/resubmission.md
+      cover-letter: static/fragments/response_stage/cover-letter.md
+    default: major-revision
+    multi: false
+
+  evidence_status:
+    detect: |
+      Detect whether supporting evidence has already been added, is planned,
+      is unavailable, or the fix is textual only.
+    values:
+      evidence-added: static/fragments/evidence_status/evidence-added.md
+      evidence-planned: static/fragments/evidence_status/evidence-planned.md
+      evidence-unavailable: static/fragments/evidence_status/evidence-unavailable.md
+      text-only-fix: static/fragments/evidence_status/text-only-fix.md
+    default: text-only-fix
+    multi: false
+
+  tone:
+    detect: |
+      Choose standard by default. Use concise for strict word limits, very-polite
+      for sensitive disagreement or major criticism, and firm when disagreeing
+      with evidence.
+    values:
+      standard: static/fragments/tone/standard.md
+      concise: static/fragments/tone/concise.md
+      very-polite: static/fragments/tone/very-polite.md
+      firm: static/fragments/tone/firm.md
+    default: standard
+    multi: false
+
+references:
+  on_demand:
+    - condition: reviewer comments require additional experiments, baselines, ablations, robustness, complexity, or reproducibility
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: reviewer comments concern figures, tables, captions, readability, or first impression
+      path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: response requires LaTeX, IEEEtran, float, or bibliography fixes
+      path: ../_shared/references/ieee-latex-guidelines.md
+    - condition: response requires section rewriting
+      path: ../_shared/references/ieee-paper-structure.md

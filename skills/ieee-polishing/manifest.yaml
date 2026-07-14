@@ -1,0 +1,74 @@
+name: ieee-polishing
+version: 0.2.0
+description: >
+  Declarative router for IEEE manuscript polishing. SKILL.md uses this file to
+  load section, language, depth, and failure-mode fragments.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-style-guide.md
+  - ../_shared/references/ieee-engineering-logic.md
+  - static/core/stance.md
+  - static/core/failure-modes.md
+  - static/core/output-format.md
+
+axes:
+  section:
+    detect: |
+      Identify the section being polished. Use standalone if the user provides
+      isolated prose without section context.
+    values:
+      title: static/fragments/section/title.md
+      abstract: static/fragments/section/abstract.md
+      introduction: static/fragments/section/introduction.md
+      related-work: static/fragments/section/related-work.md
+      method: static/fragments/section/method.md
+      experiments: static/fragments/section/experiments.md
+      conclusion: static/fragments/section/conclusion.md
+      caption: static/fragments/section/caption.md
+      response: static/fragments/section/response.md
+      standalone: static/fragments/section/standalone.md
+    default: standalone
+    multi: false
+
+  language:
+    detect: |
+      Use zh-to-en for Chinese, mixed Chinese-English, or Chinese-influenced
+      English. Otherwise use en.
+    values:
+      en: static/fragments/language/en.md
+      zh-to-en: static/fragments/language/zh-to-en.md
+    default: en
+    multi: false
+
+  failure_mode:
+    detect: |
+      Detect the dominant writing problem. Multiple values may apply.
+    values:
+      vague-claims: static/fragments/failure_mode/vague-claims.md
+      unsupported-novelty: static/fragments/failure_mode/unsupported-novelty.md
+      weak-contribution: static/fragments/failure_mode/weak-contribution.md
+      poor-method-rationale: static/fragments/failure_mode/poor-method-rationale.md
+      chinglish: static/fragments/failure_mode/chinglish.md
+      result-underreporting: static/fragments/failure_mode/result-underreporting.md
+    multi: true
+
+  polish_depth:
+    detect: |
+      Use light for grammar-only requests; standard for normal academic polish;
+      structural when the paragraph logic or section function is weak.
+    values:
+      light: static/fragments/depth/light.md
+      standard: static/fragments/depth/standard.md
+      structural: static/fragments/depth/structural.md
+    default: standard
+    multi: false
+
+references:
+  on_demand:
+    - condition: full section restructuring
+      path: ../_shared/references/ieee-paper-structure.md
+    - condition: experiment/result wording
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: figure/table captions or visual-result wording
+      path: ../_shared/references/ieee-figure-table-standards.md

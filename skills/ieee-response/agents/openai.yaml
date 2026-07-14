@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Response"
+  short_description: "Draft IEEE rebuttals and revision responses."
+  default_prompt: "Use $ieee-response to draft a point-by-point response to these reviewer comments."

@@ -1,0 +1,89 @@
+name: ieee-latex
+version: 0.2.0
+description: >
+  Declarative router for IEEEtran LaTeX debugging, layout, floats, tables,
+  equations, algorithms, bibliography, and PDF compliance.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-latex-guidelines.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  task_type:
+    detect: |
+      Detect the LaTeX task.
+    values:
+      compile-debug: static/fragments/task_type/compile-debug.md
+      layout-fix: static/fragments/task_type/layout-fix.md
+      float-placement: static/fragments/task_type/float-placement.md
+      table-formatting: static/fragments/task_type/table-formatting.md
+      equation-formatting: static/fragments/task_type/equation-formatting.md
+      algorithm-formatting: static/fragments/task_type/algorithm-formatting.md
+      bibliography: static/fragments/task_type/bibliography.md
+      pdf-check: static/fragments/task_type/pdf-check.md
+    default: compile-debug
+    multi: false
+
+  venue_type:
+    detect: |
+      Detect the target IEEE venue/template type.
+    values:
+      transaction: static/fragments/venue_type/transaction.md
+      journal: static/fragments/venue_type/journal.md
+      letter: static/fragments/venue_type/letter.md
+      conference: static/fragments/venue_type/conference.md
+      magazine: static/fragments/venue_type/magazine.md
+      generic: static/fragments/venue_type/generic.md
+    default: generic
+    multi: false
+
+  object_type:
+    detect: |
+      Detect the LaTeX object being fixed.
+    values:
+      figure: static/fragments/object_type/figure.md
+      table: static/fragments/object_type/table.md
+      equation: static/fragments/object_type/equation.md
+      algorithm: static/fragments/object_type/algorithm.md
+      reference: static/fragments/object_type/reference.md
+      class-file: static/fragments/object_type/class-file.md
+      whole-manuscript: static/fragments/object_type/whole-manuscript.md
+    default: whole-manuscript
+    multi: false
+
+  failure_mode:
+    detect: |
+      Detect the visible or log-reported failure mode. Multiple may apply.
+    values:
+      overfull-hbox: static/fragments/failure_mode/overfull-hbox.md
+      float-too-large: static/fragments/failure_mode/float-too-large.md
+      figure-at-end: static/fragments/failure_mode/figure-at-end.md
+      broken-citation: static/fragments/failure_mode/broken-citation.md
+      duplicate-label: static/fragments/failure_mode/duplicate-label.md
+      package-conflict: static/fragments/failure_mode/package-conflict.md
+      unreadable-table: static/fragments/failure_mode/unreadable-table.md
+      sparse-page: static/fragments/failure_mode/sparse-page.md
+    multi: true
+
+  stage:
+    detect: |
+      Detect manuscript stage.
+    values:
+      drafting: static/fragments/stage/drafting.md
+      pre-submission: static/fragments/stage/pre-submission.md
+      revision: static/fragments/stage/revision.md
+      final-production: static/fragments/stage/final-production.md
+    default: drafting
+    multi: false
+
+references:
+  on_demand:
+    - condition: figure/table readability, captions, or visual quality
+      path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: BibTeX and reference metadata
+      path: ../_shared/references/ieee-latex-guidelines.md
+    - condition: official IEEE tools such as Template Selector, LaTeX Analyzer, PDF Checker, or Reference Preparation Assistant
+      path: ../_shared/references/ieee-official-source-basis.md

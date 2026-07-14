@@ -1,0 +1,90 @@
+name: ieee-citation
+version: 0.2.0
+description: >
+  Declarative router for IEEE citation logic, BibTeX cleanup, metadata checks,
+  reference formatting, and related-work citation audits.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-paper-structure.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+
+axes:
+  task_type:
+    detect: |
+      Detect the citation task.
+    values:
+      bibtex-cleanup: static/fragments/task_type/bibtex-cleanup.md
+      metadata-check: static/fragments/task_type/metadata-check.md
+      citation-logic: static/fragments/task_type/citation-logic.md
+      related-work-gap: static/fragments/task_type/related-work-gap.md
+      format-conversion: static/fragments/task_type/format-conversion.md
+      reference-audit: static/fragments/task_type/reference-audit.md
+    default: reference-audit
+    multi: false
+
+  source_type:
+    detect: |
+      Detect the type of cited source.
+    values:
+      journal-article: static/fragments/source_type/journal-article.md
+      conference-paper: static/fragments/source_type/conference-paper.md
+      book: static/fragments/source_type/book.md
+      standard: static/fragments/source_type/standard.md
+      dataset-code: static/fragments/source_type/dataset-code.md
+      preprint: static/fragments/source_type/preprint.md
+      web-source: static/fragments/source_type/web-source.md
+      unknown: static/fragments/source_type/unknown.md
+    default: unknown
+    multi: false
+
+  citation_role:
+    detect: |
+      Detect why the citation is used in the manuscript.
+    values:
+      background: static/fragments/citation_role/background.md
+      method-family: static/fragments/citation_role/method-family.md
+      baseline: static/fragments/citation_role/baseline.md
+      closest-prior-work: static/fragments/citation_role/closest-prior-work.md
+      dataset: static/fragments/citation_role/dataset.md
+      tool: static/fragments/citation_role/tool.md
+      claim-support: static/fragments/citation_role/claim-support.md
+    default: claim-support
+    multi: false
+
+  failure_mode:
+    detect: |
+      Detect citation or reference problems. Multiple may apply.
+    values:
+      missing-metadata: static/fragments/failure_mode/missing-metadata.md
+      invented-or-unverified: static/fragments/failure_mode/invented-or-unverified.md
+      weak-positioning: static/fragments/failure_mode/weak-positioning.md
+      missing-classic-work: static/fragments/failure_mode/missing-classic-work.md
+      missing-recent-work: static/fragments/failure_mode/missing-recent-work.md
+      format-error: static/fragments/failure_mode/format-error.md
+      citation-does-not-support-claim: static/fragments/failure_mode/citation-does-not-support-claim.md
+    multi: true
+
+  verification_level:
+    detect: |
+      Use no-web when the user wants formatting only or forbids lookup.
+      Use web-verify when metadata may need lookup.
+      Use authoritative-only for DOI, publisher, IEEE Xplore, Crossref, journal,
+      or official dataset/code records.
+    values:
+      no-web: static/fragments/verification_level/no-web.md
+      web-verify: static/fragments/verification_level/web-verify.md
+      authoritative-only: static/fragments/verification_level/authoritative-only.md
+    default: no-web
+    multi: false
+
+references:
+  on_demand:
+    - condition: IEEEtran bibliography or compile issues
+      path: ../_shared/references/ieee-latex-guidelines.md
+    - condition: related work structure or citation positioning
+      path: ../_shared/references/ieee-paper-structure.md
+    - condition: reviewer risk from missing baselines or prior work
+      path: ../_shared/references/ieee-reviewer-criteria.md

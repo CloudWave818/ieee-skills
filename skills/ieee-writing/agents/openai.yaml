@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Writing"
+  short_description: "Draft IEEE paper sections with engineering logic."
+  default_prompt: "Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions."
