@@ -1,0 +1,37 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ieee-skills project banner</title>
+  <desc id="desc">A technical manuscript workflow banner for IEEE-style Codex skills.</desc>
+  <rect width="1280" height="360" fill="#0B1220"/>
+  <rect x="0" y="0" width="1280" height="360" fill="url(#grid)" opacity="0.18"/>
+  <path d="M0 278C146 228 262 255 383 215C515 171 610 86 760 111C902 135 971 237 1115 215C1186 204 1235 174 1280 143V360H0V278Z" fill="#123A65" opacity="0.72"/>
+  <path d="M0 309C143 271 274 285 407 247C542 208 660 151 811 176C941 198 1032 280 1177 252C1213 245 1245 233 1280 216V360H0V309Z" fill="#0E6BA8" opacity="0.55"/>
+  <g opacity="0.9">
+    <rect x="782" y="74" width="328" height="208" rx="10" fill="#F8FAFC" stroke="#9DB4CF" stroke-width="2"/>
+    <rect x="806" y="103" width="278" height="12" rx="6" fill="#24476F"/>
+    <rect x="806" y="135" width="242" height="8" rx="4" fill="#5D728B"/>
+    <rect x="806" y="157" width="256" height="8" rx="4" fill="#5D728B"/>
+    <rect x="806" y="179" width="214" height="8" rx="4" fill="#5D728B"/>
+    <rect x="806" y="216" width="82" height="38" rx="5" fill="#E8EEF6" stroke="#B7C3D2"/>
+    <rect x="906" y="216" width="82" height="38" rx="5" fill="#E8EEF6" stroke="#B7C3D2"/>
+    <rect x="1006" y="216" width="58" height="38" rx="5" fill="#E8EEF6" stroke="#B7C3D2"/>
+  </g>
+  <g opacity="0.86">
+    <circle cx="181" cy="255" r="5" fill="#8FD3FF"/>
+    <circle cx="276" cy="226" r="5" fill="#8FD3FF"/>
+    <circle cx="373" cy="244" r="5" fill="#8FD3FF"/>
+    <circle cx="468" cy="199" r="5" fill="#8FD3FF"/>
+    <path d="M181 255L276 226L373 244L468 199" stroke="#8FD3FF" stroke-width="3"/>
+    <rect x="142" y="112" width="360" height="132" rx="10" fill="#14243A" stroke="#2E5E91"/>
+    <path d="M168 148H296" stroke="#BBD9F4" stroke-width="10" stroke-linecap="round"/>
+    <path d="M168 178H460" stroke="#5E7EA3" stroke-width="8" stroke-linecap="round"/>
+    <path d="M168 207H407" stroke="#5E7EA3" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="90" y="78" fill="#CDEAFF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">CODEX SKILLS FOR IEEE-STYLE MANUSCRIPTS</text>
+  <text x="90" y="142" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="800">ieee-skills</text>
+  <text x="92" y="188" fill="#B9D0E8" font-family="Segoe UI, Arial, sans-serif" font-size="26">writing | polishing | reviewer | experiment | LaTeX | citation</text>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#CDEAFF" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>

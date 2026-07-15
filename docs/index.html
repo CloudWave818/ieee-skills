@@ -11,26 +11,19 @@
     <meta property="og:description" content="Unofficial Codex skills for IEEE-style academic writing, review, experiments, figures, LaTeX, citations, and paper reading.">
     <meta property="og:url" content="https://cloudwave818.github.io/ieee-skills/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cloudwave818.github.io/ieee-skills/assets/ieee-skills-hero.svg">
     <style>
       :root {
-        color-scheme: light dark;
-        --bg: #f7f8fb;
-        --text: #172033;
-        --muted: #526071;
-        --line: #d8dee8;
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --text: #152033;
+        --muted: #526173;
+        --line: #d9e1ea;
         --accent: #0b5cad;
+        --accent-2: #0f766e;
         --panel: #ffffff;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #111827;
-          --text: #eef2f7;
-          --muted: #a7b0bd;
-          --line: #2f3b4d;
-          --accent: #66aaff;
-          --panel: #172033;
-        }
+        --panel-soft: #eef4fb;
+        --dark: #0b1220;
       }
 
       * {
@@ -45,28 +38,65 @@
         color: var(--text);
       }
 
-      main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 56px 20px 64px;
+      a {
+        color: var(--accent);
       }
 
-      header {
-        border-bottom: 1px solid var(--line);
-        padding-bottom: 28px;
-        margin-bottom: 32px;
+      .hero {
+        background: var(--dark);
+        color: #fff;
+        border-bottom: 1px solid #18304e;
+      }
+
+      .hero-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 34px 20px 44px;
+      }
+
+      .hero-art {
+        width: 100%;
+        height: auto;
+        border: 1px solid #254767;
+        border-radius: 8px;
+        display: block;
+        background: #0b1220;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .nav a,
+      .badge {
+        color: #cfe8ff;
+        text-decoration: none;
+        border: 1px solid #365a7d;
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 14px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 34px 20px 60px;
       }
 
       h1 {
-        font-size: 44px;
-        line-height: 1.1;
+        font-size: 46px;
+        line-height: 1.08;
         margin: 0 0 12px;
         letter-spacing: 0;
       }
 
       h2 {
         font-size: 24px;
-        margin: 36px 0 12px;
+        margin: 42px 0 14px;
         letter-spacing: 0;
       }
 
@@ -74,14 +104,10 @@
         margin: 0 0 14px;
       }
 
-      a {
-        color: var(--accent);
-      }
-
       .lede {
         font-size: 19px;
-        color: var(--muted);
-        max-width: 780px;
+        color: #c7d7e8;
+        max-width: 860px;
       }
 
       .actions {
@@ -98,6 +124,7 @@
         padding: 10px 14px;
         text-decoration: none;
         font-weight: 700;
+        background: #fff;
       }
 
       .button.primary {
@@ -105,9 +132,22 @@
         color: #fff;
       }
 
+      .button.dark {
+        background: transparent;
+        color: #fff;
+        border-color: #6aa6de;
+      }
+
+      .band {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+      }
+
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 12px;
       }
 
@@ -123,8 +163,61 @@
         margin-bottom: 4px;
       }
 
+      .item span {
+        color: var(--muted);
+      }
+
+      .workflow {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .step {
+        min-height: 72px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 10px;
+        background: var(--panel-soft);
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      .step small {
+        display: block;
+        color: var(--muted);
+        font-weight: 400;
+        margin-top: 4px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid var(--line);
+        padding: 11px;
+      }
+
+      th {
+        background: var(--panel-soft);
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
       code {
-        background: color-mix(in srgb, var(--panel) 75%, var(--line));
+        background: #eef2f7;
         border: 1px solid var(--line);
         border-radius: 4px;
         padding: 2px 5px;
@@ -132,54 +225,152 @@
 
       pre {
         overflow-x: auto;
-        background: var(--panel);
-        border: 1px solid var(--line);
+        background: #101827;
+        color: #e5edf7;
         border-radius: 6px;
         padding: 14px;
+      }
+
+      pre code {
+        background: transparent;
+        border: 0;
+        padding: 0;
       }
 
       footer {
         color: var(--muted);
         border-top: 1px solid var(--line);
-        margin-top: 40px;
+        margin-top: 44px;
         padding-top: 20px;
         font-size: 14px;
+      }
+
+      @media (max-width: 760px) {
+        h1 {
+          font-size: 36px;
+        }
+
+        .workflow {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        table,
+        thead,
+        tbody,
+        tr,
+        th,
+        td {
+          display: block;
+        }
+
+        th {
+          display: none;
+        }
+
+        td {
+          border-bottom: 0;
+          padding: 9px 11px;
+        }
+
+        tr {
+          border-bottom: 1px solid var(--line);
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <header>
+    <header class="hero">
+      <div class="hero-inner">
+        <img class="hero-art" src="assets/ieee-skills-hero.svg" alt="ieee-skills project banner">
+        <nav class="nav" aria-label="Project navigation">
+          <a href="https://github.com/CloudWave818/ieee-skills">GitHub</a>
+          <a href="https://github.com/CloudWave818/ieee-skills/blob/main/README.md">Documentation</a>
+          <a href="#skills">Skills</a>
+          <a href="#install">Install</a>
+          <a href="#basis">Source Basis</a>
+        </nav>
         <h1>ieee-skills</h1>
         <p class="lede">Unofficial Codex skills for IEEE-style academic writing, review, experiments, figures, LaTeX, citations, and paper reading.</p>
         <div class="actions">
           <a class="button primary" href="https://github.com/CloudWave818/ieee-skills">Open GitHub Repository</a>
-          <a class="button" href="https://github.com/CloudWave818/ieee-skills/blob/main/README.md">Read Documentation</a>
+          <a class="button dark" href="https://github.com/CloudWave818/ieee-skills/blob/main/README.md">Read README</a>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <section>
-        <h2>Repository</h2>
-        <p>The canonical repository is <a href="https://github.com/CloudWave818/ieee-skills">github.com/CloudWave818/ieee-skills</a>.</p>
-        <p>Search terms: <code>CloudWave818/ieee-skills</code>, <code>github.com/CloudWave818/ieee-skills</code>, <code>ieee-skills</code>.</p>
+    <main>
+      <section class="band">
+        <span class="badge">CloudWave818/ieee-skills</span>
+        <span class="badge">9 Codex skills</span>
+        <span class="badge">MIT License</span>
+        <span class="badge">Chinese + English docs</span>
+        <p style="margin-top: 14px;">Search terms: <code>CloudWave818/ieee-skills</code>, <code>github.com/CloudWave818/ieee-skills</code>, <code>ieee-skills</code>.</p>
       </section>
 
       <section>
+        <h2>Engineering Evidence Chain</h2>
+        <p>IEEE-style papers should make the technical problem, constraint, method rationale, and evidence easy to inspect.</p>
+        <div class="workflow">
+          <div class="step">Object<small>What system or task?</small></div>
+          <div class="step">Condition<small>What constraint or scenario?</small></div>
+          <div class="step">Harm<small>Why does it matter?</small></div>
+          <div class="step">Limitation<small>Where do prior methods fail?</small></div>
+          <div class="step">Rationale<small>Why this method?</small></div>
+          <div class="step">Evidence<small>Which results prove it?</small></div>
+        </div>
+      </section>
+
+      <section id="skills">
         <h2>Skills</h2>
         <div class="grid">
-          <div class="item"><strong>ieee-writing</strong>Draft IEEE-style titles, abstracts, introductions, methods, experiments, conclusions, and contribution statements.</div>
-          <div class="item"><strong>ieee-polishing</strong>Polish or translate technical prose into precise IEEE-style academic English.</div>
-          <div class="item"><strong>ieee-reviewer</strong>Assess manuscripts with IEEE-style gates: scope, novelty, validity, data, clarity, compliance, and advancement.</div>
-          <div class="item"><strong>ieee-experiment</strong>Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility.</div>
-          <div class="item"><strong>ieee-figure-table</strong>Check figure and table readability, captions, accessibility, layout, and first-impression risks.</div>
-          <div class="item"><strong>ieee-response</strong>Draft point-by-point responses, rebuttals, revision plans, and cover letters.</div>
-          <div class="item"><strong>ieee-latex</strong>Fix IEEEtran LaTeX, floats, equations, algorithms, tables, BibTeX, and PDF checks.</div>
-          <div class="item"><strong>ieee-citation</strong>Check BibTeX, reference metadata, IEEE format, DOI fields, and citation logic.</div>
-          <div class="item"><strong>ieee-paper-reader</strong>Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning.</div>
+          <div class="item"><strong>ieee-writing</strong><span>Draft IEEE-style titles, abstracts, introductions, methods, experiments, conclusions, and contribution statements.</span></div>
+          <div class="item"><strong>ieee-polishing</strong><span>Polish or translate technical prose into precise IEEE-style academic English.</span></div>
+          <div class="item"><strong>ieee-reviewer</strong><span>Assess manuscripts with IEEE-style gates: scope, novelty, validity, data, clarity, compliance, and advancement.</span></div>
+          <div class="item"><strong>ieee-experiment</strong><span>Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility.</span></div>
+          <div class="item"><strong>ieee-figure-table</strong><span>Check figure and table readability, captions, accessibility, layout, and first-impression risks.</span></div>
+          <div class="item"><strong>ieee-response</strong><span>Draft point-by-point responses, rebuttals, revision plans, and cover letters.</span></div>
+          <div class="item"><strong>ieee-latex</strong><span>Fix IEEEtran LaTeX, floats, equations, algorithms, tables, BibTeX, and PDF checks.</span></div>
+          <div class="item"><strong>ieee-citation</strong><span>Check BibTeX, reference metadata, IEEE format, DOI fields, and citation logic.</span></div>
+          <div class="item"><strong>ieee-paper-reader</strong><span>Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning.</span></div>
         </div>
       </section>
 
       <section>
+        <h2>Quick Start</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Skill</th>
+              <th>Prompt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Draft a section</td>
+              <td><code>ieee-writing</code></td>
+              <td><code>Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions.</code></td>
+            </tr>
+            <tr>
+              <td>Polish English</td>
+              <td><code>ieee-polishing</code></td>
+              <td><code>Use $ieee-polishing to polish this abstract into concise IEEE-style technical English.</code></td>
+            </tr>
+            <tr>
+              <td>Pre-review a manuscript</td>
+              <td><code>ieee-reviewer</code></td>
+              <td><code>Use $ieee-reviewer to evaluate this manuscript like an IEEE Transactions reviewer.</code></td>
+            </tr>
+            <tr>
+              <td>Audit experiments</td>
+              <td><code>ieee-experiment</code></td>
+              <td><code>Use $ieee-experiment to build a claim-evidence matrix and tell me which experiments are missing.</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="install">
         <h2>Install</h2>
         <pre><code>git clone https://github.com/CloudWave818/ieee-skills.git
 cd ieee-skills
@@ -188,10 +379,14 @@ bash scripts/update-codex-skills.sh</code></pre>
         <pre><code>powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\update-codex-skills.ps1</code></pre>
       </section>
 
-      <section>
-        <h2>Design Principle</h2>
-        <p>IEEE-style papers should build a verifiable engineering evidence chain:</p>
-        <pre><code>object -> condition/constraint -> engineering harm -> prior limitation -> method rationale -> experimental evidence</code></pre>
+      <section id="basis">
+        <h2>Source Basis</h2>
+        <p>The project follows public IEEE author resources where possible and keeps a clear unofficial disclaimer.</p>
+        <ul>
+          <li><a href="https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/ieee-article-templates/">IEEE Article Templates</a></li>
+          <li><a href="https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/">IEEE Editorial Style Manual</a></li>
+          <li><a href="https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/">Tools for IEEE Authors</a></li>
+        </ul>
       </section>
 
       <footer>

@@ -1,51 +1,55 @@
+![ieee-skills banner](assets/ieee-skills-hero.svg)
+
 # ieee-skills
 
-Codex skills for IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows.
+[![License: MIT](https://img.shields.io/badge/License-MIT-0B5CAD.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/Codex%20skills-9-1F7A8C.svg)](skills)
+[![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README.md)
+[![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
-This project helps with IEEE-style academic writing, polishing, reviewer-style assessment, experimental validation, figure/table quality, revision responses, LaTeX formatting, citation checking, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
+Codex skills for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**.
+
+This project helps with **academic writing, polishing, reviewer-style assessment, experimental validation, figure/table quality, revision responses, LaTeX formatting, citation checking, and paper reading**. It is an unofficial IEEE-style skill collection, not an IEEE project.
+
+[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Installation](#installation) | [Skills](#skills) | [Example Prompts](#example-prompts) | [Disclaimer](#disclaimer)
+
+## What It Does
+
+`ieee-skills` turns common IEEE manuscript risks into reusable Codex workflows:
+
+```text
+object -> condition/constraint -> engineering harm -> prior limitation -> method rationale -> experimental evidence
+```
+
+It is suitable for AI, communications, control, signal processing, power and energy, embedded systems, robotics, circuits, hardware systems, and applied engineering papers. The guiding style is **specific engineering framing, justified method choices, adequate experimental evidence, professional visual presentation, and disciplined reviewer response**.
+
+## Quick Start
+
+| Goal | Skill | Prompt |
+|---|---|---|
+| Draft a paper section | `ieee-writing` | `Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions.` |
+| Polish technical prose | `ieee-polishing` | `Use $ieee-polishing to polish this abstract into concise IEEE-style technical English.` |
+| Run a pre-submission review | `ieee-reviewer` | `Use $ieee-reviewer to evaluate this manuscript like an IEEE Transactions reviewer.` |
+| Strengthen experiments | `ieee-experiment` | `Use $ieee-experiment to check whether my experiments prove the claims in my abstract.` |
+| Audit figures and tables | `ieee-figure-table` | `Use $ieee-figure-table to audit my figures and result tables before submission.` |
+| Respond to reviewers | `ieee-response` | `Use $ieee-response to draft point-by-point responses to these reviewer comments.` |
+| Fix IEEEtran issues | `ieee-latex` | `Use $ieee-latex to diagnose these IEEEtran compile and float-placement errors.` |
+| Clean references | `ieee-citation` | `Use $ieee-citation to audit my BibTeX entries and citation support.` |
+| Read an IEEE paper | `ieee-paper-reader` | `Use $ieee-paper-reader to extract contribution, method, experiments, and limitations from this paper.` |
 
 ## Skills
 
-| Skill | Purpose |
-|---|---|
-| `ieee-writing` | Draft and restructure IEEE-style titles, abstracts, introductions, related work, methods, experiments, conclusions, and contribution statements |
-| `ieee-polishing` | Polish or translate technical prose into precise IEEE-style English |
-| `ieee-reviewer` | Simulate IEEE-style technical review across scope, novelty, validity, data, clarity, compliance, and advancement |
-| `ieee-experiment` | Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility |
-| `ieee-figure-table` | Audit figures, tables, captions, two-column readability, accessibility, and first-impression risks |
-| `ieee-response` | Draft point-by-point responses, rebuttals, revision plans, and cover letters |
-| `ieee-latex` | Fix IEEEtran LaTeX, floats, equations, tables, algorithms, BibTeX, and PDF checks |
-| `ieee-citation` | Check BibTeX, reference metadata, DOI fields, IEEE style, and citation logic |
-| `ieee-paper-reader` | Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning |
-
-## Repository Layout
-
-```text
-ieee-skills/
-  skills/
-    _shared/
-      references/
-    ieee-writing/
-      SKILL.md
-      manifest.yaml
-      static/
-      agents/
-    ieee-polishing/
-    ieee-reviewer/
-    ieee-experiment/
-    ieee-figure-table/
-    ieee-response/
-    ieee-latex/
-    ieee-citation/
-    ieee-paper-reader/
-  scripts/
-    update-codex-skills.ps1
-    update-codex-skills.sh
-```
-
-Each `ieee-*` directory under `skills/` is an installable Codex skill. The `skills/_shared/` directory contains shared references and must be installed with the skills.
-
-Do not copy only `SKILL.md`. Many skills depend on `manifest.yaml`, `static/`, `agents/`, and `_shared/references/`.
+| Stage | Skill | Purpose |
+|---|---|---|
+| Stage 1 | `ieee-writing` | Draft and restructure IEEE-style titles, abstracts, introductions, related work, methods, experiments, conclusions, and contribution statements |
+| Stage 1 | `ieee-polishing` | Polish or translate technical prose into precise IEEE-style English |
+| Stage 1 | `ieee-reviewer` | Simulate IEEE-style technical review across scope, novelty, validity, data, clarity, compliance, and advancement |
+| Stage 2 | `ieee-experiment` | Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility |
+| Stage 2 | `ieee-latex` | Fix IEEEtran LaTeX, floats, equations, tables, algorithms, BibTeX, and PDF checks |
+| Stage 2 | `ieee-response` | Draft point-by-point responses, rebuttals, revision plans, and cover letters |
+| Stage 3 | `ieee-figure-table` | Audit figures, tables, captions, two-column readability, accessibility, and first-impression risks |
+| Stage 3 | `ieee-citation` | Check BibTeX, reference metadata, DOI fields, IEEE style, and citation logic |
+| Stage 3 | `ieee-paper-reader` | Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning |
 
 ## Installation
 
@@ -104,41 +108,65 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\update-codex-skill
 bash scripts/update-codex-skills.sh --check
 ```
 
+## Repository Layout
+
+```text
+ieee-skills/
+  skills/
+    _shared/
+      references/
+    ieee-writing/
+      SKILL.md
+      manifest.yaml
+      static/
+      agents/
+    ieee-polishing/
+    ieee-reviewer/
+    ieee-experiment/
+    ieee-figure-table/
+    ieee-response/
+    ieee-latex/
+    ieee-citation/
+    ieee-paper-reader/
+  scripts/
+    update-codex-skills.ps1
+    update-codex-skills.sh
+```
+
+Each `ieee-*` directory under `skills/` is an installable Codex skill. The `skills/_shared/` directory contains shared references and must be installed with the skills.
+
+Do not copy only `SKILL.md`. Many skills depend on `manifest.yaml`, `static/`, `agents/`, and `_shared/references/`.
+
 ## Example Prompts
 
 ```text
-Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions.
+Use $ieee-writing to turn these notes into an IEEE-style abstract with object, method, condition, and evidence.
 ```
 
 ```text
-Use $ieee-polishing to polish this abstract into concise IEEE-style technical English.
+Use $ieee-reviewer to give me a harsh pre-submission review and list rejection risks by severity.
 ```
 
 ```text
-Use $ieee-reviewer to evaluate this manuscript like an IEEE Transactions reviewer.
+Use $ieee-experiment to build a claim-evidence matrix and tell me which experiments are missing.
 ```
 
 ```text
-Use $ieee-experiment to check whether my experiments prove the claims in my abstract.
+Use $ieee-response to draft a point-by-point response with evidence-added, text-only-fix, and limitation cases separated.
 ```
 
-```text
-Use $ieee-figure-table to audit my figures and result tables before submission.
-```
+## Source Basis
 
-```text
-Use $ieee-response to draft point-by-point responses to these reviewer comments.
-```
+The project is organized around public IEEE author resources and common IEEE-style review logic, but it does not replace the latest instructions from a target venue. Before submission, check:
 
-## Design Principle
+- [IEEE Article Templates](https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/ieee-article-templates/)
+- [IEEE Editorial Style Manual](https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/)
+- [Tools for IEEE Authors](https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/)
+- The author instructions for the target IEEE journal, conference, Transactions, Letters, or Magazine
 
-IEEE-style papers should build a verifiable engineering evidence chain:
+## Contributing
 
-```text
-object -> condition/constraint -> engineering harm -> prior limitation -> method rationale -> experimental evidence
-```
-
-These skills emphasize technical specificity, fair comparison, reproducibility, professional visual evidence, and disciplined reviewer response.
+GitHub Issues are welcome for new skills, workflow improvements, IEEE writing rules, LaTeX cases, citation checks, and concrete venue-specific examples.
 
 ## Disclaimer
 
