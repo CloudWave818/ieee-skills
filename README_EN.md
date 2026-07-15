@@ -51,6 +51,26 @@ It is suitable for AI, communications, control, signal processing, power and ene
 | Stage 3 | `ieee-citation` | Check BibTeX, reference metadata, DOI fields, IEEE style, and citation logic |
 | Stage 3 | `ieee-paper-reader` | Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning |
 
+## Figure Examples
+
+`ieee-figure-table` now includes IEEE-style figure/table audit, redraw, and reproducible plotting examples. The repository includes three zero-dependency SVG demos:
+
+| Example | IEEE Claim | Figure |
+|---|---|---|
+| Robustness SNR curve | The method keeps lower BER under low-SNR operating conditions. | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
+| Accuracy-latency Pareto | The method provides a better engineering tradeoff between accuracy and inference latency. | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
+| Ablation result table | Each module contributes to Accuracy/F1 while deployment-cost metrics remain visible. | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
+
+```bash
+python examples/figure-table/generate_examples.py
+```
+
+![Robustness SNR curve](examples/figure-table/figures/robustness-snr-curve.svg)
+
+![Accuracy latency Pareto](examples/figure-table/figures/accuracy-latency-pareto.svg)
+
+![Ablation result table](examples/figure-table/figures/ablation-result-table.svg)
+
 ## Installation
 
 Clone the repository:

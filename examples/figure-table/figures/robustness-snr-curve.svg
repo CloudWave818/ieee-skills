@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img">
+  <rect width="1120" height="650" fill="#ffffff"/>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .title { font-size: 24px; font-weight: 700; }
+    .subtitle { font-size: 15px; fill: #596579; }
+    .axis { stroke: #172033; stroke-width: 1.4; }
+    .grid { stroke: #D8E0EA; stroke-width: 1; }
+    .tick { font-size: 13px; fill: #596579; }
+    .label { font-size: 15px; font-weight: 700; }
+    .small { font-size: 12px; fill: #596579; }
+    .legend { font-size: 14px; }
+    .panel { font-size: 16px; font-weight: 700; }
+  </style>
+<text x="54" y="48" class="title">Robustness under low-SNR operating conditions</text>
+<text x="54" y="76" class="subtitle">Lower BER is better. Markers and line styles remain distinguishable in grayscale.</text>
+<line x1="110" y1="540" x2="1040" y2="540" class="axis"/>
+<line x1="110" y1="118" x2="110" y2="540" class="axis"/>
+<line x1="110.0" y1="540" x2="110.0" y2="546" class="axis"/>
+<text x="110.0" y="566" text-anchor="middle" class="tick">-10</text>
+<line x1="265.0" y1="540" x2="265.0" y2="546" class="axis"/>
+<text x="265.0" y="566" text-anchor="middle" class="tick">-5</text>
+<line x1="420.0" y1="540" x2="420.0" y2="546" class="axis"/>
+<text x="420.0" y="566" text-anchor="middle" class="tick">0</text>
+<line x1="575.0" y1="540" x2="575.0" y2="546" class="axis"/>
+<text x="575.0" y="566" text-anchor="middle" class="tick">5</text>
+<line x1="730.0" y1="540" x2="730.0" y2="546" class="axis"/>
+<text x="730.0" y="566" text-anchor="middle" class="tick">10</text>
+<line x1="885.0" y1="540" x2="885.0" y2="546" class="axis"/>
+<text x="885.0" y="566" text-anchor="middle" class="tick">15</text>
+<line x1="1040.0" y1="540" x2="1040.0" y2="546" class="axis"/>
+<text x="1040.0" y="566" text-anchor="middle" class="tick">20</text>
+<line x1="110" y1="156.5" x2="1040" y2="156.5" class="grid"/>
+<line x1="104" y1="156.5" x2="110" y2="156.5" class="axis"/>
+<text x="96" y="160.5" text-anchor="end" class="tick">10^-1</text>
+<line x1="110" y1="284.3" x2="1040" y2="284.3" class="grid"/>
+<line x1="104" y1="284.3" x2="110" y2="284.3" class="axis"/>
+<text x="96" y="288.3" text-anchor="end" class="tick">10^-2</text>
+<line x1="110" y1="412.2" x2="1040" y2="412.2" class="grid"/>
+<line x1="104" y1="412.2" x2="110" y2="412.2" class="axis"/>
+<text x="96" y="416.2" text-anchor="end" class="tick">10^-3</text>
+<line x1="110" y1="540.0" x2="1040" y2="540.0" class="grid"/>
+<line x1="104" y1="540.0" x2="110" y2="540.0" class="axis"/>
+<text x="96" y="544.0" text-anchor="end" class="tick">10^-4</text>
+<polyline points="110.0,123.8 265.0,150.2 420.0,181.3 575.0,221.5 730.0,265.6 885.0,310.9 1040.0,353.0" fill="none" stroke="#596579" stroke-width="3" stroke-dasharray="6,5"/>
+<circle cx="110.0" cy="123.8" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="265.0" cy="150.2" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="420.0" cy="181.3" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="575.0" cy="221.5" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="730.0" cy="265.6" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="885.0" cy="310.9" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<circle cx="1040.0" cy="353.0" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<polyline points="110.0,135.9 265.0,167.5 420.0,208.8 575.0,254.9 730.0,304.9 885.0,355.0 1040.0,406.9" fill="none" stroke="#B64040" stroke-width="3"/>
+<rect x="105.5" y="131.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="260.5" y="163.0" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="415.5" y="204.3" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="570.5" y="250.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="725.5" y="300.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="880.5" y="350.5" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<rect x="1035.5" y="402.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<polyline points="110.0,148.2 265.0,184.8 420.0,231.3 575.0,284.3 730.0,338.0 885.0,393.5 1040.0,452.9" fill="none" stroke="#0F766E" stroke-width="3" stroke-dasharray="2,4"/>
+<path d="M110.0,142.2 L116.0,148.2 L110.0,154.2 L104.0,148.2 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M265.0,178.8 L271.0,184.8 L265.0,190.8 L259.0,184.8 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M420.0,225.3 L426.0,231.3 L420.0,237.3 L414.0,231.3 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M575.0,278.3 L581.0,284.3 L575.0,290.3 L569.0,284.3 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M730.0,332.0 L736.0,338.0 L730.0,344.0 L724.0,338.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M885.0,387.5 L891.0,393.5 L885.0,399.5 L879.0,393.5 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M1040.0,446.9 L1046.0,452.9 L1040.0,458.9 L1034.0,452.9 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<polyline points="110.0,175.5 265.0,221.5 420.0,274.2 575.0,326.2 730.0,389.6 885.0,447.4 1040.0,504.4" fill="none" stroke="#0B5CAD" stroke-width="3"/>
+<path d="M110.0,169.5 L115.5,180.5 L104.5,180.5 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M265.0,215.5 L270.5,226.5 L259.5,226.5 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M420.0,268.2 L425.5,279.2 L414.5,279.2 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M575.0,320.2 L580.5,331.2 L569.5,331.2 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M730.0,383.6 L735.5,394.6 L724.5,394.6 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M885.0,441.4 L890.5,452.4 L879.5,452.4 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<path d="M1040.0,498.4 L1045.5,509.4 L1034.5,509.4 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<text x="575.0" y="606" text-anchor="middle" class="label">SNR (dB)</text>
+<text x="28" y="329.0" transform="rotate(-90 28 329.0)" text-anchor="middle" class="label">Bit error rate (log scale)</text>
+<rect x="692" y="104" width="318" height="122" rx="8" fill="#ffffff" stroke="#E7EDF4"/>
+<line x1="710" y1="132" x2="756" y2="132" stroke="#596579" stroke-width="3" stroke-dasharray="6,5"/>
+<circle cx="733.0" cy="132.0" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
+<text x="772" y="137" class="legend">MMSE</text>
+<line x1="710" y1="159" x2="756" y2="159" stroke="#B64040" stroke-width="3"/>
+<rect x="728.5" y="154.5" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
+<text x="772" y="164" class="legend">CNN</text>
+<line x1="710" y1="186" x2="756" y2="186" stroke="#0F766E" stroke-width="3" stroke-dasharray="2,4"/>
+<path d="M733.0,180.0 L739.0,186.0 L733.0,192.0 L727.0,186.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
+<text x="772" y="191" class="legend">Transformer</text>
+<line x1="710" y1="213" x2="756" y2="213" stroke="#0B5CAD" stroke-width="3"/>
+<path d="M733.0,207.0 L738.5,218.0 L727.5,218.0 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
+<text x="772" y="218" class="legend">Ours</text>
+<text x="1040" y="92" text-anchor="end" class="small">Claim: robust performance persists as channel quality degrades.</text>
+</svg>

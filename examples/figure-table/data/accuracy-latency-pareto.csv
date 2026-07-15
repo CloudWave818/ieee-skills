@@ -1,0 +1,7 @@
+method,latency_ms,f1,params_m
+TinyCNN,5.4,0.812,0.48
+MobileNet,8.8,0.872,1.1
+LSTM,21.0,0.858,2.7
+ResNet,31.0,0.905,5.4
+Transformer,43.0,0.918,8.2
+Ours,13.5,0.923,2.1

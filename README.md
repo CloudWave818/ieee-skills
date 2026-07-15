@@ -51,6 +51,26 @@
 | 第三阶段 | `ieee-citation` | 检查 BibTeX、参考文献元数据、DOI、IEEE 格式、Related Work 引用逻辑 |
 | 第三阶段 | `ieee-paper-reader` | 阅读 IEEE 论文，提取贡献、方法、公式、实验、局限、可复现信息和引用定位 |
 
+## 作图示例
+
+`ieee-figure-table` 已支持 IEEE 风格图表审查、重画和可复现绘图示例。仓库内置了三个零依赖 SVG demo：
+
+| 示例 | 证明的 IEEE claim | 图 |
+|---|---|---|
+| SNR 鲁棒性曲线 | 方法在低信噪比工况下仍保持更低 BER | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
+| Accuracy-latency Pareto 图 | 方法在精度和推理延迟之间取得更好的工程权衡 | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
+| 消融实验表 | 各模块对 Accuracy/F1 有贡献，同时保留部署代价指标 | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
+
+```bash
+python examples/figure-table/generate_examples.py
+```
+
+![Robustness SNR curve](examples/figure-table/figures/robustness-snr-curve.svg)
+
+![Accuracy latency Pareto](examples/figure-table/figures/accuracy-latency-pareto.svg)
+
+![Ablation result table](examples/figure-table/figures/ablation-result-table.svg)
+
 ## 安装
 
 先克隆仓库：
