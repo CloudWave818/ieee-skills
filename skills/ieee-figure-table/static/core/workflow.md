@@ -1,9 +1,11 @@
 # Workflow
 
 1. Identify the figure/table type and manuscript role.
-2. Map the item to a claim or experiment.
-3. Check first-impression risks.
-4. Check readability, accessibility, caption, layout, and statistical presentation.
-5. Identify misleading or unfair visual choices.
-6. Recommend concrete fixes.
-7. If needed, rewrite captions with placeholders for missing dataset, metric, condition, or result.
+2. Decide whether this is audit-only or plotting/redraw. For plotting/redraw, resolve Python/R before writing code.
+3. Establish the IEEE figure contract: core claim, condition, metric, baseline, final size, evidence map, and export bundle.
+4. Map each item or panel to a claim or experiment.
+5. Check first-impression risks.
+6. Check readability, accessibility, caption, layout, and statistical presentation.
+7. Identify misleading or unfair visual choices.
+8. Recommend concrete fixes or generate backend-specific plotting code.
+9. If needed, rewrite captions with placeholders for missing dataset, metric, condition, result, n, uncertainty, or source data.

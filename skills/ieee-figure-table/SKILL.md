@@ -1,11 +1,11 @@
 ---
 name: ieee-figure-table
-description: Audit, redesign, and improve IEEE manuscript figures, tables, captions, result presentation, and layout using routed visual-evidence checks. Use when checking plot readability, axes, legends, line overlap, table structure, metric reporting, captions, grayscale accessibility, two-column layout, figure/table placement, claim-evidence mapping, or reviewer first-impression risks.
+description: Audit, redesign, generate, and improve IEEE manuscript figures, tables, captions, result presentation, plotting scripts, and layout using routed visual-evidence checks. Use when checking or creating plot readability, axes, legends, line overlap, table structure, metric reporting, captions, grayscale accessibility, IEEE one-column/two-column layout, figure/table placement, claim-evidence mapping, reviewer first-impression risks, matplotlib/seaborn or ggplot2 figure code, SVG/PDF/TIFF/PNG export, or IEEE-style engineering evidence graphics.
 ---
 
 # IEEE Figure Table Router
 
-Use this skill to make figures and tables function as professional IEEE evidence. The goal is not decoration; it is readable, fair, claim-aligned visual proof.
+Use this skill to make figures and tables function as professional IEEE evidence. The goal is not decoration; it is readable, fair, claim-aligned visual proof that still works after IEEE column scaling.
 
 Do not rely on general design intuition alone. Follow the routing protocol and load the selected fragments.
 
@@ -18,17 +18,20 @@ Do not rely on general design intuition alone. Follow the routing protocol and l
    - `check_type`: readability / accessibility / caption / layout / evidence-mapping / statistical-presentation.
    - `failure_mode`: blurry-figure / bad-axis / overlapping-legend / misleading-scale / inconsistent-precision / weak-caption / unreadable-two-column.
    - `stage`: audit / redesign / caption-writing / latex-placement.
-4. State the detected axes in one short line.
-5. Load only the matching fragments.
-6. Map each figure/table to the claim it supports.
-7. Report first-impression risks before cosmetic suggestions.
+   - `backend`: python / r / no-plot. Use `no-plot` for audit-only, caption-only, table-only, or LaTeX-placement tasks that do not generate plotting code or image files.
+4. For plotting/redrawing tasks, resolve `backend` by explicit request, input workflow, or saved preference. If no preference exists, ask once: **Python or R? I will remember this as your default for IEEE figures.**
+5. State the detected axes in one short line.
+6. Load only the matching fragments.
+7. For plotting/redrawing, establish an IEEE figure contract before code: core engineering claim, evidence-panel map, final column size, metric/condition definitions, export formats, and QA risks.
+8. Map each figure/table to the claim it supports.
+9. Report first-impression risks before cosmetic suggestions.
 
 ## Output Contract
 
 Default output:
 
 ```text
-Detected axes: visual_type=..., check_type=..., failure_mode=..., stage=...
+Detected axes: visual_type=..., check_type=..., failure_mode=..., stage=..., backend=...
 
 Figure/table audit
 Item | Supported claim | First-impression risk | Technical issue | Fix
@@ -41,6 +44,22 @@ For caption writing, return revised captions plus missing information placeholde
 
 For redesign requests, provide concrete plot/table changes rather than generic advice.
 
+For plotting or redraw requests, return:
+
+```text
+IEEE figure contract
+- Core claim:
+- Evidence map:
+- Final size:
+- Export bundle:
+
+Files or code:
+- ...
+
+QA notes:
+- ...
+```
+
 ## Red Lines
 
 Do not recommend misleading axis scaling.
@@ -48,3 +67,5 @@ Do not recommend misleading axis scaling.
 Do not invent experimental results or statistical significance.
 
 Do not make visual changes that obscure fair comparison, uncertainty, or negative results.
+
+Do not use the official IEEE logo, IEEE marks, or invented acceptance/compliance claims in figures.

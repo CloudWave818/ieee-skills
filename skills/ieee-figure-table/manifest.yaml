@@ -1,12 +1,14 @@
 name: ieee-figure-table
-version: 0.2.0
+version: 0.3.0
 description: >
-  Declarative router for IEEE figure, table, caption, and result-presentation
-  auditing. SKILL.md loads visual-type, check-type, failure-mode, and stage fragments.
+  Declarative router for IEEE figure, table, caption, plotting, redraw, export,
+  and result-presentation workflows. SKILL.md loads visual-type, check-type,
+  failure-mode, stage, and plotting-backend fragments.
 
 always_load:
   - ../_shared/references/ieee-official-source-basis.md
   - ../_shared/references/ieee-figure-table-standards.md
+  - static/core/figure-contract.md
   - static/core/stance.md
   - static/core/workflow.md
   - static/core/first-impression.md
@@ -67,6 +69,23 @@ axes:
     default: audit
     multi: false
 
+  backend:
+    detect: |
+      Detect the plotting backend only when the user asks to create, redraw,
+      revise plotting code, export a rendered figure, or provide a reproducible
+      plotting workflow. Use no-plot for audit-only, caption-only, table-only,
+      or LaTeX-placement tasks. For plotting tasks, honor explicit Python/R
+      requests first, then clearly language-specific files, then the saved
+      preference returned by scripts/ieee_figure_backend.py get. If no saved
+      preference exists, ask once and stop. Save the answer with the script
+      before proceeding.
+    values:
+      python: static/fragments/backend/python.md
+      r: static/fragments/backend/r.md
+      no-plot: static/fragments/backend/no-plot.md
+    default: no-plot
+    multi: false
+
 references:
   on_demand:
     - condition: experimental-result interpretation or claim-evidence mapping
@@ -75,3 +94,9 @@ references:
       path: ../_shared/references/ieee-latex-guidelines.md
     - condition: reviewer first-impression severity
       path: ../_shared/references/ieee-reviewer-criteria.md
+    - condition: converting a result claim into an IEEE figure contract, panel map, or redraw plan
+      path: references/ieee-plotting-contract.md
+    - condition: selecting IEEE chart/table patterns for comparison, ablation, robustness, complexity, convergence, confusion matrices, or architecture diagrams
+      path: references/ieee-chart-patterns.md
+    - condition: final export, source-data, grayscale, column-size, editable text, or reproducibility QA
+      path: references/ieee-export-qa.md
