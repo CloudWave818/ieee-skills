@@ -1,0 +1,83 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ieee-skills Zhihu cover</title>
+  <desc id="desc">Premium editorial cover for ieee-skills, an open-source Codex skill collection for IEEE-style manuscripts.</desc>
+  <rect width="1600" height="900" fill="#08111F"/>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10233C"/>
+      <stop offset="1" stop-color="#0B1628"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#63D3FF"/>
+      <stop offset="1" stop-color="#20B7A6"/>
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#D7ECFF" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <path d="M0 690C154 621 277 660 433 604C622 536 744 398 965 444C1165 486 1261 644 1462 601C1515 590 1562 568 1600 537V900H0V690Z" fill="#0B5CAD" fill-opacity="0.26"/>
+  <path d="M0 756C181 709 333 720 512 663C697 604 854 540 1057 582C1240 619 1349 739 1528 700C1556 694 1580 686 1600 674V900H0V756Z" fill="#0F766E" fill-opacity="0.22"/>
+
+  <g transform="translate(78 86)">
+    <text x="0" y="0" fill="#8FD3FF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="3">OPEN-SOURCE CODEX SKILLS</text>
+    <text x="0" y="84" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="112" font-weight="800">ieee-skills</text>
+    <text x="4" y="138" fill="#C7D8EA" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="500">Codex Skills for IEEE-style manuscripts</text>
+    <g transform="translate(4 188)">
+      <rect x="0" y="0" width="132" height="38" rx="19" fill="#11243A" stroke="#2E5E91"/>
+      <text x="21" y="25" fill="#D8ECFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">writing</text>
+      <rect x="146" y="0" width="145" height="38" rx="19" fill="#11243A" stroke="#2E5E91"/>
+      <text x="168" y="25" fill="#D8ECFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">reviewer</text>
+      <rect x="305" y="0" width="165" height="38" rx="19" fill="#11243A" stroke="#2E5E91"/>
+      <text x="326" y="25" fill="#D8ECFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">experiment</text>
+      <rect x="484" y="0" width="117" height="38" rx="19" fill="#11243A" stroke="#2E5E91"/>
+      <text x="512" y="25" fill="#D8ECFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">LaTeX</text>
+      <rect x="615" y="0" width="128" height="38" rx="19" fill="#11243A" stroke="#2E5E91"/>
+      <text x="637" y="25" fill="#D8ECFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">citation</text>
+    </g>
+  </g>
+
+  <g transform="translate(820 88)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="642" height="598" rx="18" fill="url(#panel)" stroke="#2D5B84" stroke-width="2"/>
+    <rect x="34" y="34" width="276" height="510" rx="8" fill="#F8FAFC"/>
+    <rect x="332" y="34" width="276" height="510" rx="8" fill="#F8FAFC"/>
+    <rect x="60" y="68" width="222" height="13" rx="6.5" fill="#183A61"/>
+    <rect x="60" y="104" width="188" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="60" y="124" width="198" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="60" y="144" width="158" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="60" y="184" width="84" height="30" rx="5" fill="#E7EEF7" stroke="#B5C2D1"/>
+    <rect x="158" y="184" width="84" height="30" rx="5" fill="#E7EEF7" stroke="#B5C2D1"/>
+    <rect x="60" y="246" width="222" height="122" rx="7" fill="#EDF5FB" stroke="#B5C2D1"/>
+    <path d="M82 328C101 301 120 309 138 282C161 248 184 318 205 292C229 263 241 278 260 252" stroke="#0B5CAD" stroke-width="5" stroke-linecap="round"/>
+    <path d="M82 340H260M82 266V340" stroke="#92A3B5" stroke-width="2"/>
+    <rect x="60" y="404" width="222" height="14" rx="7" fill="#183A61"/>
+    <rect x="60" y="434" width="197" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="60" y="454" width="168" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="60" y="474" width="206" height="7" rx="3.5" fill="#7D8EA3"/>
+
+    <rect x="358" y="68" width="222" height="13" rx="6.5" fill="#183A61"/>
+    <rect x="358" y="104" width="178" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="358" y="124" width="202" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="358" y="164" width="222" height="108" rx="7" fill="#EDF5FB" stroke="#B5C2D1"/>
+    <rect x="384" y="229" width="32" height="28" rx="3" fill="#0F766E"/>
+    <rect x="430" y="205" width="32" height="52" rx="3" fill="#0B5CAD"/>
+    <rect x="476" y="190" width="32" height="67" rx="3" fill="#20B7A6"/>
+    <rect x="522" y="178" width="32" height="79" rx="3" fill="#1E88C8"/>
+    <path d="M374 257H566M374 182V257" stroke="#92A3B5" stroke-width="2"/>
+    <rect x="358" y="310" width="222" height="92" rx="7" fill="#10233C" stroke="#2D5B84"/>
+    <path d="M384 342H460M384 366H536" stroke="#8FD3FF" stroke-width="6" stroke-linecap="round"/>
+    <path d="M384 390H506" stroke="#5E7EA3" stroke-width="6" stroke-linecap="round"/>
+    <rect x="358" y="438" width="222" height="12" rx="6" fill="#183A61"/>
+    <rect x="358" y="468" width="190" height="7" rx="3.5" fill="#7D8EA3"/>
+    <rect x="358" y="488" width="213" height="7" rx="3.5" fill="#7D8EA3"/>
+  </g>
+
+  <g transform="translate(110 620)">
+    <rect x="0" y="0" width="600" height="136" rx="14" fill="#0D1C31" stroke="#244B72"/>
+    <text x="28" y="42" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="750">普通润色工具改句子</text>
+    <text x="28" y="84" fill="#8FD3FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">ieee-skills 检查 IEEE 审稿人会不会买账</text>
+  </g>
+</svg>
