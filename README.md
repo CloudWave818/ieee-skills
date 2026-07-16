@@ -7,11 +7,11 @@
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README_EN.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
-面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills 集合。
+普通润色工具帮你改句子，**ieee-skills 更关心 IEEE 审稿人会不会买账**。
 
-本项目用于辅助 IEEE 风格论文的 **写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读**。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
+这是一组面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills，覆盖写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
 
-[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [安装方法](#安装) | [技能索引](#技能索引) | [典型用法](#典型用法) | [免责声明](#免责声明)
+[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [为什么需要它](#为什么需要它) | [快速开始](#快速开始) | [作图示例](#作图示例) | [安装方法](#安装) | [免责声明](#免责声明)
 
 ## 这是什么
 
@@ -23,19 +23,58 @@
 
 它更适合 AI、通信、控制、信号处理、电力电子、嵌入式、机器人、硬件系统、工程应用等 IEEE 常见方向。核心风格是 **工程问题明确、方法依据具体、实验支撑充分、图表排版专业、回复审稿克制有证据**。
 
+## 为什么需要它
+
+IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证据链：
+
+| 常见痛点 | 审稿人可能怎么看 | 对应 skill |
+|---|---|---|
+| 摘要和引言只说“提出新方法”，没有对象、工况和工程危害 | motivation 不够强，contribution 不清楚 | `ieee-writing` / `ieee-polishing` |
+| 方法部分只讲怎么做，没有解释为什么适合这个系统 | method rationale 弱，像堆模块 | `ieee-writing` / `ieee-reviewer` |
+| 实验很多，但没有逐条证明论文 claim | insufficient experiments，claims not supported | `ieee-experiment` |
+| baseline 只选弱方法或旧方法 | comparison not convincing | `ieee-experiment` / `ieee-citation` |
+| 只看 accuracy，不展示复杂度、延迟、鲁棒性、部署代价 | 工程价值不足，real-time / low-complexity claim 站不住 | `ieee-experiment` / `ieee-figure-table` |
+| 图表双栏缩放后看不清、图例遮挡、caption 只描述现象 | 第一印象差，presentation weak | `ieee-figure-table` |
+| IEEEtran、BibTeX、浮动体、公式、表格反复出问题 | 格式不严谨，投稿前返工 | `ieee-latex` / `ieee-citation` |
+| 审稿回复只解释，不给修改、实验和稿件位置 | response 不像 revision package | `ieee-response` |
+
+一句话：**普通 academic writing skill 主要改表达，ieee-skills 重点检查 IEEE 论文的对象、工况、baseline、实验、图表和审稿证据。**
+
+## 能交付什么
+
+| 你要解决的问题 | 典型输出 |
+|---|---|
+| 论文结构和贡献点不清楚 | IEEE-style title / abstract / introduction outline / contribution rewrite |
+| 不确定论文会不会被审稿人质疑 | reviewer risk list / major-revision strategy / rejection-risk checklist |
+| 实验是否支撑 claim | claim-evidence matrix / missing experiment list / baseline fairness audit |
+| 图表是否像正式 IEEE 论文 | figure/table first-impression audit / redraw plan / SVG demo / caption rewrite |
+| 参考文献和 Related Work 是否扎实 | citation-support audit / missing classic or recent work checklist / BibTeX cleanup |
+| 返修不知道怎么回 | point-by-point response / cover letter / limitation wording |
+| LaTeX 和排版问题 | IEEEtran float/table/equation/BibTeX diagnosis |
+
+## 五阶段工作流
+
+```text
+1. 定位问题：对象、工况、工程危害、现有方法局限
+2. 写作成稿：标题、摘要、引言、Related Work、方法、结论
+3. 证据补强：baseline、ablation、robustness、complexity、reproducibility
+4. 投稿前预审：审稿人视角检查 novelty、validity、data、clarity、compliance
+5. 返修回复：逐点回应、补实验、改图表、写 cover letter
+```
+
 ## 快速开始
 
 | 你想做什么 | 推荐 skill | 可以这样问 |
 |---|---|---|
-| 搭论文框架、写摘要/引言/方法 | `ieee-writing` | `Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions.` |
-| 把中文或中式英文改成 IEEE 风格 | `ieee-polishing` | `Use $ieee-polishing to polish this abstract into concise IEEE-style technical English.` |
-| 投稿前模拟审稿 | `ieee-reviewer` | `Use $ieee-reviewer to evaluate this manuscript like an IEEE Transactions reviewer.` |
-| 检查实验够不够 | `ieee-experiment` | `Use $ieee-experiment to check whether my experiments prove the claims in my abstract.` |
-| 检查图表是否像正式论文 | `ieee-figure-table` | `Use $ieee-figure-table to audit my figures and result tables before submission.` |
-| 回复审稿意见 | `ieee-response` | `Use $ieee-response to draft point-by-point responses to these reviewer comments.` |
-| 修 IEEEtran / BibTeX / PDF 问题 | `ieee-latex` | `Use $ieee-latex to diagnose these IEEEtran compile and float-placement errors.` |
-| 检查参考文献和引用逻辑 | `ieee-citation` | `Use $ieee-citation to audit my BibTeX entries and citation support.` |
-| 精读 IEEE 论文 | `ieee-paper-reader` | `Use $ieee-paper-reader to extract contribution, method, experiments, and limitations from this paper.` |
+| 搭论文框架、写摘要/引言/方法 | `ieee-writing` | `Use $ieee-writing 把我的问题背景和贡献点改成 IEEE 风格 introduction。` |
+| 把中文或中式英文改成 IEEE 风格 | `ieee-polishing` | `Use $ieee-polishing 润色这段摘要，但不要夸大 claim。` |
+| 投稿前模拟审稿 | `ieee-reviewer` | `Use $ieee-reviewer 把我的论文当成 IEEE Transactions 审稿人预审一遍。` |
+| 检查实验够不够 | `ieee-experiment` | `Use $ieee-experiment 检查我的实验是否支撑摘要里的 claim。` |
+| 检查图表是否像正式论文 | `ieee-figure-table` | `Use $ieee-figure-table 看看这张图双栏缩放后会不会被审稿人嫌弃。` |
+| 回复审稿意见 | `ieee-response` | `Use $ieee-response 按“修改动作 + 新证据 + 稿件位置”回复这些审稿意见。` |
+| 修 IEEEtran / BibTeX / PDF 问题 | `ieee-latex` | `Use $ieee-latex 诊断这些 IEEEtran 编译、浮动体和表格问题。` |
+| 检查参考文献和引用逻辑 | `ieee-citation` | `Use $ieee-citation 检查这些引用是否真的支撑 Related Work 的说法。` |
+| 精读 IEEE 论文 | `ieee-paper-reader` | `Use $ieee-paper-reader 提取这篇 IEEE 论文的贡献、方法、实验和局限。` |
 
 ## 技能索引
 

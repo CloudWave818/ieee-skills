@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ieee-skills - Codex skills for IEEE-style academic writing</title>
-    <meta name="description" content="ieee-skills by CloudWave818: unofficial Codex skills for IEEE-style academic writing, review, experiments, figures, LaTeX, citations, and paper reading.">
+    <meta name="description" content="ieee-skills by CloudWave818: unofficial Codex skills that check whether IEEE-style manuscripts have convincing engineering evidence, experiments, figures, LaTeX, citations, and reviewer responses.">
     <meta name="keywords" content="ieee-skills, CloudWave818/ieee-skills, github.com/CloudWave818/ieee-skills, Codex skills, IEEE-style academic writing, IEEE paper writing, IEEE reviewer, IEEE LaTeX, IEEE citation">
     <link rel="canonical" href="https://cloudwave818.github.io/ieee-skills/">
     <meta property="og:title" content="ieee-skills">
-    <meta property="og:description" content="Unofficial Codex skills for IEEE-style academic writing, review, experiments, figures, LaTeX, citations, and paper reading.">
+    <meta property="og:description" content="Generic polishing tools improve sentences. ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence.">
     <meta property="og:url" content="https://cloudwave818.github.io/ieee-skills/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://cloudwave818.github.io/ieee-skills/assets/ieee-skills-hero.svg">
@@ -151,6 +151,27 @@
         gap: 12px;
       }
 
+      .pain-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 10px;
+      }
+
+      .pain {
+        border-left: 4px solid var(--accent);
+        background: var(--panel);
+        border-top: 1px solid var(--line);
+        border-right: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 12px 14px;
+      }
+
+      .pain strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
       .item {
         background: var(--panel);
         border: 1px solid var(--line);
@@ -290,7 +311,7 @@
           <a href="#basis">Source Basis</a>
         </nav>
         <h1>ieee-skills</h1>
-        <p class="lede">Unofficial Codex skills for IEEE-style academic writing, review, experiments, figures, LaTeX, citations, and paper reading.</p>
+        <p class="lede">Generic polishing tools improve sentences. ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence.</p>
         <div class="actions">
           <a class="button primary" href="https://github.com/CloudWave818/ieee-skills">Open GitHub Repository</a>
           <a class="button dark" href="https://github.com/CloudWave818/ieee-skills/blob/main/README.md">Read README</a>
@@ -305,6 +326,19 @@
         <span class="badge">MIT License</span>
         <span class="badge">Chinese + English docs</span>
         <p style="margin-top: 14px;">Search terms: <code>CloudWave818/ieee-skills</code>, <code>github.com/CloudWave818/ieee-skills</code>, <code>ieee-skills</code>.</p>
+      </section>
+
+      <section>
+        <h2>Why It Exists</h2>
+        <p>IEEE manuscript problems are often not only language problems. They are engineering-evidence problems.</p>
+        <div class="pain-grid">
+          <div class="pain"><strong>Weak motivation</strong><span>Abstracts and introductions omit object, condition, and engineering harm.</span></div>
+          <div class="pain"><strong>Unsupported claims</strong><span>Experiments exist, but they do not map cleanly to the stated claims.</span></div>
+          <div class="pain"><strong>Unconvincing baselines</strong><span>Comparisons use weak, old, or unfair baselines.</span></div>
+          <div class="pain"><strong>Hidden engineering cost</strong><span>Accuracy improves, but latency, complexity, robustness, or deployment cost is missing.</span></div>
+          <div class="pain"><strong>Figure first-impression risk</strong><span>Plots fail after IEEE two-column scaling or captions do not state the takeaway.</span></div>
+          <div class="pain"><strong>Weak revision package</strong><span>Reviewer responses explain instead of showing concrete changes and new evidence.</span></div>
+        </div>
       </section>
 
       <section>

@@ -7,11 +7,11 @@
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
-Codex skills for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**.
+Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence.**
 
-This project helps with **academic writing, polishing, reviewer-style assessment, experimental validation, figure/table quality, revision responses, LaTeX formatting, citation checking, and paper reading**. It is an unofficial IEEE-style skill collection, not an IEEE project.
+This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
 
-[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Installation](#installation) | [Skills](#skills) | [Example Prompts](#example-prompts) | [Disclaimer](#disclaimer)
+[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Why It Exists](#why-it-exists) | [Quick Start](#quick-start) | [Figure Examples](#figure-examples) | [Installation](#installation) | [Disclaimer](#disclaimer)
 
 ## What It Does
 
@@ -22,6 +22,45 @@ object -> condition/constraint -> engineering harm -> prior limitation -> method
 ```
 
 It is suitable for AI, communications, control, signal processing, power and energy, embedded systems, robotics, circuits, hardware systems, and applied engineering papers. The guiding style is **specific engineering framing, justified method choices, adequate experimental evidence, professional visual presentation, and disciplined reviewer response**.
+
+## Why It Exists
+
+IEEE manuscript problems are often not only language problems. They are engineering-evidence problems.
+
+| Common pain point | Reviewer risk | Skill |
+|---|---|---|
+| Abstract/introduction lacks object, condition, and engineering harm | weak motivation, unclear contribution | `ieee-writing` / `ieee-polishing` |
+| Method section explains what was done but not why it fits the system | weak method rationale, module stacking | `ieee-writing` / `ieee-reviewer` |
+| Many experiments exist but do not prove the stated claims | insufficient experiments, unsupported claims | `ieee-experiment` |
+| Baselines are weak, old, or unfair | comparison not convincing | `ieee-experiment` / `ieee-citation` |
+| Accuracy improves but complexity, latency, robustness, or deployment cost is hidden | weak engineering value | `ieee-experiment` / `ieee-figure-table` |
+| Figures fail after IEEE two-column scaling | weak presentation and poor first impression | `ieee-figure-table` |
+| IEEEtran, BibTeX, floats, equations, and tables keep breaking | formatting and submission friction | `ieee-latex` / `ieee-citation` |
+| Reviewer response explains but does not show concrete revision evidence | weak revision package | `ieee-response` |
+
+In short: **generic academic-writing skills mostly polish expression; ieee-skills checks the IEEE-specific chain of object, condition, baseline, experiment, figure, and reviewer evidence.**
+
+## Deliverables
+
+| Problem | Typical output |
+|---|---|
+| Unclear paper structure or contribution | IEEE-style title / abstract / introduction outline / contribution rewrite |
+| Unsure whether reviewers will object | reviewer risk list / major-revision strategy / rejection-risk checklist |
+| Experiments may not support claims | claim-evidence matrix / missing experiment list / baseline fairness audit |
+| Figures/tables look unprofessional | first-impression audit / redraw plan / SVG demo / caption rewrite |
+| Related work or references feel weak | citation-support audit / missing classic/recent work checklist / BibTeX cleanup |
+| Revision response is hard to organize | point-by-point response / cover letter / limitation wording |
+| LaTeX and layout issues block submission | IEEEtran float/table/equation/BibTeX diagnosis |
+
+## Five-Stage Workflow
+
+```text
+1. Frame the problem: object, condition, engineering harm, prior limitation
+2. Draft the paper: title, abstract, introduction, related work, method, conclusion
+3. Strengthen evidence: baselines, ablations, robustness, complexity, reproducibility
+4. Pre-review: novelty, validity, data, clarity, compliance, advancement
+5. Revise and respond: point-by-point response, added evidence, figures, cover letter
+```
 
 ## Quick Start
 
