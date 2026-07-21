@@ -1,4 +1,4 @@
-![ieee-skills banner](assets/ieee-skills-hero.svg)
+![ieee-skills overview](assets/ieee-skills-overview.png)
 
 # ieee-skills
 
