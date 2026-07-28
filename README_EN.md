@@ -7,11 +7,13 @@
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
-Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence.**
+**One IEEE manuscript, all reviewer-facing checks.**
+
+Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence**: whether the object is clear, the operating condition is real, baselines are fair, experiments support the claims, figures survive IEEE column scaling, and revision responses provide concrete evidence.
 
 This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
 
-[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Why It Exists](#why-it-exists) | [Quick Start](#quick-start) | [Figure Examples](#figure-examples) | [Installation](#installation) | [Disclaimer](#disclaimer)
+[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation)
 
 ## What It Does
 
@@ -22,6 +24,30 @@ object -> condition/constraint -> engineering harm -> prior limitation -> method
 ```
 
 It is suitable for AI, communications, control, signal processing, power and energy, embedded systems, robotics, circuits, hardware systems, and applied engineering papers. The guiding style is **specific engineering framing, justified method choices, adequate experimental evidence, professional visual presentation, and disciplined reviewer response**.
+
+## IEEE SubmitCheck
+
+`IEEE SubmitCheck` is the recommended flagship workflow for this repository. Instead of asking only for sentence polishing, run a manuscript through the evidence chain that IEEE reviewers usually inspect.
+
+```text
+manuscript draft
+  -> ieee-reviewer
+  -> ieee-experiment
+  -> ieee-figure-table
+  -> ieee-citation
+  -> ieee-latex
+  -> reviewer-facing revision priorities
+```
+
+A full check should produce:
+
+- `IEEE reviewer risk report`: rejection or major-revision risks ranked as Critical / Major / Minor
+- `claim-evidence matrix`: what evidence each central claim needs, what exists, and what experiment is missing
+- `baseline fairness checklist`: traditional baselines, recent strong baselines, data splits, and tuning fairness
+- `figure/table first-impression audit`: two-column readability, captions, grayscale accessibility, axes, and table precision
+- `citation-support audit`: whether citations support local claims and whether key baselines or recent work are missing
+- `IEEEtran layout diagnosis`: floats, tables, equations, BibTeX, and final PDF checks
+- `revision priority list`: the highest-impact actions before submission
 
 ## Why It Exists
 
@@ -40,17 +66,18 @@ IEEE manuscript problems are often not only language problems. They are engineer
 
 In short: **generic academic-writing skills mostly polish expression; ieee-skills checks the IEEE-specific chain of object, condition, baseline, experiment, figure, and reviewer evidence.**
 
-## Deliverables
+## Example Deliverables
 
 | Problem | Typical output |
 |---|---|
-| Unclear paper structure or contribution | IEEE-style title / abstract / introduction outline / contribution rewrite |
-| Unsure whether reviewers will object | reviewer risk list / major-revision strategy / rejection-risk checklist |
-| Experiments may not support claims | claim-evidence matrix / missing experiment list / baseline fairness audit |
-| Figures/tables look unprofessional | first-impression audit / redraw plan / SVG demo / caption rewrite |
-| Related work or references feel weak | citation-support audit / missing classic/recent work checklist / BibTeX cleanup |
-| Revision response is hard to organize | point-by-point response / cover letter / limitation wording |
-| LaTeX and layout issues block submission | IEEEtran float/table/equation/BibTeX diagnosis |
+| Unsure whether reviewers will object before submission | [pre-submission-check.md](examples/pre-submission-check.md) |
+| Experiments do not clearly support claims | [claim-evidence-matrix.md](examples/claim-evidence-matrix.md) |
+| Abstract reads like a vague summary or overclaims | [abstract-polishing.md](examples/abstract-polishing.md) |
+| Figures/tables do not look like a polished IEEE manuscript | [figure-table demos](examples/figure-table/README.md) |
+| Revision response is hard to organize | [reviewer-response.md](examples/reviewer-response.md) |
+| IEEEtran, floats, references, or PDF checks block submission | [latex-diagnosis.md](examples/latex-diagnosis.md) |
+
+These files are templates and example report shapes, not claimed accepted-paper cases. Replace the placeholders with your own abstract, experiments, figures, LaTeX logs, references, or reviewer comments.
 
 ## Five-Stage Workflow
 

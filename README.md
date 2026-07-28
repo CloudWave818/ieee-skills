@@ -7,11 +7,13 @@
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README_EN.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
-普通润色工具帮你改句子，**ieee-skills 更关心 IEEE 审稿人会不会买账**。
+**One IEEE manuscript, all reviewer-facing checks.**
+
+普通润色工具帮你改句子，**ieee-skills 更关心 IEEE 审稿人会不会买账**：对象是否明确，工况是否成立，baseline 是否公平，实验是否真的支撑 claim，图表双栏缩放后是否还能读，返修回复是否有证据。
 
 这是一组面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills，覆盖写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
 
-[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [为什么需要它](#为什么需要它) | [快速开始](#快速开始) | [作图示例](#作图示例) | [安装方法](#安装) | [免责声明](#免责声明)
+[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [IEEE SubmitCheck](#ieee-submitcheck) | [为什么需要它](#为什么需要它) | [示例交付物](#示例交付物) | [快速开始](#快速开始) | [安装方法](#安装)
 
 ## 这是什么
 
@@ -22,6 +24,30 @@
 ```
 
 它更适合 AI、通信、控制、信号处理、电力电子、嵌入式、机器人、硬件系统、工程应用等 IEEE 常见方向。核心风格是 **工程问题明确、方法依据具体、实验支撑充分、图表排版专业、回复审稿克制有证据**。
+
+## IEEE SubmitCheck
+
+`IEEE SubmitCheck` 是这个仓库推荐的旗舰用法：不是单独问“帮我润色一下”，而是把一篇 IEEE 手稿按审稿人会看的证据链跑一遍。
+
+```text
+manuscript draft
+  -> ieee-reviewer
+  -> ieee-experiment
+  -> ieee-figure-table
+  -> ieee-citation
+  -> ieee-latex
+  -> reviewer-facing revision priorities
+```
+
+一次完整检查应该输出：
+
+- `IEEE reviewer risk report`：按 Critical / Major / Minor 排序的拒稿或大修风险
+- `claim-evidence matrix`：每个核心 claim 需要什么证据、现在有什么、还缺什么实验
+- `baseline fairness checklist`：传统 baseline、近期强 baseline、数据划分、调参预算是否公平
+- `figure/table first-impression audit`：图表双栏可读性、caption、灰度可读性、坐标轴和表格精度问题
+- `citation-support audit`：引用是否支撑当前句子，是否缺少关键 baseline 或最近工作
+- `IEEEtran layout diagnosis`：浮动体、表格、公式、BibTeX、PDF 检查问题
+- `revision priority list`：投稿前最值得先改的动作，而不是泛泛地“继续完善”
 
 ## 为什么需要它
 
@@ -40,17 +66,18 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 一句话：**普通 academic writing skill 主要改表达，ieee-skills 重点检查 IEEE 论文的对象、工况、baseline、实验、图表和审稿证据。**
 
-## 能交付什么
+## 示例交付物
 
 | 你要解决的问题 | 典型输出 |
 |---|---|
-| 论文结构和贡献点不清楚 | IEEE-style title / abstract / introduction outline / contribution rewrite |
-| 不确定论文会不会被审稿人质疑 | reviewer risk list / major-revision strategy / rejection-risk checklist |
-| 实验是否支撑 claim | claim-evidence matrix / missing experiment list / baseline fairness audit |
-| 图表是否像正式 IEEE 论文 | figure/table first-impression audit / redraw plan / SVG demo / caption rewrite |
-| 参考文献和 Related Work 是否扎实 | citation-support audit / missing classic or recent work checklist / BibTeX cleanup |
-| 返修不知道怎么回 | point-by-point response / cover letter / limitation wording |
-| LaTeX 和排版问题 | IEEEtran float/table/equation/BibTeX diagnosis |
+| 投稿前不知道会不会被审稿人卡 | [pre-submission-check.md](examples/pre-submission-check.md) |
+| 实验和 claim 对不上 | [claim-evidence-matrix.md](examples/claim-evidence-matrix.md) |
+| 摘要像流水账或 claim 过大 | [abstract-polishing.md](examples/abstract-polishing.md) |
+| 图表不像正式 IEEE 论文 | [figure-table demos](examples/figure-table/README.md) |
+| 返修不知道怎么逐点回复 | [reviewer-response.md](examples/reviewer-response.md) |
+| IEEEtran、浮动体、引用和 PDF 问题 | [latex-diagnosis.md](examples/latex-diagnosis.md) |
+
+这些示例不是虚构“录用案例”，而是展示 skill 应该交付的报告形态。你可以把自己的摘要、实验表、图表、LaTeX 日志或审稿意见替换进去。
 
 ## 五阶段工作流
 
