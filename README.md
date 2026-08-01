@@ -119,7 +119,9 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 ## 作图示例
 
-`ieee-figure-table` 已支持 IEEE 风格图表审查、重画和可复现绘图示例。仓库内置了三个零依赖 SVG demo：
+`ieee-figure-table` 已支持 IEEE 风格图表审查、重画、视觉精修和可复现绘图示例。真实论文作图建议优先使用内置 matplotlib house-style helper：`skills/ieee-figure-table/scripts/ieee_plot_style.py`。它统一 IEEE 单栏/双栏尺寸、语义配色、线型/marker 冗余、panel label 和 SVG/PDF/PNG/TIFF 导出。
+
+仓库也内置了三个零依赖 SVG demo：
 
 | 示例 | 证明的 IEEE claim | 图 |
 |---|---|---|

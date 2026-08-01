@@ -119,7 +119,9 @@ These files are templates and example report shapes, not claimed accepted-paper 
 
 ## Figure Examples
 
-`ieee-figure-table` now includes IEEE-style figure/table audit, redraw, and reproducible plotting examples. The repository includes three zero-dependency SVG demos:
+`ieee-figure-table` now includes IEEE-style figure/table audit, redraw, visual polish, and reproducible plotting examples. For real manuscript figures, use the bundled matplotlib house-style helper at `skills/ieee-figure-table/scripts/ieee_plot_style.py`; it standardizes IEEE column sizes, semantic colors, line/marker redundancy, panel labels, and SVG/PDF/PNG/TIFF export.
+
+The repository also includes three zero-dependency SVG demos:
 
 | Example | IEEE Claim | Figure |
 |---|---|---|

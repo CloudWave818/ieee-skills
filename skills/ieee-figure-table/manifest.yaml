@@ -1,9 +1,10 @@
 name: ieee-figure-table
-version: 0.3.0
+version: 0.4.0
 description: >
   Declarative router for IEEE figure, table, caption, plotting, redraw, export,
-  and result-presentation workflows. SKILL.md loads visual-type, check-type,
-  failure-mode, stage, and plotting-backend fragments.
+  visual polish, house-style plotting, and result-presentation workflows.
+  SKILL.md loads visual-type, check-type, failure-mode, stage, and
+  plotting-backend fragments.
 
 always_load:
   - ../_shared/references/ieee-official-source-basis.md
@@ -98,5 +99,9 @@ references:
       path: references/ieee-plotting-contract.md
     - condition: selecting IEEE chart/table patterns for comparison, ablation, robustness, complexity, convergence, confusion matrices, or architecture diagrams
       path: references/ieee-chart-patterns.md
+    - condition: improving visual beauty, publication polish, house style, typography, color, legend, panel composition, or figures4papers-like matplotlib aesthetics
+      path: references/ieee-visual-style.md
+    - condition: generating reusable Python matplotlib plotting code, helper functions, style presets, or export scripts
+      path: references/ieee-plotting-api.md
     - condition: final export, source-data, grayscale, column-size, editable text, or reproducibility QA
       path: references/ieee-export-qa.md
