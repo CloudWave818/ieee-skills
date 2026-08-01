@@ -1,93 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="650" viewBox="0 0 1120 650" role="img">
-  <rect width="1120" height="650" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="680" viewBox="0 0 1180 680" role="img" aria-label="Robustness evidence under low-SNR conditions">
+  <rect width="1180" height="680" fill="#ffffff"/>
   <style>
-    text { font-family: Arial, Helvetica, sans-serif; }
-    .title { font-size: 24px; font-weight: 700; }
-    .subtitle { font-size: 15px; fill: #596579; }
-    .axis { stroke: #172033; stroke-width: 1.4; }
-    .grid { stroke: #D8E0EA; stroke-width: 1; }
-    .tick { font-size: 13px; fill: #596579; }
-    .label { font-size: 15px; font-weight: 700; }
-    .small { font-size: 12px; fill: #596579; }
-    .legend { font-size: 14px; }
+    text { font-family: Arial, Helvetica, sans-serif; fill: #172033; }
+    .title { font-size: 25px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: #6B7280; }
+    .axis { stroke: #172033; stroke-width: 1.35; }
+    .grid { stroke: #D7DEE8; stroke-width: 1; }
+    .tick { font-size: 12.5px; fill: #6B7280; }
+    .label { font-size: 14.5px; font-weight: 700; }
+    .small { font-size: 12px; fill: #6B7280; }
+    .legend { font-size: 13.5px; fill: #172033; }
+    .note { font-size: 12px; fill: #6B7280; }
     .panel { font-size: 16px; font-weight: 700; }
+    .method { font-size: 13px; font-weight: 700; }
   </style>
-<text x="54" y="48" class="title">Robustness under low-SNR operating conditions</text>
-<text x="54" y="76" class="subtitle">Lower BER is better. Markers and line styles remain distinguishable in grayscale.</text>
-<line x1="110" y1="540" x2="1040" y2="540" class="axis"/>
-<line x1="110" y1="118" x2="110" y2="540" class="axis"/>
-<line x1="110.0" y1="540" x2="110.0" y2="546" class="axis"/>
-<text x="110.0" y="566" text-anchor="middle" class="tick">-10</text>
-<line x1="265.0" y1="540" x2="265.0" y2="546" class="axis"/>
-<text x="265.0" y="566" text-anchor="middle" class="tick">-5</text>
-<line x1="420.0" y1="540" x2="420.0" y2="546" class="axis"/>
-<text x="420.0" y="566" text-anchor="middle" class="tick">0</text>
-<line x1="575.0" y1="540" x2="575.0" y2="546" class="axis"/>
-<text x="575.0" y="566" text-anchor="middle" class="tick">5</text>
-<line x1="730.0" y1="540" x2="730.0" y2="546" class="axis"/>
-<text x="730.0" y="566" text-anchor="middle" class="tick">10</text>
-<line x1="885.0" y1="540" x2="885.0" y2="546" class="axis"/>
-<text x="885.0" y="566" text-anchor="middle" class="tick">15</text>
-<line x1="1040.0" y1="540" x2="1040.0" y2="546" class="axis"/>
-<text x="1040.0" y="566" text-anchor="middle" class="tick">20</text>
-<line x1="110" y1="156.5" x2="1040" y2="156.5" class="grid"/>
-<line x1="104" y1="156.5" x2="110" y2="156.5" class="axis"/>
-<text x="96" y="160.5" text-anchor="end" class="tick">10^-1</text>
-<line x1="110" y1="284.3" x2="1040" y2="284.3" class="grid"/>
-<line x1="104" y1="284.3" x2="110" y2="284.3" class="axis"/>
-<text x="96" y="288.3" text-anchor="end" class="tick">10^-2</text>
-<line x1="110" y1="412.2" x2="1040" y2="412.2" class="grid"/>
-<line x1="104" y1="412.2" x2="110" y2="412.2" class="axis"/>
-<text x="96" y="416.2" text-anchor="end" class="tick">10^-3</text>
-<line x1="110" y1="540.0" x2="1040" y2="540.0" class="grid"/>
-<line x1="104" y1="540.0" x2="110" y2="540.0" class="axis"/>
-<text x="96" y="544.0" text-anchor="end" class="tick">10^-4</text>
-<polyline points="110.0,123.8 265.0,150.2 420.0,181.3 575.0,221.5 730.0,265.6 885.0,310.9 1040.0,353.0" fill="none" stroke="#596579" stroke-width="3" stroke-dasharray="6,5"/>
-<circle cx="110.0" cy="123.8" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="265.0" cy="150.2" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="420.0" cy="181.3" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="575.0" cy="221.5" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="730.0" cy="265.6" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="885.0" cy="310.9" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<circle cx="1040.0" cy="353.0" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<polyline points="110.0,135.9 265.0,167.5 420.0,208.8 575.0,254.9 730.0,304.9 885.0,355.0 1040.0,406.9" fill="none" stroke="#B64040" stroke-width="3"/>
-<rect x="105.5" y="131.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="260.5" y="163.0" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="415.5" y="204.3" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="570.5" y="250.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="725.5" y="300.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="880.5" y="350.5" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<rect x="1035.5" y="402.4" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<polyline points="110.0,148.2 265.0,184.8 420.0,231.3 575.0,284.3 730.0,338.0 885.0,393.5 1040.0,452.9" fill="none" stroke="#0F766E" stroke-width="3" stroke-dasharray="2,4"/>
-<path d="M110.0,142.2 L116.0,148.2 L110.0,154.2 L104.0,148.2 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M265.0,178.8 L271.0,184.8 L265.0,190.8 L259.0,184.8 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M420.0,225.3 L426.0,231.3 L420.0,237.3 L414.0,231.3 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M575.0,278.3 L581.0,284.3 L575.0,290.3 L569.0,284.3 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M730.0,332.0 L736.0,338.0 L730.0,344.0 L724.0,338.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M885.0,387.5 L891.0,393.5 L885.0,399.5 L879.0,393.5 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M1040.0,446.9 L1046.0,452.9 L1040.0,458.9 L1034.0,452.9 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<polyline points="110.0,175.5 265.0,221.5 420.0,274.2 575.0,326.2 730.0,389.6 885.0,447.4 1040.0,504.4" fill="none" stroke="#0B5CAD" stroke-width="3"/>
-<path d="M110.0,169.5 L115.5,180.5 L104.5,180.5 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M265.0,215.5 L270.5,226.5 L259.5,226.5 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M420.0,268.2 L425.5,279.2 L414.5,279.2 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M575.0,320.2 L580.5,331.2 L569.5,331.2 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M730.0,383.6 L735.5,394.6 L724.5,394.6 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M885.0,441.4 L890.5,452.4 L879.5,452.4 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<path d="M1040.0,498.4 L1045.5,509.4 L1034.5,509.4 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<text x="575.0" y="606" text-anchor="middle" class="label">SNR (dB)</text>
-<text x="28" y="329.0" transform="rotate(-90 28 329.0)" text-anchor="middle" class="label">Bit error rate (log scale)</text>
-<rect x="692" y="104" width="318" height="122" rx="8" fill="#ffffff" stroke="#E7EDF4"/>
-<line x1="710" y1="132" x2="756" y2="132" stroke="#596579" stroke-width="3" stroke-dasharray="6,5"/>
-<circle cx="733.0" cy="132.0" r="4.8" fill="#596579" stroke="#ffffff" stroke-width="1.2"/>
-<text x="772" y="137" class="legend">MMSE</text>
-<line x1="710" y1="159" x2="756" y2="159" stroke="#B64040" stroke-width="3"/>
-<rect x="728.5" y="154.5" width="9" height="9" fill="#B64040" stroke="#ffffff" stroke-width="1.2"/>
-<text x="772" y="164" class="legend">CNN</text>
-<line x1="710" y1="186" x2="756" y2="186" stroke="#0F766E" stroke-width="3" stroke-dasharray="2,4"/>
-<path d="M733.0,180.0 L739.0,186.0 L733.0,192.0 L727.0,186.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.2"/>
-<text x="772" y="191" class="legend">Transformer</text>
-<line x1="710" y1="213" x2="756" y2="213" stroke="#0B5CAD" stroke-width="3"/>
-<path d="M733.0,207.0 L738.5,218.0 L727.5,218.0 Z" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.2"/>
-<text x="772" y="218" class="legend">Ours</text>
-<text x="1040" y="92" text-anchor="end" class="small">Claim: robust performance persists as channel quality degrades.</text>
+  <text x="54" y="46" class="title">Robustness evidence under low-SNR conditions</text>
+  <text x="54" y="72" class="subtitle">Synthetic demo. Lower BER is better; the stress condition is visible instead of hidden in text.</text>
+  <rect x="116" y="132" width="954" height="416" fill="#ffffff" stroke="#DCE3EC"/>
+  <rect x="116.0" y="132" width="318.0" height="416" fill="#D9ECFF" opacity="0.42"/>
+  <text x="275.0" y="156" text-anchor="middle" class="note">low-SNR stress region</text>
+  <line x1="116.0" y1="132" x2="116.0" y2="548" class="grid"/>
+  <line x1="116.0" y1="548" x2="116.0" y2="554" class="axis"/>
+  <text x="116.0" y="574" text-anchor="middle" class="tick">-10</text>
+  <line x1="275.0" y1="132" x2="275.0" y2="548" class="grid"/>
+  <line x1="275.0" y1="548" x2="275.0" y2="554" class="axis"/>
+  <text x="275.0" y="574" text-anchor="middle" class="tick">-5</text>
+  <line x1="434.0" y1="132" x2="434.0" y2="548" class="grid"/>
+  <line x1="434.0" y1="548" x2="434.0" y2="554" class="axis"/>
+  <text x="434.0" y="574" text-anchor="middle" class="tick">0</text>
+  <line x1="593.0" y1="132" x2="593.0" y2="548" class="grid"/>
+  <line x1="593.0" y1="548" x2="593.0" y2="554" class="axis"/>
+  <text x="593.0" y="574" text-anchor="middle" class="tick">5</text>
+  <line x1="752.0" y1="132" x2="752.0" y2="548" class="grid"/>
+  <line x1="752.0" y1="548" x2="752.0" y2="554" class="axis"/>
+  <text x="752.0" y="574" text-anchor="middle" class="tick">10</text>
+  <line x1="911.0" y1="132" x2="911.0" y2="548" class="grid"/>
+  <line x1="911.0" y1="548" x2="911.0" y2="554" class="axis"/>
+  <text x="911.0" y="574" text-anchor="middle" class="tick">15</text>
+  <line x1="1070.0" y1="132" x2="1070.0" y2="548" class="grid"/>
+  <line x1="1070.0" y1="548" x2="1070.0" y2="554" class="axis"/>
+  <text x="1070.0" y="574" text-anchor="middle" class="tick">20</text>
+  <line x1="116" y1="169.9" x2="1070" y2="169.9" class="grid"/>
+  <line x1="110" y1="169.9" x2="116" y2="169.9" class="axis"/>
+  <text x="102" y="173.9" text-anchor="end" class="tick">10^-1</text>
+  <line x1="116" y1="296.0" x2="1070" y2="296.0" class="grid"/>
+  <line x1="110" y1="296.0" x2="116" y2="296.0" class="axis"/>
+  <text x="102" y="300.0" text-anchor="end" class="tick">10^-2</text>
+  <line x1="116" y1="422.0" x2="1070" y2="422.0" class="grid"/>
+  <line x1="110" y1="422.0" x2="116" y2="422.0" class="axis"/>
+  <text x="102" y="426.0" text-anchor="end" class="tick">10^-3</text>
+  <line x1="116" y1="548.0" x2="1070" y2="548.0" class="grid"/>
+  <line x1="110" y1="548.0" x2="116" y2="548.0" class="axis"/>
+  <text x="102" y="552.0" text-anchor="end" class="tick">10^-4</text>
+  <line x1="116" y1="548" x2="1070" y2="548" class="axis"/>
+  <line x1="116" y1="132" x2="116" y2="548" class="axis"/>
+  <polyline points="116.0,137.8 275.0,163.7 434.0,194.4 593.0,234.0 752.0,277.5 911.0,322.1 1070.0,363.7" fill="none" stroke="#6B7280" stroke-width="2.5" opacity="0.86" stroke-dasharray="3,4"/>
+  <path d="M116.0,132.0 L120.8,142.6 L111.2,142.6 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M275.0,157.9 L279.8,168.5 L270.2,168.5 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M434.0,188.6 L438.8,199.2 L429.2,199.2 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M593.0,228.2 L597.8,238.8 L588.2,238.8 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M752.0,271.7 L756.8,282.3 L747.2,282.3 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M911.0,316.3 L915.8,326.9 L906.2,326.9 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M1070.0,357.9 L1074.8,368.5 L1065.2,368.5 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <polyline points="116.0,149.6 275.0,180.8 434.0,221.5 593.0,266.9 752.0,316.3 911.0,365.6 1070.0,416.8" fill="none" stroke="#B64040" stroke-width="2.5" opacity="0.86" stroke-dasharray="7,4"/>
+  <rect x="111.2" y="144.8" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="270.2" y="176.0" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="429.2" y="216.7" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="588.2" y="262.1" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="747.2" y="311.5" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="906.2" y="360.8" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <rect x="1065.2" y="412.0" width="9.6" height="9.6" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <polyline points="116.0,161.8 275.0,197.9 434.0,243.7 593.0,296.0 752.0,348.9 911.0,403.6 1070.0,462.1" fill="none" stroke="#0F766E" stroke-width="2.5" opacity="0.86" stroke-dasharray="2,3"/>
+  <path d="M116.0,156.0 L121.8,161.8 L116.0,167.6 L110.2,161.8 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M275.0,192.1 L280.8,197.9 L275.0,203.7 L269.2,197.9 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M434.0,237.9 L439.8,243.7 L434.0,249.5 L428.2,243.7 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M593.0,290.2 L598.8,296.0 L593.0,301.8 L587.2,296.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M752.0,343.1 L757.8,348.9 L752.0,354.7 L746.2,348.9 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M911.0,397.8 L916.8,403.6 L911.0,409.4 L905.2,403.6 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <path d="M1070.0,456.3 L1075.8,462.1 L1070.0,467.9 L1064.2,462.1 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <polyline points="116.0,188.7 275.0,234.0 434.0,286.0 593.0,337.3 752.0,399.8 911.0,456.7 1070.0,512.9" fill="none" stroke="#0B5CAD" stroke-width="3.6" opacity="1.0"/>
+  <circle cx="116.0" cy="188.7" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="275.0" cy="234.0" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="434.0" cy="286.0" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="593.0" cy="337.3" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="752.0" cy="399.8" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="911.0" cy="456.7" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <circle cx="1070.0" cy="512.9" r="5.2" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <line x1="640" y1="99" x2="678" y2="99" stroke="#6B7280" stroke-width="2.8" stroke-dasharray="3,4"/>
+  <path d="M659.0,93.5 L663.5,103.5 L654.5,103.5 Z" fill="#6B7280" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="688" y="103" class="legend">MMSE</text>
+  <line x1="764" y1="99" x2="802" y2="99" stroke="#B64040" stroke-width="2.8" stroke-dasharray="7,4"/>
+  <rect x="778.5" y="94.5" width="9.0" height="9.0" fill="#B64040" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="812" y="103" class="legend">CNN</text>
+  <line x1="888" y1="99" x2="926" y2="99" stroke="#0F766E" stroke-width="2.8" stroke-dasharray="2,3"/>
+  <path d="M907.0,93.5 L912.5,99.0 L907.0,104.5 L901.5,99.0 Z" fill="#0F766E" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="936" y="103" class="legend">Transformer</text>
+  <line x1="1012" y1="99" x2="1050" y2="99" stroke="#0B5CAD" stroke-width="2.8"/>
+  <circle cx="1031.0" cy="99.0" r="4.5" fill="#0B5CAD" stroke="#ffffff" stroke-width="1.4"/>
+  <text x="1060" y="103" class="legend">Ours</text>
+  <rect x="770.0" y="408.9" width="218" height="52" rx="7" fill="#ffffff" stroke="#DCE3EC"/>
+  <path d="M988.0,434.9 C1018.0,458.9 1036.0,486.9 1058.0,504.9" fill="none" stroke="#0B5CAD" stroke-width="1.4" marker-end="url(#arrow-blue)"/>
+  <defs><marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#0B5CAD"/></marker></defs>
+  <text x="788.0" y="430.9" class="method" style="fill:#0B5CAD">Ours keeps the lowest BER</text>
+  <text x="788.0" y="450.9" class="small">claim evidence across all SNR levels</text>
+  <text x="593.0" y="637" text-anchor="middle" class="label">SNR (dB)</text>
+  <text x="30" y="340.0" transform="rotate(-90 30 340.0)" text-anchor="middle" class="label">Bit error rate, BER (log scale; lower is better)</text>
+  <text x="1070" y="660" text-anchor="end" class="small">IEEE QA: condition axis, log scale label, marker/line-style redundancy, visible baselines.</text>
 </svg>

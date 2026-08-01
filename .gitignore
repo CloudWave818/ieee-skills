@@ -28,3 +28,4 @@ venv/
 # OS and local generated files
 *.bak
 *.orig
+*.preview.png

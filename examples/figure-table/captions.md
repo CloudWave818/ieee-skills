@@ -8,12 +8,12 @@ QA: The x-axis is an engineering operating condition, the y-axis uses a labeled 
 
 ## Accuracy-Latency Pareto
 
-Caption draft: Accuracy-latency tradeoff for deployment-oriented comparison. The proposed method lies on the Pareto frontier by improving F1 while keeping inference latency lower than larger neural baselines.
+Caption draft: Accuracy-latency tradeoff for deployment-oriented comparison. The proposed method lies on the Pareto frontier by improving macro-F1 while keeping inference latency lower than larger neural baselines.
 
 QA: The figure makes the cost metric visible, labels both optimization directions, and avoids claiming accuracy improvement without deployment cost.
 
 ## Ablation Result Table
 
-Caption draft: Ablation study of the proposed model components. Removing attention, temporal modeling, physics guidance, or augmentation reduces accuracy and F1, indicating that each component contributes to the final model.
+Caption draft: Ablation study of the proposed model components. Adding attention, temporal modeling, physics guidance, and augmentation improves accuracy and F1, while the table keeps parameter count and latency visible.
 
 QA: The table keeps performance and deployability metrics together. Real manuscripts should add repeat definitions, variability, and significance testing where appropriate.

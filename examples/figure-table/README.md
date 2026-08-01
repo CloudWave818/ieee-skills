@@ -2,6 +2,8 @@
 
 These examples show how `ieee-figure-table` turns IEEE-style review concerns into concrete visual evidence.
 
+Updated on 2026-08-01: the three SVG demos were redrawn with the new IEEE house style direction: cleaner typography, semantic colors, direct evidence annotations, and visible deployment or baseline context.
+
 The skill now also includes a matplotlib house-style helper:
 
 ```text

@@ -13,7 +13,11 @@
 
 这是一组面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills，覆盖写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
 
-[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [IEEE SubmitCheck](#ieee-submitcheck) | [为什么需要它](#为什么需要它) | [示例交付物](#示例交付物) | [快速开始](#快速开始) | [安装方法](#安装)
+[English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [最近更新](#最近更新) | [IEEE SubmitCheck](#ieee-submitcheck) | [为什么需要它](#为什么需要它) | [示例交付物](#示例交付物) | [快速开始](#快速开始) | [安装方法](#安装)
+
+## 最近更新
+
+**2026-08-01：`ieee-figure-table` 作图能力升级。** 新增 IEEE matplotlib house-style helper，补充视觉风格和绘图 API 规则，并重画了三张示例图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。现在它不只是检查图表问题，也能指导生成更像正式 IEEE 论文的证据图。
 
 ## 这是什么
 
@@ -113,7 +117,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 | 第二阶段 | `ieee-experiment` | 设计和审查实验，构建 claim-evidence matrix，检查 baseline、ablation、robustness、complexity |
 | 第二阶段 | `ieee-latex` | 处理 IEEEtran、编译错误、浮动体、公式、表格、算法、BibTeX 和 PDF 检查 |
 | 第二阶段 | `ieee-response` | 生成审稿回复、revision plan、cover letter、point-by-point response |
-| 第三阶段 | `ieee-figure-table` | 检查图表、caption、双栏可读性、灰度可读性、表格精度和第一印象风险 |
+| 第三阶段 | `ieee-figure-table` | 检查图表、caption、双栏可读性、灰度可读性、表格精度、第一印象风险，并提供 IEEE matplotlib house style 作图辅助 |
 | 第三阶段 | `ieee-citation` | 检查 BibTeX、参考文献元数据、DOI、IEEE 格式、Related Work 引用逻辑 |
 | 第三阶段 | `ieee-paper-reader` | 阅读 IEEE 论文，提取贡献、方法、公式、实验、局限、可复现信息和引用定位 |
 
@@ -121,7 +125,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 `ieee-figure-table` 已支持 IEEE 风格图表审查、重画、视觉精修和可复现绘图示例。真实论文作图建议优先使用内置 matplotlib house-style helper：`skills/ieee-figure-table/scripts/ieee_plot_style.py`。它统一 IEEE 单栏/双栏尺寸、语义配色、线型/marker 冗余、panel label 和 SVG/PDF/PNG/TIFF 导出。
 
-仓库也内置了三个零依赖 SVG demo：
+本轮也刷新了三个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见** 的 IEEE 图表方向：
 
 | 示例 | 证明的 IEEE claim | 图 |
 |---|---|---|

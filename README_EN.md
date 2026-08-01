@@ -13,7 +13,11 @@ Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE 
 
 This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
 
-[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation)
+[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Latest Update](#latest-update) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation)
+
+## Latest Update
+
+**2026-08-01: upgraded `ieee-figure-table` for polished plotting.** The skill now includes an IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, and refreshed examples for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. It now helps generate reviewer-ready evidence figures instead of only auditing figure problems.
 
 ## What It Does
 
@@ -113,7 +117,7 @@ These files are templates and example report shapes, not claimed accepted-paper 
 | Stage 2 | `ieee-experiment` | Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility |
 | Stage 2 | `ieee-latex` | Fix IEEEtran LaTeX, floats, equations, tables, algorithms, BibTeX, and PDF checks |
 | Stage 2 | `ieee-response` | Draft point-by-point responses, rebuttals, revision plans, and cover letters |
-| Stage 3 | `ieee-figure-table` | Audit figures, tables, captions, two-column readability, accessibility, and first-impression risks |
+| Stage 3 | `ieee-figure-table` | Audit figures, tables, captions, two-column readability, accessibility, first-impression risks, and polished IEEE matplotlib house style |
 | Stage 3 | `ieee-citation` | Check BibTeX, reference metadata, DOI fields, IEEE style, and citation logic |
 | Stage 3 | `ieee-paper-reader` | Extract contributions, methods, equations, experiments, limitations, reproducibility details, and citation positioning |
 
@@ -121,7 +125,7 @@ These files are templates and example report shapes, not claimed accepted-paper 
 
 `ieee-figure-table` now includes IEEE-style figure/table audit, redraw, visual polish, and reproducible plotting examples. For real manuscript figures, use the bundled matplotlib house-style helper at `skills/ieee-figure-table/scripts/ieee_plot_style.py`; it standardizes IEEE column sizes, semantic colors, line/marker redundancy, panel labels, and SVG/PDF/PNG/TIFF export.
 
-The repository also includes three zero-dependency SVG demos:
+This update also refreshes the three zero-dependency SVG demos. They show the intended direction: polished visuals plus clear engineering evidence, readable scaling, and visible baselines.
 
 | Example | IEEE Claim | Figure |
 |---|---|---|
