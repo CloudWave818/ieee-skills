@@ -67,6 +67,19 @@ Avoid one-note palettes and rainbow category maps. Use highlight color once, not
 - Align axes across panels when comparing the same metric or condition.
 - Add panel labels `(a)`, `(b)`, `(c)` only when the manuscript will cite panels.
 
+## Figures4papers-Inspired Polish Rules
+
+Useful high-quality scientific plotting examples often look attractive because their layout is disciplined, not because they use decorative effects. Borrow these rules when improving IEEE figures:
+
+- Use a wide two-column canvas for dense evidence instead of squeezing labels into one axis.
+- Turn one crowded plot into a main evidence panel plus a compact summary, legend, or metric card.
+- Put legends, role encodings, and long explanatory text in a dedicated side or top panel, outside the data region.
+- Keep labels short. Move interpretation to the caption or a side evidence panel.
+- Reserve a text-safe margin around every axis and table; no label should touch the figure edge or another label.
+- Prefer subtle panel backgrounds, restrained borders, and consistent spacing over gradients or decorative fills.
+- Make the proposed method visually identifiable, but keep baselines legible enough for a fair comparison.
+- Render a PNG preview before delivery and inspect it at the intended manuscript size.
+
 ## Table Visual Style
 
 - Use units in column headers.
@@ -98,4 +111,3 @@ Avoid captions that only restate the axis labels.
 - The visual hierarchy makes the main evidence obvious within a few seconds.
 - The source data and script can regenerate the figure.
 - SVG/PDF/PNG/TIFF outputs are exported from the same script.
-

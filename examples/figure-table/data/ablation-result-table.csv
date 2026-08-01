@@ -1,7 +1,7 @@
 variant,accuracy,f1,params_m,latency_ms
 Base encoder,88.3,87.6,1.42,8.9
 + attention,90.4,89.7,1.78,10.7
-+ temporal module,91.1,90.5,1.63,9.8
-+ physics constraint,91.8,91.0,1.95,11.5
++ temporal,91.1,90.5,1.63,9.8
++ physics,91.8,91.0,1.95,11.5
 + augmentation,92.2,91.5,2.1,12.9
 Full model,94.1,93.6,2.1,13.2

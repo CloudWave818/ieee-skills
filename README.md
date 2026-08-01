@@ -17,7 +17,7 @@
 
 ## 最近更新
 
-**2026-08-01：`ieee-figure-table` 作图能力升级。** 新增 IEEE matplotlib house-style helper，补充视觉风格和绘图 API 规则，并重画了三张示例图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。现在它不只是检查图表问题，也能指导生成更像正式 IEEE 论文的证据图。
+**2026-08-01：`ieee-figure-table` 作图能力升级并重做 demo。** 新增 IEEE matplotlib house-style helper，补充视觉风格和绘图 API 规则，并按更高质量的科研绘图样例重新设计三张图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。新版 demo 强调多面板证据组织、独立图例面板、文字边界安全区、baseline 可见性和双栏缩放后的可读性。
 
 ## 这是什么
 
@@ -125,7 +125,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 `ieee-figure-table` 已支持 IEEE 风格图表审查、重画、视觉精修和可复现绘图示例。真实论文作图建议优先使用内置 matplotlib house-style helper：`skills/ieee-figure-table/scripts/ieee_plot_style.py`。它统一 IEEE 单栏/双栏尺寸、语义配色、线型/marker 冗余、panel label 和 SVG/PDF/PNG/TIFF 导出。
 
-本轮也刷新了三个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见** 的 IEEE 图表方向：
+本轮也重做了三个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见 + 文字不越界** 的 IEEE 图表方向。新版示例借鉴高质量科研绘图仓库常见的版式优点：超宽画布、多面板叙事、独立 legend/summary 面板、短标签、克制配色和留白控制。
 
 | 示例 | 证明的 IEEE claim | 图 |
 |---|---|---|

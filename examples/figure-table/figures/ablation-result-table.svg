@@ -1,86 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="650" viewBox="0 0 1180 650" role="img" aria-label="Ablation table with visible engineering cost">
-  <rect width="1180" height="650" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Ablation table with visible engineering cost">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
   <style>
     text { font-family: Arial, Helvetica, sans-serif; fill: #172033; }
     .title { font-size: 25px; font-weight: 700; }
-    .subtitle { font-size: 14px; fill: #6B7280; }
-    .axis { stroke: #172033; stroke-width: 1.35; }
-    .grid { stroke: #D7DEE8; stroke-width: 1; }
-    .tick { font-size: 12.5px; fill: #6B7280; }
-    .label { font-size: 14.5px; font-weight: 700; }
-    .small { font-size: 12px; fill: #6B7280; }
-    .legend { font-size: 13.5px; fill: #172033; }
-    .note { font-size: 12px; fill: #6B7280; }
-    .panel { font-size: 16px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: #5F6B7A; }
+    .axislabel { font-size: 14px; font-weight: 700; }
+    .tick { font-size: 12px; fill: #5F6B7A; }
+    .tiny { font-size: 11px; fill: #5F6B7A; }
+    .small { font-size: 12px; fill: #5F6B7A; }
+    .legend { font-size: 13px; fill: #172033; }
+    .paneltitle { font-size: 15px; font-weight: 700; }
     .method { font-size: 13px; font-weight: 700; }
+    .metric { font-size: 24px; font-weight: 700; }
+    .pill { font-size: 12px; }
+    .header { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .cell { font-size: 13px; }
   </style>
-  <text x="54" y="46" class="title">Ablation table with visible engineering cost</text>
-  <text x="54" y="72" class="subtitle">Synthetic demo. Component evidence and deployability metrics stay in the same reviewer-facing view.</text>
-  <rect x="62" y="120" width="720" height="48" rx="8" fill="#172033"/>
-  <text x="82.0" y="151" text-anchor="start" style="fill:#ffffff" font-size="14" font-weight="700">Variant</text>
-  <text x="380.0" y="151" text-anchor="middle" style="fill:#ffffff" font-size="14" font-weight="700">Acc. (%)</text>
-  <text x="496.0" y="151" text-anchor="middle" style="fill:#ffffff" font-size="14" font-weight="700">F1 (%)</text>
-  <text x="612.0" y="151" text-anchor="middle" style="fill:#ffffff" font-size="14" font-weight="700">Params</text>
-  <text x="726.0" y="151" text-anchor="middle" style="fill:#ffffff" font-size="14" font-weight="700">Latency</text>
-  <rect x="62" y="168" width="720" height="48" fill="#F7FAFD" stroke="#DCE3EC"/>
-  <text x="82.0" y="198" text-anchor="start" font-size="14" font-weight="400" fill="#172033">Base encoder</text>
-  <text x="380.0" y="198" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">88.3</text>
-  <text x="496.0" y="198" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">87.6</text>
-  <text x="612.0" y="198" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">1.42M</text>
-  <text x="726.0" y="198" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">8.9ms</text>
-  <rect x="62" y="216" width="720" height="48" fill="#FFFFFF" stroke="#DCE3EC"/>
-  <text x="82.0" y="246" text-anchor="start" font-size="14" font-weight="400" fill="#172033">+ attention</text>
-  <text x="380.0" y="246" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">90.4</text>
-  <text x="496.0" y="246" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">89.7</text>
-  <text x="612.0" y="246" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">1.78M</text>
-  <text x="726.0" y="246" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">10.7ms</text>
-  <rect x="62" y="264" width="720" height="48" fill="#F7FAFD" stroke="#DCE3EC"/>
-  <text x="82.0" y="294" text-anchor="start" font-size="14" font-weight="400" fill="#172033">+ temporal module</text>
-  <text x="380.0" y="294" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">91.1</text>
-  <text x="496.0" y="294" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">90.5</text>
-  <text x="612.0" y="294" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">1.63M</text>
-  <text x="726.0" y="294" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">9.8ms</text>
-  <rect x="62" y="312" width="720" height="48" fill="#FFFFFF" stroke="#DCE3EC"/>
-  <text x="82.0" y="342" text-anchor="start" font-size="14" font-weight="400" fill="#172033">+ physics constraint</text>
-  <text x="380.0" y="342" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">91.8</text>
-  <text x="496.0" y="342" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">91.0</text>
-  <text x="612.0" y="342" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">1.95M</text>
-  <text x="726.0" y="342" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">11.5ms</text>
-  <rect x="62" y="360" width="720" height="48" fill="#F7FAFD" stroke="#DCE3EC"/>
-  <text x="82.0" y="390" text-anchor="start" font-size="14" font-weight="400" fill="#172033">+ augmentation</text>
-  <text x="380.0" y="390" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">92.2</text>
-  <text x="496.0" y="390" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">91.5</text>
-  <text x="612.0" y="390" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">2.10M</text>
-  <text x="726.0" y="390" text-anchor="middle" font-size="14" font-weight="400" fill="#172033">12.9ms</text>
-  <rect x="62" y="408" width="720" height="48" fill="#D9ECFF" stroke="#DCE3EC"/>
-  <text x="82.0" y="438" text-anchor="start" font-size="14" font-weight="700" fill="#172033">Full model</text>
-  <text x="380.0" y="438" text-anchor="middle" font-size="14" font-weight="700" fill="#0B5CAD">94.1</text>
-  <text x="496.0" y="438" text-anchor="middle" font-size="14" font-weight="700" fill="#0B5CAD">93.6</text>
-  <text x="612.0" y="438" text-anchor="middle" font-size="14" font-weight="700" fill="#172033">2.10M</text>
-  <text x="726.0" y="438" text-anchor="middle" font-size="14" font-weight="700" fill="#172033">13.2ms</text>
-  <rect x="821" y="89" width="326" height="441" rx="10" fill="#F7FAFD" stroke="#DCE3EC"/>
-  <text x="841" y="119" class="method">Contribution over base</text>
-  <text x="841" y="139" class="small">delta accuracy points; higher is better</text>
-  <text x="837" y="161" text-anchor="end" class="small">Attention</text>
-  <rect x="845" y="143" width="258" height="24" rx="4" fill="#E9EEF5"/>
-  <rect x="845" y="143" width="93.4" height="24" rx="4" fill="#0F766E" opacity="0.78"/>
-  <text x="945.4" y="160" class="small">+2.1</text>
-  <text x="837" y="209" text-anchor="end" class="small">Temporal</text>
-  <rect x="845" y="191" width="258" height="24" rx="4" fill="#E9EEF5"/>
-  <rect x="845" y="191" width="124.6" height="24" rx="4" fill="#0F766E" opacity="0.78"/>
-  <text x="976.6" y="208" class="small">+2.8</text>
-  <text x="837" y="257" text-anchor="end" class="small">Physics</text>
-  <rect x="845" y="239" width="258" height="24" rx="4" fill="#E9EEF5"/>
-  <rect x="845" y="239" width="155.7" height="24" rx="4" fill="#0F766E" opacity="0.78"/>
-  <text x="1007.7" y="256" class="small">+3.5</text>
-  <text x="837" y="305" text-anchor="end" class="small">Aug.</text>
-  <rect x="845" y="287" width="258" height="24" rx="4" fill="#E9EEF5"/>
-  <rect x="845" y="287" width="173.5" height="24" rx="4" fill="#0F766E" opacity="0.78"/>
-  <text x="1025.5" y="304" class="small">+3.9</text>
-  <text x="837" y="353" text-anchor="end" class="small">Full</text>
-  <rect x="845" y="335" width="258" height="24" rx="4" fill="#E9EEF5"/>
-  <rect x="845" y="335" width="258.0" height="24" rx="4" fill="#0B5CAD" opacity="1.0"/>
-  <text x="1110.0" y="352" class="small">+5.8</text>
-  <text x="62" y="562" class="small">Caption cue: Ablation on the same dataset and split. Full model improves Acc./F1 while keeping deployment metrics visible.</text>
-  <text x="62" y="586" class="small">Reviewer-risk placeholder: real manuscripts should add repeat definition, variance/CI, and statistical test when claiming significance.</text>
+  <text x="56" y="43" class="title">Ablation table with visible engineering cost</text>
+  <text x="56" y="68" class="subtitle">Synthetic demo. Component gains, full-model result, and deployment cost stay in the same view.</text>
+  <rect x="1131.0" y="35.0" width="91.0" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#B7791F" opacity="1.000"/>
+  <text x="1176.5" y="53.0" text-anchor="middle" class="pill" fill="#B7791F" font-weight="700">cost kept</text>
+  <rect x="1037.5" y="35.0" width="83.5" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0B5CAD" opacity="1.000"/>
+  <text x="1079.3" y="53.0" text-anchor="middle" class="pill" fill="#0B5CAD" font-weight="700">ablation</text>
+  <rect x="52.0" y="96.0" width="1176.0" height="574.0" rx="18.0" fill="#F7FAFD" stroke="none" opacity="1.000"/>
+  <rect x="58.0" y="130.0" width="724.0" height="48.0" rx="10.0" fill="#172033" stroke="none" opacity="1.000"/>
+  <text x="78.0" y="161.0" text-anchor="start" class="header" fill="#FFFFFF" font-weight="700">Variant</text>
+  <text x="358.0" y="161.0" text-anchor="middle" class="header" fill="#FFFFFF" font-weight="700">Acc. (%)</text>
+  <text x="470.0" y="161.0" text-anchor="middle" class="header" fill="#FFFFFF" font-weight="700">F1 (%)</text>
+  <text x="589.0" y="161.0" text-anchor="middle" class="header" fill="#FFFFFF" font-weight="700">Params (M)</text>
+  <text x="717.0" y="161.0" text-anchor="middle" class="header" fill="#FFFFFF" font-weight="700">Latency (ms)</text>
+  <rect x="58.0" y="178.0" width="724.0" height="48.0" rx="0.0" fill="#F1F6FB" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="208.0" text-anchor="start" class="cell" fill="#172033" font-weight="400">Base encoder</text>
+  <text x="358.0" y="208.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">88.3</text>
+  <text x="470.0" y="208.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">87.6</text>
+  <text x="589.0" y="208.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">1.42</text>
+  <text x="717.0" y="208.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">8.9</text>
+  <rect x="58.0" y="226.0" width="724.0" height="48.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="256.0" text-anchor="start" class="cell" fill="#172033" font-weight="400">+ attention</text>
+  <text x="358.0" y="256.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">90.4</text>
+  <text x="470.0" y="256.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">89.7</text>
+  <text x="589.0" y="256.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">1.78</text>
+  <text x="717.0" y="256.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">10.7</text>
+  <rect x="58.0" y="274.0" width="724.0" height="48.0" rx="0.0" fill="#F1F6FB" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="304.0" text-anchor="start" class="cell" fill="#172033" font-weight="400">+ temporal</text>
+  <text x="358.0" y="304.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">91.1</text>
+  <text x="470.0" y="304.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">90.5</text>
+  <text x="589.0" y="304.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">1.63</text>
+  <text x="717.0" y="304.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">9.8</text>
+  <rect x="58.0" y="322.0" width="724.0" height="48.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="352.0" text-anchor="start" class="cell" fill="#172033" font-weight="400">+ physics</text>
+  <text x="358.0" y="352.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">91.8</text>
+  <text x="470.0" y="352.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">91.0</text>
+  <text x="589.0" y="352.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">1.95</text>
+  <text x="717.0" y="352.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">11.5</text>
+  <rect x="58.0" y="370.0" width="724.0" height="48.0" rx="0.0" fill="#F1F6FB" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="400.0" text-anchor="start" class="cell" fill="#172033" font-weight="400">+ augmentation</text>
+  <text x="358.0" y="400.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">92.2</text>
+  <text x="470.0" y="400.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">91.5</text>
+  <text x="589.0" y="400.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">2.10</text>
+  <text x="717.0" y="400.0" text-anchor="middle" class="cell" fill="#172033" font-weight="400">12.9</text>
+  <rect x="58.0" y="418.0" width="724.0" height="48.0" rx="0.0" fill="#EAF4FF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="78.0" y="448.0" text-anchor="start" class="cell" fill="#172033" font-weight="700">Full model</text>
+  <text x="358.0" y="448.0" text-anchor="middle" class="cell" fill="#0B5CAD" font-weight="700">94.1</text>
+  <text x="470.0" y="448.0" text-anchor="middle" class="cell" fill="#0B5CAD" font-weight="700">93.6</text>
+  <text x="589.0" y="448.0" text-anchor="middle" class="cell" fill="#172033" font-weight="700">2.10</text>
+  <text x="717.0" y="448.0" text-anchor="middle" class="cell" fill="#172033" font-weight="700">13.2</text>
+  <rect x="830.0" y="130.0" width="374.0" height="384.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="854.0" y="164.0" text-anchor="start" class="paneltitle">Component contribution</text>
+  <text x="854.0" y="187.0" text-anchor="start" class="small">delta accuracy points over base</text>
+  <line x1="854.0" y1="208.0" x2="1180.0" y2="208.0" stroke="#D5DEE9" stroke-width="1.00"/>
+  <text x="854.0" y="258.0" text-anchor="start" class="small">attention</text>
+  <rect x="956.0" y="242.0" width="194.0" height="18.0" rx="6.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
+  <rect x="956.0" y="242.0" width="70.2" height="18.0" rx="6.0" fill="#0F766E" stroke="none" opacity="0.920"/>
+  <text x="1160.0" y="257.0" text-anchor="start" class="tiny">+2.1</text>
+  <text x="854.0" y="302.0" text-anchor="start" class="small">temporal</text>
+  <rect x="956.0" y="286.0" width="194.0" height="18.0" rx="6.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
+  <rect x="956.0" y="286.0" width="93.7" height="18.0" rx="6.0" fill="#0F766E" stroke="none" opacity="0.920"/>
+  <text x="1160.0" y="301.0" text-anchor="start" class="tiny">+2.8</text>
+  <text x="854.0" y="346.0" text-anchor="start" class="small">physics</text>
+  <rect x="956.0" y="330.0" width="194.0" height="18.0" rx="6.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
+  <rect x="956.0" y="330.0" width="117.1" height="18.0" rx="6.0" fill="#0F766E" stroke="none" opacity="0.920"/>
+  <text x="1160.0" y="345.0" text-anchor="start" class="tiny">+3.5</text>
+  <text x="854.0" y="390.0" text-anchor="start" class="small">augment</text>
+  <rect x="956.0" y="374.0" width="194.0" height="18.0" rx="6.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
+  <rect x="956.0" y="374.0" width="130.4" height="18.0" rx="6.0" fill="#0F766E" stroke="none" opacity="0.920"/>
+  <text x="1160.0" y="389.0" text-anchor="start" class="tiny">+3.9</text>
+  <text x="854.0" y="434.0" text-anchor="start" class="small">Full model</text>
+  <rect x="956.0" y="418.0" width="194.0" height="18.0" rx="6.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
+  <rect x="956.0" y="418.0" width="194.0" height="18.0" rx="6.0" fill="#0B5CAD" stroke="none" opacity="0.920"/>
+  <text x="1160.0" y="433.0" text-anchor="start" class="tiny">+5.8</text>
+  <rect x="58.0" y="548.0" width="244.0" height="44.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="76.0" y="567.0" text-anchor="start" class="method" fill="#0B5CAD">What this table proves</text>
+  <text x="76.0" y="585.0" text-anchor="start" class="small">each module supports the final claim</text>
+  <rect x="326.0" y="548.0" width="252.0" height="44.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="344.0" y="567.0" text-anchor="start" class="method" fill="#0F766E">What it does not hide</text>
+  <text x="344.0" y="585.0" text-anchor="start" class="small">params and latency stay visible</text>
+  <rect x="602.0" y="548.0" width="238.0" height="44.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="620.0" y="567.0" text-anchor="start" class="method" fill="#B64040">Missing in real papers</text>
+  <text x="620.0" y="585.0" text-anchor="start" class="small">variance, seeds, significance</text>
+  <rect x="830.0" y="548.0" width="374.0" height="44.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="850.0" y="567.0" text-anchor="start" class="method" fill="#B7791F">IEEE reviewer cue</text>
+  <text x="850.0" y="585.0" text-anchor="start" class="small">performance gain is tied to component evidence</text>
 </svg>

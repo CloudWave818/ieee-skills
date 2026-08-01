@@ -17,7 +17,7 @@ This is a Codex skill collection for **IEEE-style conference, journal, Transacti
 
 ## Latest Update
 
-**2026-08-01: upgraded `ieee-figure-table` for polished plotting.** The skill now includes an IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, and refreshed examples for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. It now helps generate reviewer-ready evidence figures instead of only auditing figure problems.
+**2026-08-01: upgraded `ieee-figure-table` and rebuilt the demos.** The skill now includes an IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, and redesigned examples for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. The refreshed demos emphasize multi-panel evidence organization, dedicated legend panels, text-safe layout, visible baselines, and readability after IEEE two-column scaling.
 
 ## What It Does
 
@@ -125,7 +125,7 @@ These files are templates and example report shapes, not claimed accepted-paper 
 
 `ieee-figure-table` now includes IEEE-style figure/table audit, redraw, visual polish, and reproducible plotting examples. For real manuscript figures, use the bundled matplotlib house-style helper at `skills/ieee-figure-table/scripts/ieee_plot_style.py`; it standardizes IEEE column sizes, semantic colors, line/marker redundancy, panel labels, and SVG/PDF/PNG/TIFF export.
 
-This update also refreshes the three zero-dependency SVG demos. They show the intended direction: polished visuals plus clear engineering evidence, readable scaling, and visible baselines.
+This update also rebuilds the three zero-dependency SVG demos. They show the intended direction: polished visuals plus clear engineering evidence, readable scaling, visible baselines, and no text spilling out of the figure. The layout borrows useful patterns from high-quality scientific plotting examples: wide canvases, multi-panel storytelling, dedicated legend/summary panels, short labels, restrained semantic color, and controlled whitespace.
 
 | Example | IEEE Claim | Figure |
 |---|---|---|
