@@ -6,7 +6,7 @@ For plotting, redrawing, or major redesign tasks, establish this contract before
 2. **Evidence map**: each panel, curve, row, or column must support a unique part of the claim.
 3. **Comparison contract**: list baseline methods, proposed method variants, operating conditions, datasets, metrics, and whether higher/lower is better.
 4. **IEEE layout contract**: decide one-column, two-column, page-wide, or supplementary use before choosing font size, line width, legend position, and aspect ratio.
-5. **Export contract**: specify source data, editable SVG/PDF, high-DPI PNG/TIFF preview, and the script/notebook needed to regenerate the figure.
+5. **Export contract**: specify source data, editable SVG/PDF, high-DPI PNG/TIFF preview, and the script/notebook needed to regenerate the figure. For hybrid figures, also specify the editable layout source and manual edit log.
 
 If the user provides only a vague request such as "make this figure better", first infer a provisional contract and mark missing items explicitly.
 

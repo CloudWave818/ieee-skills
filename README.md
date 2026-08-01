@@ -17,7 +17,7 @@
 
 ## 最近更新
 
-**2026-08-01：`ieee-figure-table` 作图能力升级并重做 demo。** 新增 IEEE matplotlib house-style helper，补充视觉风格和绘图 API 规则，并按更高质量的科研绘图样例重新设计三张图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。新版 demo 强调多面板证据组织、独立图例面板、文字边界安全区、baseline 可见性和双栏缩放后的可读性。
+**2026-08-01：`ieee-figure-table` 作图能力升级并重做 demo。** 新增 IEEE matplotlib house-style helper，补充视觉风格、绘图 API 和 hybrid figure workflow，并按更高质量的科研绘图样例重新设计三张图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。新版 demo 强调多面板证据组织、独立图例面板、文字边界安全区、baseline 可见性和双栏缩放后的可读性；对于机制图、流程图、组合图，也支持“Python/R 生成底图 + Illustrator/Inkscape/PowerPoint/Figma 等工具矢量精修 + edit log”的工作流。
 
 ## 这是什么
 
@@ -117,13 +117,15 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 | 第二阶段 | `ieee-experiment` | 设计和审查实验，构建 claim-evidence matrix，检查 baseline、ablation、robustness、complexity |
 | 第二阶段 | `ieee-latex` | 处理 IEEEtran、编译错误、浮动体、公式、表格、算法、BibTeX 和 PDF 检查 |
 | 第二阶段 | `ieee-response` | 生成审稿回复、revision plan、cover letter、point-by-point response |
-| 第三阶段 | `ieee-figure-table` | 检查图表、caption、双栏可读性、灰度可读性、表格精度、第一印象风险，并提供 IEEE matplotlib house style 作图辅助 |
+| 第三阶段 | `ieee-figure-table` | 检查图表、caption、双栏可读性、灰度可读性、表格精度、第一印象风险，并提供 IEEE matplotlib house style 与 hybrid vector finishing 工作流 |
 | 第三阶段 | `ieee-citation` | 检查 BibTeX、参考文献元数据、DOI、IEEE 格式、Related Work 引用逻辑 |
 | 第三阶段 | `ieee-paper-reader` | 阅读 IEEE 论文，提取贡献、方法、公式、实验、局限、可复现信息和引用定位 |
 
 ## 作图示例
 
 `ieee-figure-table` 已支持 IEEE 风格图表审查、重画、视觉精修和可复现绘图示例。真实论文作图建议优先使用内置 matplotlib house-style helper：`skills/ieee-figure-table/scripts/ieee_plot_style.py`。它统一 IEEE 单栏/双栏尺寸、语义配色、线型/marker 冗余、panel label 和 SVG/PDF/PNG/TIFF 导出。
+
+有些好图不应该强行端到端 Python 化。对于机制示意图、实验流程图、系统架构图、多来源组合图，可以采用 hybrid workflow：代码生成可复现的定量底图，再用 Illustrator、Inkscape、PowerPoint、Figma 或 draw.io 做矢量排版和标注，同时保留 base exports、editable layout source、final exports 和 `figure_edit_log.md`，避免“图很好看但证据不可追溯”。
 
 本轮也重做了三个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见 + 文字不越界** 的 IEEE 图表方向。新版示例借鉴高质量科研绘图仓库常见的版式优点：超宽画布、多面板叙事、独立 legend/summary 面板、短标签、克制配色和留白控制。
 
@@ -132,6 +134,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 | SNR 鲁棒性曲线 | 方法在低信噪比工况下仍保持更低 BER | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
 | Accuracy-latency Pareto 图 | 方法在精度和推理延迟之间取得更好的工程权衡 | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
 | 消融实验表 | 各模块对 Accuracy/F1 有贡献，同时保留部署代价指标 | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
+| Hybrid 组合图工作流 | 定量底图可复现，矢量排版可编辑，手工修改可追溯 | [hybrid-workflow.md](examples/figure-table/hybrid-workflow.md) |
 
 ```bash
 python examples/figure-table/generate_examples.py

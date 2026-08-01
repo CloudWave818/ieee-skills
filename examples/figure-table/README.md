@@ -12,6 +12,8 @@ skills/ieee-figure-table/scripts/ieee_plot_style.py
 
 Use that helper for real manuscript figures when matplotlib is available. It standardizes IEEE one-column/two-column sizes, semantic colors, print-safe line and marker redundancy, panel labels, grouped bars, trend plots, Pareto plots, and SVG/PDF/PNG/TIFF export.
 
+For figures that are not made end-to-end in Python, use the hybrid workflow in `skills/ieee-figure-table/references/ieee-hybrid-figure-workflow.md`: generate reproducible base panels from code, finish vector layout and annotations in a design/editor tool, and keep an edit log so quantitative evidence remains traceable.
+
 ## Examples
 
 | Example | Claim | Output |
@@ -19,6 +21,7 @@ Use that helper for real manuscript figures when matplotlib is available. It sta
 | Robustness SNR curve | The proposed method remains reliable under low-SNR operating conditions. | `figures/robustness-snr-curve.svg` |
 | Accuracy-latency Pareto | The proposed method provides a better accuracy-cost tradeoff for deployment. | `figures/accuracy-latency-pareto.svg` |
 | Ablation result table | Each module contributes to accuracy/F1 while preserving deployability. | `figures/ablation-result-table.svg` |
+| Hybrid composite workflow | Data panels remain reproducible while vector finishing stays editable and traceable. | `hybrid-workflow.md` |
 
 ## Generate
 

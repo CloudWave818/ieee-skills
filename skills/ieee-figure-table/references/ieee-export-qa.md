@@ -16,6 +16,15 @@ caption draft:
 QA notes:
 ```
 
+For hybrid figures that are partially finished outside Python/R, also require:
+
+```text
+base exports: editable SVG/PDF generated from code
+layout source: editable SVG/AI/PPTX/Figma/draw.io/Inkscape source
+edit log: manual changes after code export
+final export: PDF/SVG plus PNG/TIFF preview
+```
+
 ## Column-Size QA
 
 Check the figure at intended placement:
@@ -60,3 +69,5 @@ code/script:
 ```
 
 If any item is missing, expose it as a missing-information placeholder rather than inventing it.
+
+For hybrid figures, also record which elements were manually edited and confirm that plotted values, axis limits, tick locations, uncertainty bands, and baseline labels were not manually altered.

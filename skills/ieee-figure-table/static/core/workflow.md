@@ -1,7 +1,7 @@
 # Workflow
 
 1. Identify the figure/table type and manuscript role.
-2. Decide whether this is audit-only or plotting/redraw. For plotting/redraw, resolve Python/R before writing code.
+2. Decide whether this is audit-only, pure plotting/redraw, or hybrid figure finishing. For pure plotting/redraw, resolve Python/R before writing code. For hybrid figures, separate code-generated data panels from vector/layout finishing.
 3. Establish the IEEE figure contract: core claim, condition, metric, baseline, final size, evidence map, and export bundle.
 4. Map each item or panel to a claim or experiment.
 5. Check first-impression risks.

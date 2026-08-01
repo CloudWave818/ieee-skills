@@ -1,5 +1,5 @@
 name: ieee-figure-table
-version: 0.4.1
+version: 0.4.2
 description: >
   Declarative router for IEEE figure, table, caption, plotting, redraw, export,
   visual polish, house-style plotting, and result-presentation workflows.
@@ -74,15 +74,18 @@ axes:
     detect: |
       Detect the plotting backend only when the user asks to create, redraw,
       revise plotting code, export a rendered figure, or provide a reproducible
-      plotting workflow. Use no-plot for audit-only, caption-only, table-only,
-      or LaTeX-placement tasks. For plotting tasks, honor explicit Python/R
-      requests first, then clearly language-specific files, then the saved
-      preference returned by scripts/ieee_figure_backend.py get. If no saved
-      preference exists, ask once and stop. Save the answer with the script
-      before proceeding.
+      plotting workflow. Use hybrid when data/code-generated layers are
+      combined with Illustrator, Inkscape, PowerPoint, Figma, draw.io, or
+      another vector/layout editor. Use no-plot for audit-only, caption-only,
+      table-only, or LaTeX-placement tasks. For pure plotting tasks, honor
+      explicit Python/R requests first, then clearly language-specific files,
+      then the saved preference returned by scripts/ieee_figure_backend.py get.
+      If no saved preference exists, ask once and stop. Save the answer with the
+      script before proceeding.
     values:
       python: static/fragments/backend/python.md
       r: static/fragments/backend/r.md
+      hybrid: static/fragments/backend/hybrid.md
       no-plot: static/fragments/backend/no-plot.md
     default: no-plot
     multi: false
@@ -101,6 +104,8 @@ references:
       path: references/ieee-chart-patterns.md
     - condition: improving visual beauty, publication polish, house style, typography, color, legend, panel composition, or figures4papers-like matplotlib aesthetics
       path: references/ieee-visual-style.md
+    - condition: figure is not made end-to-end in Python/R, requires Illustrator, Inkscape, PowerPoint, Figma, draw.io, manual vector finishing, schematic layout, mechanism diagrams, or composite figure assembly
+      path: references/ieee-hybrid-figure-workflow.md
     - condition: generating reusable Python matplotlib plotting code, helper functions, style presets, or export scripts
       path: references/ieee-plotting-api.md
     - condition: final export, source-data, grayscale, column-size, editable text, or reproducibility QA

@@ -80,6 +80,8 @@ Useful high-quality scientific plotting examples often look attractive because t
 - Make the proposed method visually identifiable, but keep baselines legible enough for a fair comparison.
 - Render a PNG preview before delivery and inspect it at the intended manuscript size.
 
+When a figure requires manual vector finishing, use the hybrid workflow instead of pretending that every element must be regenerated end-to-end from Python/R. Keep quantitative panels reproducible, and keep manual edits traceable.
+
 ## Table Visual Style
 
 - Use units in column headers.
