@@ -516,144 +516,255 @@ def ablation_result_table() -> None:
 
 
 def drl_framework_diagram() -> None:
-    width, height = 1280, 720
+    width, height = 1500, 900
     body: list[str] = [
         f'  <defs>'
-        f'<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{BLUE}"/></marker>'
-        f'<marker id="arrow-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{TEAL}"/></marker>'
-        f'<marker id="arrow-gold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{GOLD}"/></marker>'
-        f'<marker id="arrow-gray" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{GRAY}"/></marker>'
+        f'<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{BLUE}"/></marker>'
+        f'<marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{TEAL}"/></marker>'
+        f'<marker id="arrow-gold" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{GOLD}"/></marker>'
+        f'<marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{RED}"/></marker>'
+        f'<marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{DARK}"/></marker>'
         f'</defs>',
-        rect(52, 96, 1176, 574, PANEL, "none", 18),
+        text(24, 58, "a", fill="#000000", weight="700", size=34),
+        text(24, 585, "b", fill="#000000", weight="700", size=34),
+        text(486, 585, "c", fill="#000000", weight="700", size=34),
+        text(1080, 585, "d", fill="#000000", weight="700", size=34),
     ]
 
-    env_x, env_y, env_w, env_h = 72, 144, 248, 356
-    agent_x, agent_y, agent_w, agent_h = 370, 122, 532, 404
-    act_x, act_y, act_w, act_h = 960, 196, 232, 226
-    train_x, train_y, train_w, train_h = 304, 552, 672, 86
+    def block(x: float, y: float, w: float, h: float, label: str, fill: str, stroke: str, size: float = 18) -> str:
+        return "\n".join(
+            [
+                rect(x, y, w, h, fill, stroke, 16),
+                text(x + w / 2, y + h / 2 + 6, label, "method", "middle", DARK, "700", size),
+            ]
+        )
 
-    body.extend(round_card(env_x, env_y, env_w, env_h, "IEEE system / environment", "plant, channel, grid, robot", TEAL))
+    def small_arrow(x1: float, y1: float, x2: float, y2: float, color: str = GRAY, dash: str = "") -> str:
+        marker = "arrow-blue" if color == BLUE else "arrow-teal" if color == TEAL else "arrow-gold" if color == GOLD else "arrow-red" if color == RED else "arrow-gray"
+        return arrow(x1, y1, x2, y2, color, 2.2, dash, marker)
+
+    def graph_icon(cx: float, cy: float, scale: float, color: str) -> list[str]:
+        pts = [
+            (cx - 48 * scale, cy + 8 * scale),
+            (cx - 18 * scale, cy - 30 * scale),
+            (cx + 24 * scale, cy - 18 * scale),
+            (cx + 52 * scale, cy + 18 * scale),
+            (cx - 6 * scale, cy + 34 * scale),
+        ]
+        parts: list[str] = []
+        for i, j in [(0, 1), (1, 2), (2, 3), (1, 4), (4, 3), (0, 4)]:
+            parts.append(line(pts[i][0], pts[i][1], pts[j][0], pts[j][1], color, 3.0))
+        for x, y in pts:
+            parts.append(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="{8*scale:.1f}" fill="#D8EBCB" stroke="{color}" stroke-width="2.2"/>')
+        return parts
+
+    def stack_bar(x: float, y: float, h: float) -> list[str]:
+        return [
+            rect(x, y, 18, h * 0.42, "#DCECD1", DARK, 0),
+            rect(x, y + h * 0.42, 18, h * 0.30, "#CDE5F7", DARK, 0),
+            rect(x, y + h * 0.72, 18, h * 0.28, "#FFF0BF", DARK, 0),
+        ]
+
+    def mlp(x: float, y: float, color: str, scale: float = 1.0) -> list[str]:
+        layers = [
+            neural_layer(x, y + 18 * scale, 3, 32 * scale, color),
+            neural_layer(x + 56 * scale, y, 4, 32 * scale, color),
+            neural_layer(x + 112 * scale, y + 18 * scale, 3, 32 * scale, color),
+        ]
+        return draw_network(layers)
+
+    # Panel a: full multimodal DRL framework.
+    y_top = 82
     body.extend(
         [
-            rect(env_x + 24, env_y + 86, env_w - 48, 54, "#ECF8F6", TEAL, 10, 0.92),
-            text(env_x + 42, env_y + 108, "state s_t", "method", fill=TEAL),
-            text(env_x + 42, env_y + 128, "sensors, load, channel, queue", "small"),
-            rect(env_x + 24, env_y + 158, env_w - 48, 54, "#FFF8E8", GOLD, 10, 0.92),
-            text(env_x + 42, env_y + 180, "reward / cost r_t", "method", fill=GOLD),
-            text(env_x + 42, env_y + 200, "tracking, energy, delay, safety", "small"),
-            rect(env_x + 24, env_y + 230, env_w - 48, 82, WHITE, LINE, 10),
-            text(env_x + 42, env_y + 252, "constraints", "method", fill=RED),
-            text(env_x + 42, env_y + 274, "power budget", "small"),
-            text(env_x + 42, env_y + 294, "stability bound", "small"),
-            text(env_x + 42, env_y + 314, "QoS or safety limit", "small"),
-            text(env_x + 24, env_y + 340, "object and operating condition stay explicit", "tiny", fill=GRAY),
+            block(248, y_top + 30, 132, 58, "State trace", "#DCECD1", DARK),
+            block(248, y_top + 162, 132, 58, "Topology", "#CDE5F7", DARK),
+            block(248, y_top + 294, 132, 64, "Constraints", "#FFF0BF", DARK),
         ]
     )
-
-    body.extend(round_card(agent_x, agent_y, agent_w, agent_h, "DRL agent", "actor-critic policy learning with deployable action output", BLUE))
     body.extend(
         [
-            rect(agent_x + 24, agent_y + 80, 132, 132, WHITE, LINE, 12),
-            text(agent_x + 42, agent_y + 108, "State encoder", "method", fill=BLUE),
-            text(agent_x + 42, agent_y + 130, "normalize", "small"),
-            text(agent_x + 42, agent_y + 150, "history window", "small"),
-            text(agent_x + 42, agent_y + 170, "feature fusion", "small"),
-            line(agent_x + 42, agent_y + 190, agent_x + 134, agent_y + 190, BLUE, 2.2),
-            text(agent_x + 42, agent_y + 205, "z_t", "tiny", fill=BLUE),
-            rect(agent_x + 194, agent_y + 72, 146, 160, WHITE, LINE, 12),
-            text(agent_x + 214, agent_y + 100, "Actor network", "method", fill=BLUE),
-            text(agent_x + 214, agent_y + 122, "policy pi_theta", "small"),
-            rect(agent_x + 194, agent_y + 260, 146, 142, WHITE, LINE, 12),
-            text(agent_x + 214, agent_y + 288, "Critic network", "method", fill=TEAL),
-            text(agent_x + 214, agent_y + 310, "Q_phi(s, a)", "small"),
-            rect(agent_x + 374, agent_y + 86, 124, 74, "#ECF8F6", TEAL, 10, 0.92),
-            text(agent_x + 392, agent_y + 114, "Policy head", "method", fill=TEAL),
-            text(agent_x + 392, agent_y + 136, "continuous / discrete", "small"),
-            rect(agent_x + 374, agent_y + 226, 124, 86, "#FFF8E8", GOLD, 10, 0.92),
-            text(agent_x + 392, agent_y + 254, "Loss update", "method", fill=GOLD),
-            text(agent_x + 392, agent_y + 276, "actor loss", "small"),
-            text(agent_x + 392, agent_y + 296, "critic loss", "small"),
-            rect(agent_x + 374, agent_y + 338, 124, 62, WHITE, LINE, 10),
-            text(agent_x + 392, agent_y + 364, "Target nets", "method", fill=GRAY),
-            text(agent_x + 392, agent_y + 385, "soft update", "small"),
+            rect(60, y_top + 110, 126, 126, WHITE, LINE, 14),
+            text(82, y_top + 137, "IEEE system", "method", fill=TEAL),
+            text(82, y_top + 160, "channel / grid", "small"),
+            text(82, y_top + 181, "robot / edge", "small"),
+            text(82, y_top + 206, "s_t, r_t, limits", "small"),
+            small_arrow(186, y_top + 146, 240, y_top + 70, TEAL),
+            small_arrow(186, y_top + 174, 240, y_top + 191, BLUE),
+            small_arrow(186, y_top + 204, 240, y_top + 326, GOLD),
+            rect(420, y_top + 42, 128, 34, "#DCECD1", LINE, 0),
+            text(484, y_top + 65, "x1 x2 ... xt", "method", "middle", DARK, "700", 14),
+            rect(420, y_top + 292, 140, 96, "#FFF4CD", LINE, 0),
+            text(434, y_top + 318, "power budget", "small"),
+            text(434, y_top + 340, "delay limit", "small"),
+            text(434, y_top + 362, "safety bound", "small"),
+            text(434, y_top + 384, "QoS threshold", "small"),
         ]
     )
-
-    actor_layers = [
-        neural_layer(agent_x + 220, agent_y + 144, 3, 24, BLUE),
-        neural_layer(agent_x + 266, agent_y + 132, 4, 24, BLUE_2),
-        neural_layer(agent_x + 312, agent_y + 156, 2, 24, BLUE),
-    ]
-    critic_layers = [
-        neural_layer(agent_x + 220, agent_y + 330, 3, 24, TEAL),
-        neural_layer(agent_x + 266, agent_y + 318, 4, 24, TEAL_2),
-        neural_layer(agent_x + 312, agent_y + 342, 2, 24, TEAL),
-    ]
-    body.extend(draw_network(actor_layers))
-    body.extend(draw_network(critic_layers))
-
-    body.extend(round_card(act_x, act_y, act_w, act_h, "Deployment action", "closed-loop decision", GOLD))
-    body.extend(
-        [
-            rect(act_x + 24, act_y + 86, act_w - 48, 48, WHITE, LINE, 10),
-            text(act_x + 42, act_y + 116, "resource allocation", "small"),
-            rect(act_x + 24, act_y + 148, act_w - 48, 48, WHITE, LINE, 10),
-            text(act_x + 42, act_y + 178, "control command", "small"),
-            rect(act_x + 24, act_y + 210, act_w - 48, 48, WHITE, LINE, 10),
-            text(act_x + 42, act_y + 240, "safe setpoint", "small"),
-        ]
-    )
+    body.extend(graph_icon(488, y_top + 196, 1.15, BLUE))
 
     body.extend(
         [
-            rect(train_x, train_y, train_w, train_h, WHITE, LINE, 14),
-            text(train_x + 24, train_y + 31, "Training memory and update loop", "paneltitle"),
-            text(train_x + 24, train_y + 57, "transition tuple: (s_t, a_t, r_t, s_{t+1})", "small"),
-            rect(train_x + 314, train_y + 18, 132, 50, BLUE_LIGHT, BLUE, 10, 0.95),
-            text(train_x + 336, train_y + 49, "Replay buffer", "method", fill=BLUE),
-            rect(train_x + 486, train_y + 18, 150, 50, "#FFF8E8", GOLD, 10, 0.95),
-            text(train_x + 508, train_y + 41, "Mini-batch", "method", fill=GOLD),
-            text(train_x + 508, train_y + 60, "actor + critic update", "tiny", fill=GRAY),
+            small_arrow(380, y_top + 59, 414, y_top + 59, TEAL),
+            small_arrow(380, y_top + 191, 414, y_top + 191, BLUE),
+            small_arrow(380, y_top + 326, 414, y_top + 326, GOLD),
+            small_arrow(548, y_top + 59, 606, y_top + 69, TEAL),
+            small_arrow(548, y_top + 196, 606, y_top + 196, BLUE),
+            small_arrow(560, y_top + 340, 606, y_top + 326, GOLD),
         ]
     )
 
+    # Encoders and reconstruction path.
     body.extend(
         [
-            arrow(env_x + env_w, env_y + 128, agent_x + 24, agent_y + 146, TEAL, 2.4, "", "arrow-teal"),
-            text(338, 244, "state s_t", "tiny", fill=TEAL),
-            arrow(agent_x + 156, agent_y + 146, agent_x + 194, agent_y + 146, BLUE, 2.2, "", "arrow-blue"),
-            arrow(agent_x + 340, agent_y + 146, agent_x + 374, agent_y + 122, BLUE, 2.2, "", "arrow-blue"),
-            arrow(agent_x + 498, agent_y + 122, act_x, act_y + 110, BLUE, 2.6, "", "arrow-blue"),
-            text(918, 248, "action a_t", "tiny", fill=BLUE),
-            f'  <path d="M{act_x+act_w:.1f},{act_y+112:.1f} L1212.0,{act_y+112:.1f} L1212.0,654.0 L330.0,654.0 L330.0,{env_y+356:.1f} L{env_x+env_w:.1f},{env_y+356:.1f}" fill="none" stroke="{GOLD}" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.62" marker-end="url(#arrow-gold)"/>',
-            text(700, 674, "execution feedback returns to environment", "tiny", fill=GOLD),
-            arrow(train_x + 252, train_y + 43, train_x + 314, train_y + 43, GRAY, 2.0, "5,5", "arrow-gray"),
-            arrow(train_x + 446, train_y + 43, train_x + 486, train_y + 43, BLUE, 2.0, "", "arrow-blue"),
-            arrow(train_x + 636, train_y + 43, agent_x + 436, agent_y + 312, GOLD, 2.2, "6,5", "arrow-gold"),
-            arrow(agent_x + 374, agent_y + 268, agent_x + 340, agent_y + 330, GOLD, 2.0, "5,5", "arrow-gold"),
+            text(694, y_top + 12, "Temporal autoencoder", "paneltitle", "middle", TEAL),
+            f'  <path d="M626,{y_top+8} L706,{y_top+40} L706,{y_top+98} L626,{y_top+130} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
+            text(666, y_top + 75, "F_time", "method", "middle", DARK, "700", 22),
+            rect(746, y_top + 33, 18, 94, "#DCECD1", DARK),
+            f'  <path d="M804,{y_top+40} L884,{y_top+8} L884,{y_top+130} L804,{y_top+98} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
+            text(844, y_top + 75, "G_time", "method", "middle", DARK, "700", 22),
+            rect(934, y_top + 40, 18, 118, "#DCECD1", DARK),
+            f'  <path d="M706,{y_top+70} L746,{y_top+70}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M764,{y_top+70} L804,{y_top+70}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M884,{y_top+70} L934,{y_top+98}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M610,{y_top-28} L610,{y_top-54} L930,{y_top-54} L930,{y_top+12}" fill="none" stroke="{RED}" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>',
+            text(768, y_top - 60, "reconstruction", "small", "middle", RED, "700", 14),
+            rect(620, y_top + 164, 266, 72, "#CDE5F7", BLUE, 10),
+            text(753, y_top + 208, "Graph encoder  F_graph", "method", "middle", DARK, "700", 20),
+            text(753, y_top + 152, "graph neural network", "method", "middle", BLUE, "700", 16),
+            text(733, y_top + 296, "Constraint MLP", "paneltitle", "middle", GOLD),
         ]
     )
-
+    body.extend(mlp(622, y_top + 308, GOLD, 0.82))
     body.extend(
         [
-            rect(72, 604, 190, 44, WHITE, LINE, 10),
-            text(90, 623, "IEEE caption cue", "method", fill=BLUE),
-            text(90, 641, "define state, action, reward", "small"),
-            rect(1004, 476, 188, 78, WHITE, LINE, 10),
-            text(1024, 499, "Reviewer risk", "method", fill=RED),
-            text(1024, 520, "missing constraints", "small"),
-            text(1024, 540, "no deployment metric", "small"),
+            small_arrow(886, y_top + 200, 928, y_top + 200, BLUE),
+            small_arrow(800, y_top + 348, 928, y_top + 326, GOLD),
+        ]
+    )
+    for item in stack_bar(934, y_top + 168, 198):
+        body.append(item)
+    body.extend(
+        [
+            small_arrow(952, y_top + 266, 1006, y_top + 266, DARK),
+            rect(1008, y_top + 160, 134, 132, "#E8D8EA", "#4A235A", 16),
+            text(1075, y_top + 205, "Multimodal", "method", "middle", DARK, "700", 18),
+            text(1075, y_top + 235, "multi-head", "method", "middle", DARK, "700", 18),
+            text(1075, y_top + 265, "attention", "method", "middle", DARK, "700", 18),
+            small_arrow(1142, y_top + 226, 1196, y_top + 226, "#4A235A"),
+        ]
+    )
+    body.extend(mlp(1216, y_top + 172, "#4A235A", 0.78))
+    body.extend(
+        [
+            text(1372, y_top + 206, "Actor", "method", fill="#4A235A", weight="700", size=18),
+            text(1372, y_top + 232, "Critic", "method", fill="#4A235A", weight="700", size=18),
+            text(1372, y_top + 268, "action a_t", "method", fill=BLUE, weight="700", size=16),
+            text(1372, y_top + 292, "Q(s,a)", "method", fill=TEAL, weight="700", size=16),
         ]
     )
 
-    svg = svg_wrap(
-        width,
-        height,
-        "Deep reinforcement learning control framework",
-        "Synthetic IEEE-style architecture demo. The closed-loop state-action-reward path is explicit.",
-        [("architecture", BLUE), ("RL", TEAL), ("hybrid-ready", GOLD)],
-        "\n".join(body),
+    # Panel b: graph construction.
+    body.extend(
+        [
+            rect(56, 624, 292, 198, "#F5FAF2", DARK, 14),
+            text(100, 650, "Graph construction", "method", fill=DARK, weight="700", size=20),
+            rect(76, 678, 86, 30, "#DCECD1", DARK, 8),
+            text(119, 699, "State trace", "small", "middle", DARK, "700", 13),
+            small_arrow(164, 693, 224, 693, TEAL),
+            text(232, 699, "node features", "small", fill=TEAL, weight="700"),
+            rect(76, 726, 86, 30, "#CDE5F7", DARK, 8),
+            text(119, 747, "Topology", "small", "middle", DARK, "700", 13),
+        ]
     )
+    body.extend(graph_icon(182, 780, 0.88, BLUE))
+    body.extend(
+        [
+            text(242, 750, "edges", "small", fill=BLUE, weight="700"),
+            text(242, 773, "physical link", "small"),
+            text(242, 794, "interference", "small"),
+            text(242, 815, "adjacency", "small"),
+            rect(370, 696, 86, 42, WHITE, LINE, 8),
+            text(413, 721, "G_t", "method", "middle", BLUE, "700", 18),
+            small_arrow(348, 733, 368, 718, BLUE),
+        ]
+    )
+
+    # Panel c: scenario/evidence interpretation.
+    body.extend(
+        [
+            text(550, 632, "Operating-condition evidence", "method", fill=DARK, weight="700", size=18),
+            rect(548, 662, 118, 118, WHITE, LINE),
+        ]
+    )
+    for i in range(72):
+        x = 562 + (i * 37 % 90)
+        y = 676 + (i * 53 % 88)
+        color = BLUE if i % 5 else RED
+        body.append(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="1.8" fill="{color}" opacity="0.65"/>')
+    body.extend(
+        [
+            text(574, 654, "policy risk", "small", fill=GRAY),
+            small_arrow(666, 698, 770, 646, BLUE, "5,5"),
+            small_arrow(666, 748, 770, 798, RED, "5,5"),
+            rect(786, 616, 132, 82, "#ECF8F6", TEAL, 12, 0.82),
+            text(852, 646, "low-cost", "method", "middle", TEAL, "700", 18),
+            text(852, 672, "stable action", "small", "middle"),
+            rect(786, 748, 132, 82, "#FDECEC", RED, 12, 0.82),
+            text(852, 778, "high-risk", "method", "middle", RED, "700", 18),
+            text(852, 804, "constraint violation", "small", "middle"),
+            rect(952, 678, 102, 70, "#FFF4CD", GOLD, 12),
+            text(1003, 708, "Reward", "method", "middle", GOLD, "700", 18),
+            text(1003, 732, "cost + safety", "small", "middle"),
+            small_arrow(918, 656, 950, 696, TEAL),
+            small_arrow(918, 790, 950, 724, RED),
+        ]
+    )
+
+    # Panel d: pretraining / transfer.
+    def mini_stack(x: float, y: float, label: str, output: str, dashed: bool) -> list[str]:
+        parts = [
+            text(x - 66, y + 56, label, "method", fill=DARK, weight="700", size=17),
+            rect(x, y, 88, 30, "#DCECD1", DARK, 9),
+            text(x + 44, y + 21, "State", "small", "middle", DARK, "700", 12),
+            rect(x, y + 42, 88, 30, "#CDE5F7", DARK, 9),
+            text(x + 44, y + 63, "Graph", "small", "middle", DARK, "700", 12),
+            rect(x, y + 84, 88, 30, "#FFF0BF", DARK, 9),
+            text(x + 44, y + 105, "Limits", "small", "middle", DARK, "700", 12),
+            small_arrow(x + 88, y + 57, x + 128, y + 57, BLUE),
+        ]
+        for item in stack_bar(x + 132, y + 12, 90):
+            parts.append(item)
+        parts.append(rect(x + 170, y + 2, 44, 112, "#E8D8EA", "#4A235A", 8))
+        parts.extend(mlp(x + 240, y + 18, "#4A235A", 0.45))
+        if dashed:
+            parts.append(f'  <rect x="{x+154:.1f}" y="{y-10:.1f}" width="186" height="136" fill="none" stroke="{DARK}" stroke-width="1.6" stroke-dasharray="6,5"/>')
+        parts.append(text(x + 306, y + 67, output, "method", fill="#4A235A", weight="700", size=14))
+        return parts
+
+    body.extend(mini_stack(1088, 612, "Pre-train", "generic score", True))
+    body.extend(
+        [
+            rect(1220, 740, 64, 26, "#EEEEEE", DARK, 0),
+            text(1252, 759, "fine-tune", "tiny", "middle", DARK, "700", 11),
+            rect(1294, 740, 72, 26, "#EEEEEE", DARK, 0),
+            text(1330, 759, "re-init", "tiny", "middle", DARK, "700", 11),
+        ]
+    )
+    body.extend(mini_stack(1088, 768, "Transfer", "task action", False))
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Multimodal DRL framework diagram">
+  <rect width="{width}" height="{height}" fill="{WHITE}"/>
+  <style>
+    text {{ font-family: Arial, Helvetica, sans-serif; fill: {DARK}; }}
+    .small {{ font-size: 12px; fill: {GRAY}; }}
+    .tiny {{ font-size: 10.5px; fill: {GRAY}; }}
+    .method {{ font-size: 13px; font-weight: 700; }}
+    .paneltitle {{ font-size: 15px; font-weight: 700; }}
+  </style>
+{chr(10).join(body)}
+</svg>
+"""
     (FIGURES / "drl-framework-diagram.svg").write_text(svg, encoding="utf-8")
 
 
@@ -680,9 +791,9 @@ QA: The table uses consistent precision, highlights only the full-model/best met
 
 ## DRL Framework Diagram
 
-Caption draft: Deep reinforcement learning control framework for an IEEE-style engineering system. The environment exposes state, reward/cost, and constraints; the DRL agent encodes state, uses actor-critic networks to generate actions, and updates from replayed transition tuples before deployment in a closed loop.
+Caption draft: Multimodal deep reinforcement learning framework for an IEEE-style engineering system. Panel (a) shows state traces, topology graphs, and engineering constraints encoded by temporal, graph, and constraint branches before multimodal attention and actor-critic output. Panel (b) details graph construction. Panel (c) links operating conditions to low-cost and high-risk decisions. Panel (d) shows pretraining and transfer learning for downstream control tasks.
 
-QA: The diagram states the system boundary, state-action-reward path, training loop, deployment action, and reviewer-risk placeholders. It is suitable for hybrid vector finishing because quantitative panels or real testbed photos can be added without changing the core evidence map.
+QA: The diagram states the system boundary, multimodal inputs, encoder roles, fusion path, decision head, graph construction, operating-condition evidence, and transfer-learning path. It is suitable for hybrid vector finishing because quantitative panels or real testbed photos can be added without changing the core evidence map.
 """
     (ROOT / "captions.md").write_text(text, encoding="utf-8")
 
