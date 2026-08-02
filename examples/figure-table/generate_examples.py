@@ -516,7 +516,7 @@ def ablation_result_table() -> None:
 
 
 def drl_framework_diagram() -> None:
-    width, height = 1500, 900
+    width, height = 1500, 760
     body: list[str] = [
         f'  <defs>'
         f'<marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{BLUE}"/></marker>'
@@ -525,10 +525,6 @@ def drl_framework_diagram() -> None:
         f'<marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{RED}"/></marker>'
         f'<marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="{DARK}"/></marker>'
         f'</defs>',
-        text(24, 58, "a", fill="#000000", weight="700", size=34),
-        text(24, 585, "b", fill="#000000", weight="700", size=34),
-        text(486, 585, "c", fill="#000000", weight="700", size=34),
-        text(1080, 585, "d", fill="#000000", weight="700", size=34),
     ]
 
     def block(x: float, y: float, w: float, h: float, label: str, fill: str, stroke: str, size: float = 18) -> str:
@@ -573,164 +569,159 @@ def drl_framework_diagram() -> None:
         ]
         return draw_network(layers)
 
-    # Panel a: full multimodal DRL framework.
-    y_top = 82
+    y_top = 58
     body.extend(
         [
-            block(248, y_top + 30, 132, 58, "State trace", "#DCECD1", DARK),
-            block(248, y_top + 162, 132, 58, "Topology", "#CDE5F7", DARK),
-            block(248, y_top + 294, 132, 64, "Constraints", "#FFF0BF", DARK),
+            rect(28, 24, 1444, 682, WHITE, "none"),
+            text(58, 48, "Multimodal DRL framework for IEEE engineering systems", "method", fill=DARK, weight="700", size=22),
+            text(58, 72, "state sequence, topology graph, and engineering constraints remain visible from input to actor-critic decision", "small"),
+            block(248, y_top + 48, 132, 58, "State trace", "#DCECD1", DARK),
+            block(248, y_top + 184, 132, 58, "Topology", "#CDE5F7", DARK),
+            block(248, y_top + 320, 132, 64, "Constraints", "#FFF0BF", DARK),
         ]
     )
     body.extend(
         [
-            rect(60, y_top + 110, 126, 126, WHITE, LINE, 14),
-            text(82, y_top + 137, "IEEE system", "method", fill=TEAL),
-            text(82, y_top + 160, "channel / grid", "small"),
-            text(82, y_top + 181, "robot / edge", "small"),
-            text(82, y_top + 206, "s_t, r_t, limits", "small"),
-            small_arrow(186, y_top + 146, 240, y_top + 70, TEAL),
-            small_arrow(186, y_top + 174, 240, y_top + 191, BLUE),
-            small_arrow(186, y_top + 204, 240, y_top + 326, GOLD),
-            rect(420, y_top + 42, 128, 34, "#DCECD1", LINE, 0),
-            text(484, y_top + 65, "x1 x2 ... xt", "method", "middle", DARK, "700", 14),
-            rect(420, y_top + 292, 140, 96, "#FFF4CD", LINE, 0),
-            text(434, y_top + 318, "power budget", "small"),
-            text(434, y_top + 340, "delay limit", "small"),
-            text(434, y_top + 362, "safety bound", "small"),
-            text(434, y_top + 384, "QoS threshold", "small"),
+            rect(62, y_top + 138, 128, 132, WHITE, LINE, 16),
+            text(84, y_top + 166, "IEEE system", "method", fill=TEAL),
+            text(84, y_top + 190, "channel / grid", "small"),
+            text(84, y_top + 212, "robot / edge", "small"),
+            text(84, y_top + 238, "s_t, r_t, limits", "small"),
+            small_arrow(190, y_top + 170, 240, y_top + 88, TEAL),
+            small_arrow(190, y_top + 204, 240, y_top + 214, BLUE),
+            small_arrow(190, y_top + 238, 240, y_top + 352, GOLD),
+            rect(420, y_top + 60, 128, 34, "#DCECD1", LINE, 0),
+            text(484, y_top + 83, "x1 x2 ... xt", "method", "middle", DARK, "700", 14),
+            rect(420, y_top + 320, 142, 92, "#FFF4CD", LINE, 0),
+            text(434, y_top + 344, "power budget", "small"),
+            text(434, y_top + 365, "delay limit", "small"),
+            text(434, y_top + 386, "safety bound", "small"),
+            text(434, y_top + 407, "QoS threshold", "small"),
         ]
     )
-    body.extend(graph_icon(488, y_top + 196, 1.15, BLUE))
+    body.extend(graph_icon(488, y_top + 222, 1.15, BLUE))
 
     body.extend(
         [
-            small_arrow(380, y_top + 59, 414, y_top + 59, TEAL),
-            small_arrow(380, y_top + 191, 414, y_top + 191, BLUE),
-            small_arrow(380, y_top + 326, 414, y_top + 326, GOLD),
-            small_arrow(548, y_top + 59, 606, y_top + 69, TEAL),
-            small_arrow(548, y_top + 196, 606, y_top + 196, BLUE),
-            small_arrow(560, y_top + 340, 606, y_top + 326, GOLD),
+            small_arrow(380, y_top + 77, 414, y_top + 77, TEAL),
+            small_arrow(380, y_top + 213, 414, y_top + 213, BLUE),
+            small_arrow(380, y_top + 352, 414, y_top + 352, GOLD),
+            small_arrow(548, y_top + 77, 606, y_top + 87, TEAL),
+            small_arrow(548, y_top + 222, 606, y_top + 222, BLUE),
+            small_arrow(562, y_top + 366, 606, y_top + 352, GOLD),
         ]
     )
 
-    # Encoders and reconstruction path.
     body.extend(
         [
-            text(694, y_top + 12, "Temporal autoencoder", "paneltitle", "middle", TEAL),
-            f'  <path d="M626,{y_top+8} L706,{y_top+40} L706,{y_top+98} L626,{y_top+130} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
-            text(666, y_top + 75, "F_time", "method", "middle", DARK, "700", 22),
-            rect(746, y_top + 33, 18, 94, "#DCECD1", DARK),
-            f'  <path d="M804,{y_top+40} L884,{y_top+8} L884,{y_top+130} L804,{y_top+98} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
-            text(844, y_top + 75, "G_time", "method", "middle", DARK, "700", 22),
-            rect(934, y_top + 40, 18, 118, "#DCECD1", DARK),
-            f'  <path d="M706,{y_top+70} L746,{y_top+70}" fill="none" stroke="{DARK}" stroke-width="2"/>',
-            f'  <path d="M764,{y_top+70} L804,{y_top+70}" fill="none" stroke="{DARK}" stroke-width="2"/>',
-            f'  <path d="M884,{y_top+70} L934,{y_top+98}" fill="none" stroke="{DARK}" stroke-width="2"/>',
-            f'  <path d="M610,{y_top-28} L610,{y_top-54} L930,{y_top-54} L930,{y_top+12}" fill="none" stroke="{RED}" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>',
-            text(768, y_top - 60, "reconstruction", "small", "middle", RED, "700", 14),
-            rect(620, y_top + 164, 266, 72, "#CDE5F7", BLUE, 10),
-            text(753, y_top + 208, "Graph encoder  F_graph", "method", "middle", DARK, "700", 20),
-            text(753, y_top + 152, "graph neural network", "method", "middle", BLUE, "700", 16),
-            text(733, y_top + 296, "Constraint MLP", "paneltitle", "middle", GOLD),
+            text(694, y_top + 30, "Temporal autoencoder", "paneltitle", "middle", TEAL),
+            f'  <path d="M626,{y_top+26} L706,{y_top+58} L706,{y_top+116} L626,{y_top+148} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
+            text(666, y_top + 93, "F_time", "method", "middle", DARK, "700", 22),
+            rect(746, y_top + 51, 18, 94, "#DCECD1", DARK),
+            f'  <path d="M804,{y_top+58} L884,{y_top+26} L884,{y_top+148} L804,{y_top+116} Z" fill="#DCECD1" stroke="{DARK}" stroke-width="2"/>',
+            text(844, y_top + 93, "G_time", "method", "middle", DARK, "700", 22),
+            rect(934, y_top + 58, 18, 118, "#DCECD1", DARK),
+            f'  <path d="M706,{y_top+88} L746,{y_top+88}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M764,{y_top+88} L804,{y_top+88}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M884,{y_top+88} L934,{y_top+116}" fill="none" stroke="{DARK}" stroke-width="2"/>',
+            f'  <path d="M610,{y_top-10} L610,{y_top-36} L930,{y_top-36} L930,{y_top+30}" fill="none" stroke="{RED}" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>',
+            text(768, y_top - 42, "reconstruction", "small", "middle", RED, "700", 14),
+            rect(620, y_top + 190, 266, 72, "#CDE5F7", BLUE, 10),
+            text(753, y_top + 234, "Graph encoder  F_graph", "method", "middle", DARK, "700", 20),
+            text(753, y_top + 178, "graph neural network", "method", "middle", BLUE, "700", 16),
+            text(733, y_top + 322, "Constraint MLP", "paneltitle", "middle", GOLD),
         ]
     )
-    body.extend(mlp(622, y_top + 308, GOLD, 0.82))
+    body.extend(mlp(622, y_top + 334, GOLD, 0.82))
     body.extend(
         [
-            small_arrow(886, y_top + 200, 928, y_top + 200, BLUE),
-            small_arrow(800, y_top + 348, 928, y_top + 326, GOLD),
+            small_arrow(886, y_top + 226, 928, y_top + 226, BLUE),
+            small_arrow(800, y_top + 374, 928, y_top + 352, GOLD),
         ]
     )
-    for item in stack_bar(934, y_top + 168, 198):
+    for item in stack_bar(934, y_top + 186, 198):
         body.append(item)
     body.extend(
         [
-            small_arrow(952, y_top + 266, 1006, y_top + 266, DARK),
-            rect(1008, y_top + 160, 134, 132, "#E8D8EA", "#4A235A", 16),
-            text(1075, y_top + 205, "Multimodal", "method", "middle", DARK, "700", 18),
-            text(1075, y_top + 235, "multi-head", "method", "middle", DARK, "700", 18),
-            text(1075, y_top + 265, "attention", "method", "middle", DARK, "700", 18),
-            small_arrow(1142, y_top + 226, 1196, y_top + 226, "#4A235A"),
+            small_arrow(952, y_top + 284, 1006, y_top + 284, DARK),
+            rect(1008, y_top + 178, 134, 132, "#E8D8EA", "#4A235A", 16),
+            text(1075, y_top + 223, "Multimodal", "method", "middle", DARK, "700", 18),
+            text(1075, y_top + 253, "multi-head", "method", "middle", DARK, "700", 18),
+            text(1075, y_top + 283, "attention", "method", "middle", DARK, "700", 18),
+            small_arrow(1142, y_top + 244, 1196, y_top + 244, "#4A235A"),
         ]
     )
-    body.extend(mlp(1216, y_top + 172, "#4A235A", 0.78))
+    body.extend(mlp(1216, y_top + 190, "#4A235A", 0.78))
     body.extend(
         [
-            text(1372, y_top + 206, "Actor", "method", fill="#4A235A", weight="700", size=18),
-            text(1372, y_top + 232, "Critic", "method", fill="#4A235A", weight="700", size=18),
-            text(1372, y_top + 268, "action a_t", "method", fill=BLUE, weight="700", size=16),
-            text(1372, y_top + 292, "Q(s,a)", "method", fill=TEAL, weight="700", size=16),
+            text(1372, y_top + 224, "Actor", "method", fill="#4A235A", weight="700", size=18),
+            text(1372, y_top + 250, "Critic", "method", fill="#4A235A", weight="700", size=18),
+            text(1372, y_top + 286, "action a_t", "method", fill=BLUE, weight="700", size=16),
+            text(1372, y_top + 310, "Q(s,a)", "method", fill=TEAL, weight="700", size=16),
+            f'  <path d="M1400,{y_top+316} C1460,{y_top+390} 1340,{y_top+492} 190,{y_top+492}" fill="none" stroke="{GOLD}" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.62" marker-end="url(#arrow-gold)"/>',
+            text(770, y_top + 512, "deployment feedback updates the next state and reward", "tiny", "middle", GOLD, "700", 11),
         ]
     )
 
-    # Panel b: graph construction.
+    # Embedded graph construction inset.
     body.extend(
         [
-            rect(56, 624, 292, 198, "#F5FAF2", DARK, 14),
-            text(100, 650, "Graph construction", "method", fill=DARK, weight="700", size=20),
-            rect(76, 678, 86, 30, "#DCECD1", DARK, 8),
-            text(119, 699, "State trace", "small", "middle", DARK, "700", 13),
-            small_arrow(164, 693, 224, 693, TEAL),
-            text(232, 699, "node features", "small", fill=TEAL, weight="700"),
-            rect(76, 726, 86, 30, "#CDE5F7", DARK, 8),
-            text(119, 747, "Topology", "small", "middle", DARK, "700", 13),
+            rect(58, 572, 316, 128, "#F5FAF2", DARK, 14),
+            text(88, 598, "Graph construction inset", "method", fill=DARK, weight="700", size=17),
+            rect(78, 620, 86, 28, "#DCECD1", DARK, 8),
+            text(121, 640, "State", "small", "middle", DARK, "700", 12),
+            small_arrow(164, 634, 224, 634, TEAL),
+            text(232, 640, "node features", "small", fill=TEAL, weight="700"),
+            rect(78, 662, 86, 28, "#CDE5F7", DARK, 8),
+            text(121, 682, "Topology", "small", "middle", DARK, "700", 12),
         ]
     )
-    body.extend(graph_icon(182, 780, 0.88, BLUE))
+    body.extend(graph_icon(190, 672, 0.72, BLUE))
     body.extend(
         [
-            text(242, 750, "edges", "small", fill=BLUE, weight="700"),
-            text(242, 773, "physical link", "small"),
-            text(242, 794, "interference", "small"),
-            text(242, 815, "adjacency", "small"),
-            rect(370, 696, 86, 42, WHITE, LINE, 8),
-            text(413, 721, "G_t", "method", "middle", BLUE, "700", 18),
-            small_arrow(348, 733, 368, 718, BLUE),
+            text(258, 668, "edges:", "small", fill=BLUE, weight="700"),
+            text(258, 688, "link / interference", "small"),
+            rect(302, 618, 52, 34, WHITE, LINE, 8),
+            text(328, 640, "G_t", "method", "middle", BLUE, "700", 15),
         ]
     )
 
-    # Panel c: scenario/evidence interpretation.
+    # Embedded operating-condition evidence inset.
     body.extend(
         [
-            text(550, 632, "Operating-condition evidence", "method", fill=DARK, weight="700", size=18),
-            rect(548, 662, 118, 118, WHITE, LINE),
+            rect(418, 572, 314, 128, WHITE, LINE, 14),
+            text(440, 598, "Operating-condition evidence", "method", fill=DARK, weight="700", size=16),
+            rect(440, 618, 88, 70, WHITE, LINE),
         ]
     )
-    for i in range(72):
-        x = 562 + (i * 37 % 90)
-        y = 676 + (i * 53 % 88)
+    for i in range(48):
+        x = 450 + (i * 37 % 68)
+        y = 630 + (i * 53 % 50)
         color = BLUE if i % 5 else RED
         body.append(f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="1.8" fill="{color}" opacity="0.65"/>')
     body.extend(
         [
-            text(574, 654, "policy risk", "small", fill=GRAY),
-            small_arrow(666, 698, 770, 646, BLUE, "5,5"),
-            small_arrow(666, 748, 770, 798, RED, "5,5"),
-            rect(786, 616, 132, 82, "#ECF8F6", TEAL, 12, 0.82),
-            text(852, 646, "low-cost", "method", "middle", TEAL, "700", 18),
-            text(852, 672, "stable action", "small", "middle"),
-            rect(786, 748, 132, 82, "#FDECEC", RED, 12, 0.82),
-            text(852, 778, "high-risk", "method", "middle", RED, "700", 18),
-            text(852, 804, "constraint violation", "small", "middle"),
-            rect(952, 678, 102, 70, "#FFF4CD", GOLD, 12),
-            text(1003, 708, "Reward", "method", "middle", GOLD, "700", 18),
-            text(1003, 732, "cost + safety", "small", "middle"),
-            small_arrow(918, 656, 950, 696, TEAL),
-            small_arrow(918, 790, 950, 724, RED),
+            small_arrow(530, 642, 580, 614, BLUE, "5,5"),
+            small_arrow(530, 666, 580, 686, RED, "5,5"),
+            rect(590, 608, 96, 38, "#ECF8F6", TEAL, 10, 0.82),
+            text(638, 632, "low-cost", "method", "middle", TEAL, "700", 14),
+            rect(590, 660, 96, 38, "#FDECEC", RED, 10, 0.82),
+            text(638, 684, "high-risk", "method", "middle", RED, "700", 14),
+            rect(700, 632, 82, 44, "#FFF4CD", GOLD, 10),
+            text(741, 658, "reward", "method", "middle", GOLD, "700", 14),
         ]
     )
 
-    # Panel d: pretraining / transfer.
+    # Embedded pretraining / transfer inset.
     def mini_stack(x: float, y: float, label: str, output: str, dashed: bool) -> list[str]:
         parts = [
-            text(x - 66, y + 56, label, "method", fill=DARK, weight="700", size=17),
+            text(x + 44, y - 10, label, "method", "middle", DARK, "700", 13),
             rect(x, y, 88, 30, "#DCECD1", DARK, 9),
-            text(x + 44, y + 21, "State", "small", "middle", DARK, "700", 12),
+            text(x + 44, y + 21, "State", "small", "middle", DARK, "700", 11),
             rect(x, y + 42, 88, 30, "#CDE5F7", DARK, 9),
-            text(x + 44, y + 63, "Graph", "small", "middle", DARK, "700", 12),
+            text(x + 44, y + 63, "Graph", "small", "middle", DARK, "700", 11),
             rect(x, y + 84, 88, 30, "#FFF0BF", DARK, 9),
-            text(x + 44, y + 105, "Limits", "small", "middle", DARK, "700", 12),
+            text(x + 44, y + 105, "Limits", "small", "middle", DARK, "700", 11),
             small_arrow(x + 88, y + 57, x + 128, y + 57, BLUE),
         ]
         for item in stack_bar(x + 132, y + 12, 90):
@@ -739,19 +730,26 @@ def drl_framework_diagram() -> None:
         parts.extend(mlp(x + 240, y + 18, "#4A235A", 0.45))
         if dashed:
             parts.append(f'  <rect x="{x+154:.1f}" y="{y-10:.1f}" width="186" height="136" fill="none" stroke="{DARK}" stroke-width="1.6" stroke-dasharray="6,5"/>')
-        parts.append(text(x + 306, y + 67, output, "method", fill="#4A235A", weight="700", size=14))
+        if output:
+            parts.append(text(x + 282, y + 118, output, "tiny", "middle", "#4A235A", "700", 10.5))
         return parts
 
-    body.extend(mini_stack(1088, 612, "Pre-train", "generic score", True))
     body.extend(
         [
-            rect(1220, 740, 64, 26, "#EEEEEE", DARK, 0),
-            text(1252, 759, "fine-tune", "tiny", "middle", DARK, "700", 11),
-            rect(1294, 740, 72, 26, "#EEEEEE", DARK, 0),
-            text(1330, 759, "re-init", "tiny", "middle", DARK, "700", 11),
+            rect(824, 572, 632, 178, WHITE, LINE, 14),
+            text(846, 598, "Pretraining to transfer learning", "method", fill=DARK, weight="700", size=16),
         ]
     )
-    body.extend(mini_stack(1088, 768, "Transfer", "task action", False))
+    body.extend(mini_stack(914, 620, "Pre-train", "", True))
+    body.extend(
+        [
+            rect(1060, 728, 64, 22, "#EEEEEE", DARK, 0),
+            text(1092, 744, "fine-tune", "tiny", "middle", DARK, "700", 10),
+            rect(1134, 728, 72, 22, "#EEEEEE", DARK, 0),
+            text(1170, 744, "re-init", "tiny", "middle", DARK, "700", 10),
+        ]
+    )
+    body.extend(mini_stack(1168, 620, "Transfer", "task action", False))
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Multimodal DRL framework diagram">
   <rect width="{width}" height="{height}" fill="{WHITE}"/>
@@ -791,7 +789,7 @@ QA: The table uses consistent precision, highlights only the full-model/best met
 
 ## DRL Framework Diagram
 
-Caption draft: Multimodal deep reinforcement learning framework for an IEEE-style engineering system. Panel (a) shows state traces, topology graphs, and engineering constraints encoded by temporal, graph, and constraint branches before multimodal attention and actor-critic output. Panel (b) details graph construction. Panel (c) links operating conditions to low-cost and high-risk decisions. Panel (d) shows pretraining and transfer learning for downstream control tasks.
+Caption draft: Multimodal deep reinforcement learning framework for an IEEE-style engineering system. The main path keeps state traces, topology graphs, and engineering constraints visible from input encoding through feature fusion, multimodal attention, and actor-critic output. Embedded insets document graph construction, operating-condition evidence, and the pretraining-to-transfer path used for downstream control tasks.
 
 QA: The diagram states the system boundary, multimodal inputs, encoder roles, fusion path, decision head, graph construction, operating-condition evidence, and transfer-learning path. It is suitable for hybrid vector finishing because quantitative panels or real testbed photos can be added without changing the core evidence map.
 """

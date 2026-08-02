@@ -17,7 +17,7 @@ This is a Codex skill collection for **IEEE-style conference, journal, Transacti
 
 ## Latest Update
 
-**2026-08-02: added a multimodal DRL / neural-network framework diagram demo.** `ieee-figure-table` now includes a four-panel composite framework figure closer to a real paper overview: the main panel shows state traces, topology graphs, and engineering constraints flowing into encoders, fusion, attention, and actor-critic outputs; the subpanels add graph construction, operating-condition evidence, and pretraining/transfer learning. The demo can be adapted for communications resource allocation, robotics, power systems, edge intelligence, and smart manufacturing papers.
+**2026-08-02: rebuilt the multimodal DRL / neural-network framework diagram demo.** `ieee-figure-table` now includes a single large framework overview closer to real IEEE architecture figures: the main path shows state traces, topology graphs, and engineering constraints flowing into encoders, fusion, attention, and actor-critic outputs; embedded insets add graph construction, operating-condition evidence, and pretraining/transfer learning details. The demo can be adapted for communications resource allocation, robotics, power systems, edge intelligence, and smart manufacturing papers.
 
 **2026-08-01: upgraded `ieee-figure-table` and rebuilt the demos.** The skill now includes an IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, a hybrid figure workflow, and redesigned examples for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. The refreshed demos emphasize multi-panel evidence organization, dedicated legend panels, text-safe layout, visible baselines, and readability after IEEE two-column scaling. For mechanisms, pipelines, architecture diagrams, and composite figures, it also supports Python/R base plots plus Illustrator/Inkscape/PowerPoint/Figma-style vector finishing with an edit log.
 
@@ -136,7 +136,7 @@ The examples now include four zero-dependency SVG demos. They show the intended 
 | Robustness SNR curve | The method keeps lower BER under low-SNR operating conditions. | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
 | Accuracy-latency Pareto | The method provides a better engineering tradeoff between accuracy and inference latency. | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
 | Ablation result table | Each module contributes to Accuracy/F1 while deployment-cost metrics remain visible. | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
-| Multimodal DRL / neural-network framework | State traces, topology graphs, and engineering constraints feed encoders, fusion, attention, and actor-critic outputs. | [drl-framework-diagram.svg](examples/figure-table/figures/drl-framework-diagram.svg) |
+| Multimodal DRL / neural-network framework | A single large overview shows state traces, topology graphs, and engineering constraints feeding encoders, fusion, attention, and actor-critic outputs. | [drl-framework-diagram.svg](examples/figure-table/figures/drl-framework-diagram.svg) |
 | Hybrid composite workflow | Quantitative base panels stay reproducible, vector layout stays editable, and manual edits stay traceable. | [hybrid-workflow.md](examples/figure-table/hybrid-workflow.md) |
 
 ```bash

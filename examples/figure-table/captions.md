@@ -20,6 +20,6 @@ QA: The table uses consistent precision, highlights only the full-model/best met
 
 ## DRL Framework Diagram
 
-Caption draft: Multimodal deep reinforcement learning framework for an IEEE-style engineering system. Panel (a) shows state traces, topology graphs, and engineering constraints encoded by temporal, graph, and constraint branches before multimodal attention and actor-critic output. Panel (b) details graph construction. Panel (c) links operating conditions to low-cost and high-risk decisions. Panel (d) shows pretraining and transfer learning for downstream control tasks.
+Caption draft: Multimodal deep reinforcement learning framework for an IEEE-style engineering system. The main path keeps state traces, topology graphs, and engineering constraints visible from input encoding through feature fusion, multimodal attention, and actor-critic output. Embedded insets document graph construction, operating-condition evidence, and the pretraining-to-transfer path used for downstream control tasks.
 
 QA: The diagram states the system boundary, multimodal inputs, encoder roles, fusion path, decision head, graph construction, operating-condition evidence, and transfer-learning path. It is suitable for hybrid vector finishing because quantitative panels or real testbed photos can be added without changing the core evidence map.

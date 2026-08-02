@@ -17,7 +17,7 @@
 
 ## 最近更新
 
-**2026-08-02：新增多模态 DRL / 神经网络框架图 demo。** `ieee-figure-table` 现在补充了一个更接近论文总图的四面板框架图示例：主面板展示时序状态、拓扑图、工程约束三路输入到 encoder、fusion、attention 和 actor-critic 输出；子面板补充图构建、工况证据和预训练/迁移学习。这个 demo 适合迁移到通信资源分配、机器人控制、电力系统、边缘智能和智能制造等 IEEE 论文场景。
+**2026-08-02：重做多模态 DRL / 神经网络框架图 demo。** `ieee-figure-table` 现在补充了一张更接近真实论文 overview 的单张大框架图：主路径展示时序状态、拓扑图、工程约束三路输入到 encoder、fusion、attention 和 actor-critic 输出；底部 inset 只补充图构建、工况证据和预训练/迁移学习细节。这个 demo 更适合迁移到通信资源分配、机器人控制、电力系统、边缘智能和智能制造等 IEEE 论文场景。
 
 **2026-08-01：`ieee-figure-table` 作图能力升级并重做 demo。** 新增 IEEE matplotlib house-style helper，补充视觉风格、绘图 API 和 hybrid figure workflow，并按更高质量的科研绘图样例重新设计三张图：SNR 鲁棒性曲线、accuracy-latency Pareto 图、消融实验表。新版 demo 强调多面板证据组织、独立图例面板、文字边界安全区、baseline 可见性和双栏缩放后的可读性；对于机制图、流程图、组合图，也支持“Python/R 生成底图 + Illustrator/Inkscape/PowerPoint/Figma 等工具矢量精修 + edit log”的工作流。
 
@@ -129,14 +129,14 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 有些好图不应该强行端到端 Python 化。对于机制示意图、实验流程图、系统架构图、多来源组合图，可以采用 hybrid workflow：代码生成可复现的定量底图，再用 Illustrator、Inkscape、PowerPoint、Figma 或 draw.io 做矢量排版和标注，同时保留 base exports、editable layout source、final exports 和 `figure_edit_log.md`，避免“图很好看但证据不可追溯”。
 
-目前包含四个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见 + 文字不越界** 的 IEEE 图表方向。新版示例借鉴高质量科研绘图仓库常见的版式优点：超宽画布、多面板叙事、独立 legend/summary 面板、短标签、克制配色和留白控制。
+目前包含四个零依赖 SVG demo。它们不是追求装饰，而是展示 **好看 + 工程证据清楚 + 双栏可读 + baseline 可见 + 文字不越界** 的 IEEE 图表方向。新版示例借鉴高质量科研绘图仓库常见的版式优点：超宽画布、清晰主路径、嵌入式 inset、独立 legend/summary 面板、短标签、克制配色和留白控制。
 
 | 示例 | 证明的 IEEE claim | 图 |
 |---|---|---|
 | SNR 鲁棒性曲线 | 方法在低信噪比工况下仍保持更低 BER | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
 | Accuracy-latency Pareto 图 | 方法在精度和推理延迟之间取得更好的工程权衡 | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
 | 消融实验表 | 各模块对 Accuracy/F1 有贡献，同时保留部署代价指标 | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
-| 多模态 DRL / 神经网络框架图 | 时序状态、拓扑图和工程约束如何进入 encoder、fusion、attention 和 actor-critic 输出 | [drl-framework-diagram.svg](examples/figure-table/figures/drl-framework-diagram.svg) |
+| 多模态 DRL / 神经网络框架图 | 单张大图展示时序状态、拓扑图和工程约束如何进入 encoder、fusion、attention 和 actor-critic 输出 | [drl-framework-diagram.svg](examples/figure-table/figures/drl-framework-diagram.svg) |
 | Hybrid 组合图工作流 | 定量底图可复现，矢量排版可编辑，手工修改可追溯 | [hybrid-workflow.md](examples/figure-table/hybrid-workflow.md) |
 
 ```bash
