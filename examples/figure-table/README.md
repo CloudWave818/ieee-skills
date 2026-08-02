@@ -2,7 +2,9 @@
 
 These examples show how `ieee-figure-table` turns IEEE-style review concerns into concrete visual evidence.
 
-Updated on 2026-08-01: the three SVG demos were rebuilt after a stricter quality pass. The new version uses wide two-column canvases, multi-panel evidence organization, dedicated legend/summary panels, short labels, text-safe margins, semantic colors, and visible deployment or baseline context.
+Updated on 2026-08-02: added a DRL / neural-network framework diagram for IEEE-style learning-based control, resource allocation, robotics, edge intelligence, and power-system papers.
+
+Updated on 2026-08-01: the original three SVG demos were rebuilt after a stricter quality pass. The new version uses wide two-column canvases, multi-panel evidence organization, dedicated legend/summary panels, short labels, text-safe margins, semantic colors, and visible deployment or baseline context.
 
 The skill now also includes a matplotlib house-style helper:
 
@@ -21,6 +23,7 @@ For figures that are not made end-to-end in Python, use the hybrid workflow in `
 | Robustness SNR curve | The proposed method remains reliable under low-SNR operating conditions. | `figures/robustness-snr-curve.svg` |
 | Accuracy-latency Pareto | The proposed method provides a better accuracy-cost tradeoff for deployment. | `figures/accuracy-latency-pareto.svg` |
 | Ablation result table | Each module contributes to accuracy/F1 while preserving deployability. | `figures/ablation-result-table.svg` |
+| DRL framework diagram | The state-action-reward loop and actor-critic training path remain visible. | `figures/drl-framework-diagram.svg` |
 | Hybrid composite workflow | Data panels remain reproducible while vector finishing stays editable and traceable. | `hybrid-workflow.md` |
 
 ## Generate

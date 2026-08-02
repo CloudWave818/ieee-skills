@@ -65,7 +65,7 @@ def text(
     if cls:
         attrs.append(f'class="{cls}"')
     if fill:
-        attrs.append(f'fill="{fill}"')
+        attrs.append(f'style="fill:{fill}"')
     if weight:
         attrs.append(f'font-weight="{weight}"')
     if size:
@@ -148,6 +148,42 @@ def legend_line(x: float, y: float, name: str, color: str, shape: str, dash: str
             text(x + 48, y + 4, name, "legend"),
         ]
     )
+
+
+def arrow(x1: float, y1: float, x2: float, y2: float, color: str, width: float = 2.0, dash: str = "", marker_id: str = "arrow-blue") -> str:
+    dash_attr = f' stroke-dasharray="{dash}"' if dash else ""
+    return f'  <path d="M{x1:.1f},{y1:.1f} L{x2:.1f},{y2:.1f}" fill="none" stroke="{color}" stroke-width="{width:.1f}"{dash_attr} marker-end="url(#{marker_id})"/>'
+
+
+def round_card(x: float, y: float, w: float, h: float, title: str, subtitle: str = "", color: str = BLUE, fill: str = WHITE) -> list[str]:
+    parts = [
+        rect(x, y, w, h, fill, LINE, 13),
+        rect(x, y, w, 36, color, "none", 13, 0.96),
+        text(x + 18, y + 24, title, "header", fill=WHITE, weight="700"),
+    ]
+    if subtitle:
+        parts.append(text(x + 18, y + 60, subtitle, "small"))
+    return parts
+
+
+def node(cx: float, cy: float, r: float, color: str, fill: str = WHITE) -> str:
+    return f'  <circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="{fill}" stroke="{color}" stroke-width="2.0"/>'
+
+
+def neural_layer(x: float, y: float, count: int, spacing: float, color: str, fill: str = WHITE) -> list[tuple[float, float, str]]:
+    return [(x, y + i * spacing, color) for i in range(count)]
+
+
+def draw_network(layers: list[list[tuple[float, float, str]]]) -> list[str]:
+    parts: list[str] = []
+    for left_layer, right_layer in zip(layers, layers[1:]):
+        for x1, y1, _ in left_layer:
+            for x2, y2, _ in right_layer:
+                parts.append(line(x1, y1, x2, y2, GRID, 0.8))
+    for layer in layers:
+        for x, y, color in layer:
+            parts.append(node(x, y, 7.0, color, WHITE))
+    return parts
 
 
 def robustness_snr_curve() -> None:
@@ -479,6 +515,148 @@ def ablation_result_table() -> None:
     (FIGURES / "ablation-result-table.svg").write_text(svg, encoding="utf-8")
 
 
+def drl_framework_diagram() -> None:
+    width, height = 1280, 720
+    body: list[str] = [
+        f'  <defs>'
+        f'<marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{BLUE}"/></marker>'
+        f'<marker id="arrow-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{TEAL}"/></marker>'
+        f'<marker id="arrow-gold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{GOLD}"/></marker>'
+        f'<marker id="arrow-gray" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="{GRAY}"/></marker>'
+        f'</defs>',
+        rect(52, 96, 1176, 574, PANEL, "none", 18),
+    ]
+
+    env_x, env_y, env_w, env_h = 72, 144, 248, 356
+    agent_x, agent_y, agent_w, agent_h = 370, 122, 532, 404
+    act_x, act_y, act_w, act_h = 960, 196, 232, 226
+    train_x, train_y, train_w, train_h = 304, 552, 672, 86
+
+    body.extend(round_card(env_x, env_y, env_w, env_h, "IEEE system / environment", "plant, channel, grid, robot", TEAL))
+    body.extend(
+        [
+            rect(env_x + 24, env_y + 86, env_w - 48, 54, "#ECF8F6", TEAL, 10, 0.92),
+            text(env_x + 42, env_y + 108, "state s_t", "method", fill=TEAL),
+            text(env_x + 42, env_y + 128, "sensors, load, channel, queue", "small"),
+            rect(env_x + 24, env_y + 158, env_w - 48, 54, "#FFF8E8", GOLD, 10, 0.92),
+            text(env_x + 42, env_y + 180, "reward / cost r_t", "method", fill=GOLD),
+            text(env_x + 42, env_y + 200, "tracking, energy, delay, safety", "small"),
+            rect(env_x + 24, env_y + 230, env_w - 48, 82, WHITE, LINE, 10),
+            text(env_x + 42, env_y + 252, "constraints", "method", fill=RED),
+            text(env_x + 42, env_y + 274, "power budget", "small"),
+            text(env_x + 42, env_y + 294, "stability bound", "small"),
+            text(env_x + 42, env_y + 314, "QoS or safety limit", "small"),
+            text(env_x + 24, env_y + 340, "object and operating condition stay explicit", "tiny", fill=GRAY),
+        ]
+    )
+
+    body.extend(round_card(agent_x, agent_y, agent_w, agent_h, "DRL agent", "actor-critic policy learning with deployable action output", BLUE))
+    body.extend(
+        [
+            rect(agent_x + 24, agent_y + 80, 132, 132, WHITE, LINE, 12),
+            text(agent_x + 42, agent_y + 108, "State encoder", "method", fill=BLUE),
+            text(agent_x + 42, agent_y + 130, "normalize", "small"),
+            text(agent_x + 42, agent_y + 150, "history window", "small"),
+            text(agent_x + 42, agent_y + 170, "feature fusion", "small"),
+            line(agent_x + 42, agent_y + 190, agent_x + 134, agent_y + 190, BLUE, 2.2),
+            text(agent_x + 42, agent_y + 205, "z_t", "tiny", fill=BLUE),
+            rect(agent_x + 194, agent_y + 72, 146, 160, WHITE, LINE, 12),
+            text(agent_x + 214, agent_y + 100, "Actor network", "method", fill=BLUE),
+            text(agent_x + 214, agent_y + 122, "policy pi_theta", "small"),
+            rect(agent_x + 194, agent_y + 260, 146, 142, WHITE, LINE, 12),
+            text(agent_x + 214, agent_y + 288, "Critic network", "method", fill=TEAL),
+            text(agent_x + 214, agent_y + 310, "Q_phi(s, a)", "small"),
+            rect(agent_x + 374, agent_y + 86, 124, 74, "#ECF8F6", TEAL, 10, 0.92),
+            text(agent_x + 392, agent_y + 114, "Policy head", "method", fill=TEAL),
+            text(agent_x + 392, agent_y + 136, "continuous / discrete", "small"),
+            rect(agent_x + 374, agent_y + 226, 124, 86, "#FFF8E8", GOLD, 10, 0.92),
+            text(agent_x + 392, agent_y + 254, "Loss update", "method", fill=GOLD),
+            text(agent_x + 392, agent_y + 276, "actor loss", "small"),
+            text(agent_x + 392, agent_y + 296, "critic loss", "small"),
+            rect(agent_x + 374, agent_y + 338, 124, 62, WHITE, LINE, 10),
+            text(agent_x + 392, agent_y + 364, "Target nets", "method", fill=GRAY),
+            text(agent_x + 392, agent_y + 385, "soft update", "small"),
+        ]
+    )
+
+    actor_layers = [
+        neural_layer(agent_x + 220, agent_y + 144, 3, 24, BLUE),
+        neural_layer(agent_x + 266, agent_y + 132, 4, 24, BLUE_2),
+        neural_layer(agent_x + 312, agent_y + 156, 2, 24, BLUE),
+    ]
+    critic_layers = [
+        neural_layer(agent_x + 220, agent_y + 330, 3, 24, TEAL),
+        neural_layer(agent_x + 266, agent_y + 318, 4, 24, TEAL_2),
+        neural_layer(agent_x + 312, agent_y + 342, 2, 24, TEAL),
+    ]
+    body.extend(draw_network(actor_layers))
+    body.extend(draw_network(critic_layers))
+
+    body.extend(round_card(act_x, act_y, act_w, act_h, "Deployment action", "closed-loop decision", GOLD))
+    body.extend(
+        [
+            rect(act_x + 24, act_y + 86, act_w - 48, 48, WHITE, LINE, 10),
+            text(act_x + 42, act_y + 116, "resource allocation", "small"),
+            rect(act_x + 24, act_y + 148, act_w - 48, 48, WHITE, LINE, 10),
+            text(act_x + 42, act_y + 178, "control command", "small"),
+            rect(act_x + 24, act_y + 210, act_w - 48, 48, WHITE, LINE, 10),
+            text(act_x + 42, act_y + 240, "safe setpoint", "small"),
+        ]
+    )
+
+    body.extend(
+        [
+            rect(train_x, train_y, train_w, train_h, WHITE, LINE, 14),
+            text(train_x + 24, train_y + 31, "Training memory and update loop", "paneltitle"),
+            text(train_x + 24, train_y + 57, "transition tuple: (s_t, a_t, r_t, s_{t+1})", "small"),
+            rect(train_x + 314, train_y + 18, 132, 50, BLUE_LIGHT, BLUE, 10, 0.95),
+            text(train_x + 336, train_y + 49, "Replay buffer", "method", fill=BLUE),
+            rect(train_x + 486, train_y + 18, 150, 50, "#FFF8E8", GOLD, 10, 0.95),
+            text(train_x + 508, train_y + 41, "Mini-batch", "method", fill=GOLD),
+            text(train_x + 508, train_y + 60, "actor + critic update", "tiny", fill=GRAY),
+        ]
+    )
+
+    body.extend(
+        [
+            arrow(env_x + env_w, env_y + 128, agent_x + 24, agent_y + 146, TEAL, 2.4, "", "arrow-teal"),
+            text(338, 244, "state s_t", "tiny", fill=TEAL),
+            arrow(agent_x + 156, agent_y + 146, agent_x + 194, agent_y + 146, BLUE, 2.2, "", "arrow-blue"),
+            arrow(agent_x + 340, agent_y + 146, agent_x + 374, agent_y + 122, BLUE, 2.2, "", "arrow-blue"),
+            arrow(agent_x + 498, agent_y + 122, act_x, act_y + 110, BLUE, 2.6, "", "arrow-blue"),
+            text(918, 248, "action a_t", "tiny", fill=BLUE),
+            f'  <path d="M{act_x+act_w:.1f},{act_y+112:.1f} L1212.0,{act_y+112:.1f} L1212.0,654.0 L330.0,654.0 L330.0,{env_y+356:.1f} L{env_x+env_w:.1f},{env_y+356:.1f}" fill="none" stroke="{GOLD}" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.62" marker-end="url(#arrow-gold)"/>',
+            text(700, 674, "execution feedback returns to environment", "tiny", fill=GOLD),
+            arrow(train_x + 252, train_y + 43, train_x + 314, train_y + 43, GRAY, 2.0, "5,5", "arrow-gray"),
+            arrow(train_x + 446, train_y + 43, train_x + 486, train_y + 43, BLUE, 2.0, "", "arrow-blue"),
+            arrow(train_x + 636, train_y + 43, agent_x + 436, agent_y + 312, GOLD, 2.2, "6,5", "arrow-gold"),
+            arrow(agent_x + 374, agent_y + 268, agent_x + 340, agent_y + 330, GOLD, 2.0, "5,5", "arrow-gold"),
+        ]
+    )
+
+    body.extend(
+        [
+            rect(72, 604, 190, 44, WHITE, LINE, 10),
+            text(90, 623, "IEEE caption cue", "method", fill=BLUE),
+            text(90, 641, "define state, action, reward", "small"),
+            rect(1004, 476, 188, 78, WHITE, LINE, 10),
+            text(1024, 499, "Reviewer risk", "method", fill=RED),
+            text(1024, 520, "missing constraints", "small"),
+            text(1024, 540, "no deployment metric", "small"),
+        ]
+    )
+
+    svg = svg_wrap(
+        width,
+        height,
+        "Deep reinforcement learning control framework",
+        "Synthetic IEEE-style architecture demo. The closed-loop state-action-reward path is explicit.",
+        [("architecture", BLUE), ("RL", TEAL), ("hybrid-ready", GOLD)],
+        "\n".join(body),
+    )
+    (FIGURES / "drl-framework-diagram.svg").write_text(svg, encoding="utf-8")
+
+
 def write_captions() -> None:
     text = """# Captions and QA Notes
 
@@ -499,6 +677,12 @@ QA: The figure shows accuracy, latency, and parameter cost in one claim-facing v
 Caption draft: Ablation study of the proposed model components. Adding attention, temporal modeling, physics guidance, and augmentation improves accuracy and F1, while the table keeps parameter count and latency visible.
 
 QA: The table uses consistent precision, highlights only the full-model/best metrics, keeps cost metrics visible, and states missing real-manuscript requirements such as variance, seeds, and significance testing.
+
+## DRL Framework Diagram
+
+Caption draft: Deep reinforcement learning control framework for an IEEE-style engineering system. The environment exposes state, reward/cost, and constraints; the DRL agent encodes state, uses actor-critic networks to generate actions, and updates from replayed transition tuples before deployment in a closed loop.
+
+QA: The diagram states the system boundary, state-action-reward path, training loop, deployment action, and reviewer-risk placeholders. It is suitable for hybrid vector finishing because quantitative panels or real testbed photos can be added without changing the core evidence map.
 """
     (ROOT / "captions.md").write_text(text, encoding="utf-8")
 
@@ -509,6 +693,7 @@ def main() -> None:
     robustness_snr_curve()
     accuracy_latency_pareto()
     ablation_result_table()
+    drl_framework_diagram()
     write_captions()
     print(f"Wrote refreshed examples under {ROOT}")
 

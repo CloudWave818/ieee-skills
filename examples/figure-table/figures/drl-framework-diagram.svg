@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Deep reinforcement learning control framework">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #172033; }
+    .title { font-size: 25px; font-weight: 700; }
+    .subtitle { font-size: 14px; fill: #5F6B7A; }
+    .axislabel { font-size: 14px; font-weight: 700; }
+    .tick { font-size: 12px; fill: #5F6B7A; }
+    .tiny { font-size: 11px; fill: #5F6B7A; }
+    .small { font-size: 12px; fill: #5F6B7A; }
+    .legend { font-size: 13px; fill: #172033; }
+    .paneltitle { font-size: 15px; font-weight: 700; }
+    .method { font-size: 13px; font-weight: 700; }
+    .metric { font-size: 24px; font-weight: 700; }
+    .pill { font-size: 12px; }
+    .header { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .cell { font-size: 13px; }
+  </style>
+  <text x="56" y="43" class="title">Deep reinforcement learning control framework</text>
+  <text x="56" y="68" class="subtitle">Synthetic IEEE-style architecture demo. The closed-loop state-action-reward path is explicit.</text>
+  <rect x="1108.7" y="35.0" width="113.3" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#B7791F" opacity="1.000"/>
+  <text x="1165.4" y="53.0" text-anchor="middle" class="pill" style="fill:#B7791F" font-weight="700">hybrid-ready</text>
+  <rect x="1022.7" y="35.0" width="76.0" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0F766E" opacity="1.000"/>
+  <text x="1060.7" y="53.0" text-anchor="middle" class="pill" style="fill:#0F766E" font-weight="700">RL</text>
+  <rect x="899.4" y="35.0" width="113.3" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0B5CAD" opacity="1.000"/>
+  <text x="956.1" y="53.0" text-anchor="middle" class="pill" style="fill:#0B5CAD" font-weight="700">architecture</text>
+  <defs><marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#0B5CAD"/></marker><marker id="arrow-teal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#0F766E"/></marker><marker id="arrow-gold" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#B7791F"/></marker><marker id="arrow-gray" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#5F6B7A"/></marker></defs>
+  <rect x="52.0" y="96.0" width="1176.0" height="574.0" rx="18.0" fill="#F7FAFD" stroke="none" opacity="1.000"/>
+  <rect x="72.0" y="144.0" width="248.0" height="356.0" rx="13.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <rect x="72.0" y="144.0" width="248.0" height="36.0" rx="13.0" fill="#0F766E" stroke="none" opacity="0.960"/>
+  <text x="90.0" y="168.0" text-anchor="start" class="header" style="fill:#FFFFFF" font-weight="700">IEEE system / environment</text>
+  <text x="90.0" y="204.0" text-anchor="start" class="small">plant, channel, grid, robot</text>
+  <rect x="96.0" y="230.0" width="200.0" height="54.0" rx="10.0" fill="#ECF8F6" stroke="#0F766E" opacity="0.920"/>
+  <text x="114.0" y="252.0" text-anchor="start" class="method" style="fill:#0F766E">state s_t</text>
+  <text x="114.0" y="272.0" text-anchor="start" class="small">sensors, load, channel, queue</text>
+  <rect x="96.0" y="302.0" width="200.0" height="54.0" rx="10.0" fill="#FFF8E8" stroke="#B7791F" opacity="0.920"/>
+  <text x="114.0" y="324.0" text-anchor="start" class="method" style="fill:#B7791F">reward / cost r_t</text>
+  <text x="114.0" y="344.0" text-anchor="start" class="small">tracking, energy, delay, safety</text>
+  <rect x="96.0" y="374.0" width="200.0" height="82.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="114.0" y="396.0" text-anchor="start" class="method" style="fill:#B64040">constraints</text>
+  <text x="114.0" y="418.0" text-anchor="start" class="small">power budget</text>
+  <text x="114.0" y="438.0" text-anchor="start" class="small">stability bound</text>
+  <text x="114.0" y="458.0" text-anchor="start" class="small">QoS or safety limit</text>
+  <text x="96.0" y="484.0" text-anchor="start" class="tiny" style="fill:#5F6B7A">object and operating condition stay explicit</text>
+  <rect x="370.0" y="122.0" width="532.0" height="404.0" rx="13.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <rect x="370.0" y="122.0" width="532.0" height="36.0" rx="13.0" fill="#0B5CAD" stroke="none" opacity="0.960"/>
+  <text x="388.0" y="146.0" text-anchor="start" class="header" style="fill:#FFFFFF" font-weight="700">DRL agent</text>
+  <text x="388.0" y="182.0" text-anchor="start" class="small">actor-critic policy learning with deployable action output</text>
+  <rect x="394.0" y="202.0" width="132.0" height="132.0" rx="12.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="412.0" y="230.0" text-anchor="start" class="method" style="fill:#0B5CAD">State encoder</text>
+  <text x="412.0" y="252.0" text-anchor="start" class="small">normalize</text>
+  <text x="412.0" y="272.0" text-anchor="start" class="small">history window</text>
+  <text x="412.0" y="292.0" text-anchor="start" class="small">feature fusion</text>
+  <line x1="412.0" y1="312.0" x2="504.0" y2="312.0" stroke="#0B5CAD" stroke-width="2.20"/>
+  <text x="412.0" y="327.0" text-anchor="start" class="tiny" style="fill:#0B5CAD">z_t</text>
+  <rect x="564.0" y="194.0" width="146.0" height="160.0" rx="12.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="584.0" y="222.0" text-anchor="start" class="method" style="fill:#0B5CAD">Actor network</text>
+  <text x="584.0" y="244.0" text-anchor="start" class="small">policy pi_theta</text>
+  <rect x="564.0" y="382.0" width="146.0" height="142.0" rx="12.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="584.0" y="410.0" text-anchor="start" class="method" style="fill:#0F766E">Critic network</text>
+  <text x="584.0" y="432.0" text-anchor="start" class="small">Q_phi(s, a)</text>
+  <rect x="744.0" y="208.0" width="124.0" height="74.0" rx="10.0" fill="#ECF8F6" stroke="#0F766E" opacity="0.920"/>
+  <text x="762.0" y="236.0" text-anchor="start" class="method" style="fill:#0F766E">Policy head</text>
+  <text x="762.0" y="258.0" text-anchor="start" class="small">continuous / discrete</text>
+  <rect x="744.0" y="348.0" width="124.0" height="86.0" rx="10.0" fill="#FFF8E8" stroke="#B7791F" opacity="0.920"/>
+  <text x="762.0" y="376.0" text-anchor="start" class="method" style="fill:#B7791F">Loss update</text>
+  <text x="762.0" y="398.0" text-anchor="start" class="small">actor loss</text>
+  <text x="762.0" y="418.0" text-anchor="start" class="small">critic loss</text>
+  <rect x="744.0" y="460.0" width="124.0" height="62.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="762.0" y="486.0" text-anchor="start" class="method" style="fill:#5F6B7A">Target nets</text>
+  <text x="762.0" y="507.0" text-anchor="start" class="small">soft update</text>
+  <line x1="590.0" y1="266.0" x2="636.0" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="266.0" x2="636.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="266.0" x2="636.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="266.0" x2="636.0" y2="326.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="290.0" x2="636.0" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="290.0" x2="636.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="290.0" x2="636.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="290.0" x2="636.0" y2="326.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="314.0" x2="636.0" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="314.0" x2="636.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="314.0" x2="636.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="314.0" x2="636.0" y2="326.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="254.0" x2="682.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="254.0" x2="682.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="278.0" x2="682.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="278.0" x2="682.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="302.0" x2="682.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="302.0" x2="682.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="326.0" x2="682.0" y2="278.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="326.0" x2="682.0" y2="302.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="590.0" cy="266.0" r="7.0" fill="#FFFFFF" stroke="#0B5CAD" stroke-width="2.0"/>
+  <circle cx="590.0" cy="290.0" r="7.0" fill="#FFFFFF" stroke="#0B5CAD" stroke-width="2.0"/>
+  <circle cx="590.0" cy="314.0" r="7.0" fill="#FFFFFF" stroke="#0B5CAD" stroke-width="2.0"/>
+  <circle cx="636.0" cy="254.0" r="7.0" fill="#FFFFFF" stroke="#2F80C8" stroke-width="2.0"/>
+  <circle cx="636.0" cy="278.0" r="7.0" fill="#FFFFFF" stroke="#2F80C8" stroke-width="2.0"/>
+  <circle cx="636.0" cy="302.0" r="7.0" fill="#FFFFFF" stroke="#2F80C8" stroke-width="2.0"/>
+  <circle cx="636.0" cy="326.0" r="7.0" fill="#FFFFFF" stroke="#2F80C8" stroke-width="2.0"/>
+  <circle cx="682.0" cy="278.0" r="7.0" fill="#FFFFFF" stroke="#0B5CAD" stroke-width="2.0"/>
+  <circle cx="682.0" cy="302.0" r="7.0" fill="#FFFFFF" stroke="#0B5CAD" stroke-width="2.0"/>
+  <line x1="590.0" y1="452.0" x2="636.0" y2="440.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="452.0" x2="636.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="452.0" x2="636.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="452.0" x2="636.0" y2="512.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="476.0" x2="636.0" y2="440.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="476.0" x2="636.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="476.0" x2="636.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="476.0" x2="636.0" y2="512.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="500.0" x2="636.0" y2="440.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="500.0" x2="636.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="500.0" x2="636.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="590.0" y1="500.0" x2="636.0" y2="512.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="440.0" x2="682.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="440.0" x2="682.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="464.0" x2="682.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="464.0" x2="682.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="488.0" x2="682.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="488.0" x2="682.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="512.0" x2="682.0" y2="464.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="636.0" y1="512.0" x2="682.0" y2="488.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="590.0" cy="452.0" r="7.0" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.0"/>
+  <circle cx="590.0" cy="476.0" r="7.0" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.0"/>
+  <circle cx="590.0" cy="500.0" r="7.0" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.0"/>
+  <circle cx="636.0" cy="440.0" r="7.0" fill="#FFFFFF" stroke="#59B3A9" stroke-width="2.0"/>
+  <circle cx="636.0" cy="464.0" r="7.0" fill="#FFFFFF" stroke="#59B3A9" stroke-width="2.0"/>
+  <circle cx="636.0" cy="488.0" r="7.0" fill="#FFFFFF" stroke="#59B3A9" stroke-width="2.0"/>
+  <circle cx="636.0" cy="512.0" r="7.0" fill="#FFFFFF" stroke="#59B3A9" stroke-width="2.0"/>
+  <circle cx="682.0" cy="464.0" r="7.0" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.0"/>
+  <circle cx="682.0" cy="488.0" r="7.0" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.0"/>
+  <rect x="960.0" y="196.0" width="232.0" height="226.0" rx="13.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <rect x="960.0" y="196.0" width="232.0" height="36.0" rx="13.0" fill="#B7791F" stroke="none" opacity="0.960"/>
+  <text x="978.0" y="220.0" text-anchor="start" class="header" style="fill:#FFFFFF" font-weight="700">Deployment action</text>
+  <text x="978.0" y="256.0" text-anchor="start" class="small">closed-loop decision</text>
+  <rect x="984.0" y="282.0" width="184.0" height="48.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="1002.0" y="312.0" text-anchor="start" class="small">resource allocation</text>
+  <rect x="984.0" y="344.0" width="184.0" height="48.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="1002.0" y="374.0" text-anchor="start" class="small">control command</text>
+  <rect x="984.0" y="406.0" width="184.0" height="48.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="1002.0" y="436.0" text-anchor="start" class="small">safe setpoint</text>
+  <rect x="304.0" y="552.0" width="672.0" height="86.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="328.0" y="583.0" text-anchor="start" class="paneltitle">Training memory and update loop</text>
+  <text x="328.0" y="609.0" text-anchor="start" class="small">transition tuple: (s_t, a_t, r_t, s_{t+1})</text>
+  <rect x="618.0" y="570.0" width="132.0" height="50.0" rx="10.0" fill="#EAF4FF" stroke="#0B5CAD" opacity="0.950"/>
+  <text x="640.0" y="601.0" text-anchor="start" class="method" style="fill:#0B5CAD">Replay buffer</text>
+  <rect x="790.0" y="570.0" width="150.0" height="50.0" rx="10.0" fill="#FFF8E8" stroke="#B7791F" opacity="0.950"/>
+  <text x="812.0" y="593.0" text-anchor="start" class="method" style="fill:#B7791F">Mini-batch</text>
+  <text x="812.0" y="612.0" text-anchor="start" class="tiny" style="fill:#5F6B7A">actor + critic update</text>
+  <path d="M320.0,272.0 L394.0,268.0" fill="none" stroke="#0F766E" stroke-width="2.4" marker-end="url(#arrow-teal)"/>
+  <text x="338.0" y="244.0" text-anchor="start" class="tiny" style="fill:#0F766E">state s_t</text>
+  <path d="M526.0,268.0 L564.0,268.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M710.0,268.0 L744.0,244.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M868.0,244.0 L960.0,306.0" fill="none" stroke="#0B5CAD" stroke-width="2.6" marker-end="url(#arrow-blue)"/>
+  <text x="918.0" y="248.0" text-anchor="start" class="tiny" style="fill:#0B5CAD">action a_t</text>
+  <path d="M1192.0,308.0 L1212.0,308.0 L1212.0,654.0 L330.0,654.0 L330.0,500.0 L320.0,500.0" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.62" marker-end="url(#arrow-gold)"/>
+  <text x="700.0" y="674.0" text-anchor="start" class="tiny" style="fill:#B7791F">execution feedback returns to environment</text>
+  <path d="M556.0,595.0 L618.0,595.0" fill="none" stroke="#5F6B7A" stroke-width="2.0" stroke-dasharray="5,5" marker-end="url(#arrow-gray)"/>
+  <path d="M750.0,595.0 L790.0,595.0" fill="none" stroke="#0B5CAD" stroke-width="2.0" marker-end="url(#arrow-blue)"/>
+  <path d="M940.0,595.0 L806.0,434.0" fill="none" stroke="#B7791F" stroke-width="2.2" stroke-dasharray="6,5" marker-end="url(#arrow-gold)"/>
+  <path d="M744.0,390.0 L710.0,452.0" fill="none" stroke="#B7791F" stroke-width="2.0" stroke-dasharray="5,5" marker-end="url(#arrow-gold)"/>
+  <rect x="72.0" y="604.0" width="190.0" height="44.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="90.0" y="623.0" text-anchor="start" class="method" style="fill:#0B5CAD">IEEE caption cue</text>
+  <text x="90.0" y="641.0" text-anchor="start" class="small">define state, action, reward</text>
+  <rect x="1004.0" y="476.0" width="188.0" height="78.0" rx="10.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="1024.0" y="499.0" text-anchor="start" class="method" style="fill:#B64040">Reviewer risk</text>
+  <text x="1024.0" y="520.0" text-anchor="start" class="small">missing constraints</text>
+  <text x="1024.0" y="540.0" text-anchor="start" class="small">no deployment metric</text>
+</svg>

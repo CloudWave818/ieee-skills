@@ -17,6 +17,8 @@ This is a Codex skill collection for **IEEE-style conference, journal, Transacti
 
 ## Latest Update
 
+**2026-08-02: added a DRL / neural-network framework diagram demo.** `ieee-figure-table` now includes an IEEE-style reinforcement-learning control framework example that shows environment, state, reward/cost, actor-critic networks, replay buffer, loss update, and deployment action in one closed loop. The demo can be adapted for communications resource allocation, robotics, power systems, edge intelligence, and smart manufacturing papers.
+
 **2026-08-01: upgraded `ieee-figure-table` and rebuilt the demos.** The skill now includes an IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, a hybrid figure workflow, and redesigned examples for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. The refreshed demos emphasize multi-panel evidence organization, dedicated legend panels, text-safe layout, visible baselines, and readability after IEEE two-column scaling. For mechanisms, pipelines, architecture diagrams, and composite figures, it also supports Python/R base plots plus Illustrator/Inkscape/PowerPoint/Figma-style vector finishing with an edit log.
 
 ## What It Does
@@ -127,13 +129,14 @@ These files are templates and example report shapes, not claimed accepted-paper 
 
 Not every polished paper figure should be forced into end-to-end Python. For mechanisms, experimental pipelines, system architectures, or multi-source composite figures, use the hybrid workflow: generate reproducible quantitative base panels from code, finish layout and annotations in Illustrator, Inkscape, PowerPoint, Figma, or draw.io, and keep base exports, editable layout source, final exports, and `figure_edit_log.md`.
 
-This update also rebuilds the three zero-dependency SVG demos. They show the intended direction: polished visuals plus clear engineering evidence, readable scaling, visible baselines, and no text spilling out of the figure. The layout borrows useful patterns from high-quality scientific plotting examples: wide canvases, multi-panel storytelling, dedicated legend/summary panels, short labels, restrained semantic color, and controlled whitespace.
+The examples now include four zero-dependency SVG demos. They show the intended direction: polished visuals plus clear engineering evidence, readable scaling, visible baselines, and no text spilling out of the figure. The layout borrows useful patterns from high-quality scientific plotting examples: wide canvases, multi-panel storytelling, dedicated legend/summary panels, short labels, restrained semantic color, and controlled whitespace.
 
 | Example | IEEE Claim | Figure |
 |---|---|---|
 | Robustness SNR curve | The method keeps lower BER under low-SNR operating conditions. | [robustness-snr-curve.svg](examples/figure-table/figures/robustness-snr-curve.svg) |
 | Accuracy-latency Pareto | The method provides a better engineering tradeoff between accuracy and inference latency. | [accuracy-latency-pareto.svg](examples/figure-table/figures/accuracy-latency-pareto.svg) |
 | Ablation result table | Each module contributes to Accuracy/F1 while deployment-cost metrics remain visible. | [ablation-result-table.svg](examples/figure-table/figures/ablation-result-table.svg) |
+| DRL / neural-network framework | The state-action-reward loop between a learning agent and an engineering system is explicit. | [drl-framework-diagram.svg](examples/figure-table/figures/drl-framework-diagram.svg) |
 | Hybrid composite workflow | Quantitative base panels stay reproducible, vector layout stays editable, and manual edits stay traceable. | [hybrid-workflow.md](examples/figure-table/hybrid-workflow.md) |
 
 ```bash
@@ -145,6 +148,8 @@ python examples/figure-table/generate_examples.py
 ![Accuracy latency Pareto](examples/figure-table/figures/accuracy-latency-pareto.svg)
 
 ![Ablation result table](examples/figure-table/figures/ablation-result-table.svg)
+
+![DRL framework diagram](examples/figure-table/figures/drl-framework-diagram.svg)
 
 ## Installation
 

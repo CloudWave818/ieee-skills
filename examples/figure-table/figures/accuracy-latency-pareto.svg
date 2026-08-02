@@ -19,13 +19,13 @@
   <text x="56" y="43" class="title">Accuracy-latency tradeoff for deployment</text>
   <text x="56" y="68" class="subtitle">Synthetic demo. Accuracy, latency, and parameter cost are shown as one reviewer-facing claim.</text>
   <rect x="1108.7" y="35.0" width="113.3" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#B7791F" opacity="1.000"/>
-  <text x="1165.4" y="53.0" text-anchor="middle" class="pill" fill="#B7791F" font-weight="700">cost visible</text>
+  <text x="1165.4" y="53.0" text-anchor="middle" class="pill" style="fill:#B7791F" font-weight="700">cost visible</text>
   <rect x="1022.7" y="35.0" width="76.0" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0B5CAD" opacity="1.000"/>
-  <text x="1060.7" y="53.0" text-anchor="middle" class="pill" fill="#0B5CAD" font-weight="700">Pareto</text>
+  <text x="1060.7" y="53.0" text-anchor="middle" class="pill" style="fill:#0B5CAD" font-weight="700">Pareto</text>
   <rect x="52.0" y="96.0" width="1176.0" height="574.0" rx="18.0" fill="#F7FAFD" stroke="none" opacity="1.000"/>
   <rect x="104.0" y="132.0" width="780.0" height="438.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
   <rect x="104.0" y="132.0" width="334.0" height="176.0" rx="0.0" fill="#EAF4FF" stroke="none" opacity="0.780"/>
-  <text x="126.0" y="160.0" text-anchor="start" class="method" fill="#0B5CAD">preferred region</text>
+  <text x="126.0" y="160.0" text-anchor="start" class="method" style="fill:#0B5CAD">preferred region</text>
   <text x="126.0" y="182.0" text-anchor="start" class="small">higher F1, lower latency</text>
   <line x1="104.0" y1="132.0" x2="104.0" y2="570.0" stroke="#D8E0EA" stroke-width="1.00"/>
   <text x="104.0" y="595.0" text-anchor="middle" class="tick">0</text>
@@ -49,30 +49,30 @@
   <line x1="104.0" y1="132.0" x2="104.0" y2="570.0" stroke="#172033" stroke-width="1.35"/>
   <polyline points="191.8,482.4 247.0,318.1 323.4,178.5" fill="none" stroke="#0B5CAD" stroke-width="2.4" stroke-dasharray="8,5" opacity="0.9"/>
   <circle cx="191.8" cy="482.4" r="8.1" fill="#FFFFFF" fill-opacity="0.76" stroke="#B64040" stroke-width="2.2"/>
-  <text x="203.8" y="507.4" text-anchor="start" class="legend" fill="#172033" font-weight="400">TinyCNN</text>
+  <text x="203.8" y="507.4" text-anchor="start" class="legend" style="fill:#172033" font-weight="400">TinyCNN</text>
   <circle cx="247.0" cy="318.1" r="8.9" fill="#59B3A9" fill-opacity="0.76" stroke="#0F766E" stroke-width="2.2"/>
-  <text x="259.0" y="304.1" text-anchor="start" class="legend" fill="#172033" font-weight="400">MobileNet</text>
+  <text x="259.0" y="304.1" text-anchor="start" class="legend" style="fill:#172033" font-weight="400">MobileNet</text>
   <circle cx="445.2" cy="356.5" r="10.9" fill="#FFFFFF" fill-opacity="0.76" stroke="#B64040" stroke-width="2.2"/>
-  <text x="459.2" y="379.5" text-anchor="start" class="legend" fill="#172033" font-weight="400">LSTM</text>
+  <text x="459.2" y="379.5" text-anchor="start" class="legend" style="fill:#172033" font-weight="400">LSTM</text>
   <circle cx="607.8" cy="227.8" r="14.2" fill="#59B3A9" fill-opacity="0.76" stroke="#0F766E" stroke-width="2.2"/>
-  <text x="620.8" y="215.8" text-anchor="start" class="legend" fill="#172033" font-weight="400">ResNet</text>
+  <text x="620.8" y="215.8" text-anchor="start" class="legend" style="fill:#172033" font-weight="400">ResNet</text>
   <circle cx="802.8" cy="192.2" r="17.8" fill="#59B3A9" fill-opacity="0.76" stroke="#0F766E" stroke-width="2.2"/>
-  <text x="684.8" y="180.2" text-anchor="start" class="legend" fill="#172033" font-weight="400">Transformer</text>
+  <text x="684.8" y="180.2" text-anchor="start" class="legend" style="fill:#172033" font-weight="400">Transformer</text>
   <circle cx="323.4" cy="178.5" r="10.1" fill="#0B5CAD" fill-opacity="1.00" stroke="#0B5CAD" stroke-width="2.2"/>
-  <text x="337.4" y="156.5" text-anchor="start" class="legend" fill="#172033" font-weight="700">Ours</text>
+  <text x="337.4" y="156.5" text-anchor="start" class="legend" style="fill:#172033" font-weight="700">Ours</text>
   <text x="494.0" y="624.0" text-anchor="middle" class="axislabel">Inference latency (ms; lower is better)</text>
   <text x="28.0" y="351.0" transform="rotate(-90 28.0 351.0)" text-anchor="middle" class="axislabel">Macro-F1 (higher is better)</text>
   <rect x="932.0" y="132.0" width="276.0" height="438.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
   <text x="956.0" y="166.0" text-anchor="start" class="paneltitle">Tradeoff evidence</text>
   <text x="956.0" y="190.0" text-anchor="start" class="small">Ours is on the frontier</text>
   <line x1="956.0" y1="210.0" x2="1184.0" y2="210.0" stroke="#D5DEE9" stroke-width="1.00"/>
-  <text x="956.0" y="252.0" text-anchor="start" class="metric" fill="#0B5CAD">0.923</text>
+  <text x="956.0" y="252.0" text-anchor="start" class="metric" style="fill:#0B5CAD">0.923</text>
   <text x="1048.0" y="252.0" text-anchor="start" class="method">Macro-F1</text>
   <text x="1048.0" y="274.0" text-anchor="start" class="small">higher than large baselines</text>
-  <text x="956.0" y="326.0" text-anchor="start" class="metric" fill="#0F766E">13.5 ms</text>
+  <text x="956.0" y="326.0" text-anchor="start" class="metric" style="fill:#0F766E">13.5 ms</text>
   <text x="1060.0" y="326.0" text-anchor="start" class="method">latency</text>
   <text x="1060.0" y="348.0" text-anchor="start" class="small">deployment cost visible</text>
-  <text x="956.0" y="400.0" text-anchor="start" class="metric" fill="#B7791F">2.10 M</text>
+  <text x="956.0" y="400.0" text-anchor="start" class="metric" style="fill:#B7791F">2.10 M</text>
   <text x="1060.0" y="400.0" text-anchor="start" class="method">params</text>
   <text x="1060.0" y="422.0" text-anchor="start" class="small">bubble size encodes cost</text>
   <line x1="956.0" y1="426.0" x2="1184.0" y2="426.0" stroke="#D5DEE9" stroke-width="1.00"/>

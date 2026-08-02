@@ -1,5 +1,5 @@
 name: ieee-figure-table
-version: 0.4.2
+version: 0.4.3
 description: >
   Declarative router for IEEE figure, table, caption, plotting, redraw, export,
   visual polish, house-style plotting, and result-presentation workflows.

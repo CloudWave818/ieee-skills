@@ -19,13 +19,13 @@
   <text x="56" y="43" class="title">Robustness evidence under low-SNR conditions</text>
   <text x="56" y="68" class="subtitle">Synthetic demo. Stress condition, baseline fairness, and method separation are visible in one view.</text>
   <rect x="1123.6" y="35.0" width="98.4" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0F766E" opacity="1.000"/>
-  <text x="1172.8" y="53.0" text-anchor="middle" class="pill" fill="#0F766E" font-weight="700">log metric</text>
+  <text x="1172.8" y="53.0" text-anchor="middle" class="pill" style="fill:#0F766E" font-weight="700">log metric</text>
   <rect x="1015.2" y="35.0" width="98.4" height="28.0" rx="14.0" fill="#FFFFFF" stroke="#0B5CAD" opacity="1.000"/>
-  <text x="1064.4" y="53.0" text-anchor="middle" class="pill" fill="#0B5CAD" font-weight="700">two-column</text>
+  <text x="1064.4" y="53.0" text-anchor="middle" class="pill" style="fill:#0B5CAD" font-weight="700">two-column</text>
   <rect x="52.0" y="96.0" width="1176.0" height="574.0" rx="18.0" fill="#F7FAFD" stroke="none" opacity="1.000"/>
   <rect x="104.0" y="132.0" width="752.0" height="438.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
   <rect x="104.0" y="132.0" width="250.7" height="438.0" rx="0.0" fill="#EAF4FF" stroke="none" opacity="0.720"/>
-  <text x="229.3" y="156.0" text-anchor="middle" class="tiny" fill="#5F6B7A">low-SNR stress</text>
+  <text x="229.3" y="156.0" text-anchor="middle" class="tiny" style="fill:#5F6B7A">low-SNR stress</text>
   <line x1="104.0" y1="132.0" x2="104.0" y2="570.0" stroke="#D8E0EA" stroke-width="1.00"/>
   <line x1="104.0" y1="570.0" x2="104.0" y2="576.0" stroke="#172033" stroke-width="1.20"/>
   <text x="104.0" y="595.0" text-anchor="middle" class="tick">-10</text>
@@ -93,7 +93,7 @@
   <circle cx="605.3" cy="415.9" r="5.2" fill="#0B5CAD" stroke="#FFFFFF" stroke-width="1.4"/>
   <circle cx="730.7" cy="475.1" r="5.2" fill="#0B5CAD" stroke="#FFFFFF" stroke-width="1.4"/>
   <circle cx="856.0" cy="533.5" r="5.2" fill="#0B5CAD" stroke="#FFFFFF" stroke-width="1.4"/>
-  <text x="850.0" y="518.5" text-anchor="end" class="method" fill="#0B5CAD" font-weight="700">Ours</text>
+  <text x="850.0" y="518.5" text-anchor="end" class="method" style="fill:#0B5CAD" font-weight="700">Ours</text>
   <text x="480.0" y="624.0" text-anchor="middle" class="axislabel">SNR (dB)</text>
   <text x="28.0" y="351.0" transform="rotate(-90 28.0 351.0)" text-anchor="middle" class="axislabel">Bit error rate, BER (log scale; lower is better)</text>
   <rect x="910.0" y="132.0" width="300.0" height="438.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
@@ -130,7 +130,7 @@
   <rect x="1022.0" y="506.0" width="142.0" height="14.0" rx="5.0" fill="#E8EEF5" stroke="none" opacity="1.000"/>
   <rect x="1022.0" y="506.0" width="142.0" height="14.0" rx="5.0" fill="#5F6B7A" stroke="none" opacity="0.850"/>
   <text x="1174.0" y="519.0" text-anchor="start" class="tiny">0.112</text>
-  <text x="934.0" y="550.0" text-anchor="start" class="method" fill="#0B5CAD">Reviewer cue</text>
+  <text x="934.0" y="550.0" text-anchor="start" class="method" style="fill:#0B5CAD">Reviewer cue</text>
   <text x="934.0" y="573.0" text-anchor="start" class="small">stress condition is visible;</text>
   <text x="934.0" y="593.0" text-anchor="start" class="small">baselines remain readable.</text>
 </svg>

@@ -15,6 +15,7 @@ Use this reference when selecting a figure/table design or rewriting plotting co
 | Detection/segmentation | PR/ROC, qualitative examples, IoU/F1 table | only cherry-picked images |
 | Control/robotics | trajectory plot, tracking error, disturbance response, stability region | only final scalar score |
 | Communications/signal processing | SNR/BER/SER curves, channel/load conditions, spectrum/PSD | missing operating condition |
+| Learning-based control/RL | state-action-reward architecture plus actor/critic/update path and deployment action | black-box neural-network block without system boundary |
 | Hardware/system | block diagram, timing/resource table, testbed photo/schematic | decorative architecture without data flow |
 
 ## Styling Defaults
