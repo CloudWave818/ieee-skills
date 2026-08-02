@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760" role="img" aria-label="Multimodal DRL framework diagram">
-  <rect width="1500" height="760" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img" aria-label="Multimodal DRL framework diagram">
+  <rect width="1500" height="900" fill="#FFFFFF"/>
   <style>
     text { font-family: Arial, Helvetica, sans-serif; fill: #172033; }
     .small { font-size: 12px; fill: #5F6B7A; }
@@ -8,328 +8,358 @@
     .paneltitle { font-size: 15px; font-weight: 700; }
   </style>
   <defs><marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0B5CAD"/></marker><marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#0F766E"/></marker><marker id="arrow-gold" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#B7791F"/></marker><marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#B64040"/></marker><marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#172033"/></marker></defs>
-  <rect x="28.0" y="24.0" width="1444.0" height="682.0" rx="0.0" fill="#FFFFFF" stroke="none" opacity="1.000"/>
-  <text x="58.0" y="48.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="22.0">Multimodal DRL framework for IEEE engineering systems</text>
-  <text x="58.0" y="72.0" text-anchor="start" class="small">state sequence, topology graph, and engineering constraints remain visible from input to actor-critic decision</text>
-  <rect x="248.0" y="106.0" width="132.0" height="58.0" rx="16.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <text x="314.0" y="141.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">State trace</text>
-  <rect x="248.0" y="242.0" width="132.0" height="58.0" rx="16.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <text x="314.0" y="277.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Topology</text>
-  <rect x="248.0" y="378.0" width="132.0" height="64.0" rx="16.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <text x="314.0" y="416.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Constraints</text>
-  <rect x="62.0" y="196.0" width="128.0" height="132.0" rx="16.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="84.0" y="224.0" text-anchor="start" class="method" style="fill:#0F766E">IEEE system</text>
-  <text x="84.0" y="248.0" text-anchor="start" class="small">channel / grid</text>
-  <text x="84.0" y="270.0" text-anchor="start" class="small">robot / edge</text>
-  <text x="84.0" y="296.0" text-anchor="start" class="small">s_t, r_t, limits</text>
-  <path d="M190.0,228.0 L240.0,146.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
-  <path d="M190.0,262.0 L240.0,272.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <path d="M190.0,296.0 L240.0,410.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
-  <rect x="420.0" y="118.0" width="128.0" height="34.0" rx="0.0" fill="#DCECD1" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="484.0" y="141.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="14.0">x1 x2 ... xt</text>
-  <rect x="420.0" y="378.0" width="142.0" height="92.0" rx="0.0" fill="#FFF4CD" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="434.0" y="402.0" text-anchor="start" class="small">power budget</text>
-  <text x="434.0" y="423.0" text-anchor="start" class="small">delay limit</text>
+  <text x="24.0" y="58.0" text-anchor="start" style="fill:#000000" font-weight="700" font-size="34.0">a</text>
+  <text x="24.0" y="585.0" text-anchor="start" style="fill:#000000" font-weight="700" font-size="34.0">b</text>
+  <text x="486.0" y="585.0" text-anchor="start" style="fill:#000000" font-weight="700" font-size="34.0">c</text>
+  <text x="1080.0" y="585.0" text-anchor="start" style="fill:#000000" font-weight="700" font-size="34.0">d</text>
+  <rect x="248.0" y="112.0" width="132.0" height="58.0" rx="16.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <text x="314.0" y="147.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">State trace</text>
+  <rect x="248.0" y="244.0" width="132.0" height="58.0" rx="16.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <text x="314.0" y="279.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Topology</text>
+  <rect x="248.0" y="376.0" width="132.0" height="64.0" rx="16.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <text x="314.0" y="414.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Constraints</text>
+  <rect x="60.0" y="192.0" width="126.0" height="126.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="82.0" y="219.0" text-anchor="start" class="method" style="fill:#0F766E">IEEE system</text>
+  <text x="82.0" y="242.0" text-anchor="start" class="small">channel / grid</text>
+  <text x="82.0" y="263.0" text-anchor="start" class="small">robot / edge</text>
+  <text x="82.0" y="288.0" text-anchor="start" class="small">s_t, r_t, limits</text>
+  <path d="M186.0,228.0 L240.0,152.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <path d="M186.0,256.0 L240.0,273.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M186.0,286.0 L240.0,408.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
+  <rect x="420.0" y="124.0" width="128.0" height="34.0" rx="0.0" fill="#DCECD1" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="484.0" y="147.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="14.0">x1 x2 ... xt</text>
+  <rect x="420.0" y="374.0" width="140.0" height="96.0" rx="0.0" fill="#FFF4CD" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="434.0" y="400.0" text-anchor="start" class="small">power budget</text>
+  <text x="434.0" y="422.0" text-anchor="start" class="small">delay limit</text>
   <text x="434.0" y="444.0" text-anchor="start" class="small">safety bound</text>
-  <text x="434.0" y="465.0" text-anchor="start" class="small">QoS threshold</text>
-  <line x1="432.8" y1="289.2" x2="467.3" y2="245.5" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="467.3" y1="245.5" x2="515.6" y2="259.3" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="515.6" y1="259.3" x2="547.8" y2="300.7" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="467.3" y1="245.5" x2="481.1" y2="319.1" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="481.1" y1="319.1" x2="547.8" y2="300.7" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="432.8" y1="289.2" x2="481.1" y2="319.1" stroke="#0B5CAD" stroke-width="3.00"/>
-  <circle cx="432.8" cy="289.2" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="467.3" cy="245.5" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="515.6" cy="259.3" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="547.8" cy="300.7" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="481.1" cy="319.1" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <path d="M380.0,135.0 L414.0,135.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
-  <path d="M380.0,271.0 L414.0,271.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <path d="M380.0,410.0 L414.0,410.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
-  <path d="M548.0,135.0 L606.0,145.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
-  <path d="M548.0,280.0 L606.0,280.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <path d="M562.0,424.0 L606.0,410.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
-  <text x="694.0" y="88.0" text-anchor="middle" class="paneltitle" style="fill:#0F766E">Temporal autoencoder</text>
-  <path d="M626,84 L706,116 L706,174 L626,206 Z" fill="#DCECD1" stroke="#172033" stroke-width="2"/>
-  <text x="666.0" y="151.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="22.0">F_time</text>
-  <rect x="746.0" y="109.0" width="18.0" height="94.0" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <path d="M804,116 L884,84 L884,206 L804,174 Z" fill="#DCECD1" stroke="#172033" stroke-width="2"/>
-  <text x="844.0" y="151.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="22.0">G_time</text>
-  <rect x="934.0" y="116.0" width="18.0" height="118.0" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <path d="M706,146 L746,146" fill="none" stroke="#172033" stroke-width="2"/>
-  <path d="M764,146 L804,146" fill="none" stroke="#172033" stroke-width="2"/>
-  <path d="M884,146 L934,174" fill="none" stroke="#172033" stroke-width="2"/>
-  <path d="M610,48 L610,22 L930,22 L930,88" fill="none" stroke="#B64040" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-  <text x="768.0" y="16.0" text-anchor="middle" class="small" style="fill:#B64040" font-weight="700" font-size="14.0">reconstruction</text>
-  <rect x="620.0" y="248.0" width="266.0" height="72.0" rx="10.0" fill="#CDE5F7" stroke="#0B5CAD" opacity="1.000"/>
-  <text x="753.0" y="292.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="20.0">Graph encoder  F_graph</text>
-  <text x="753.0" y="236.0" text-anchor="middle" class="method" style="fill:#0B5CAD" font-weight="700" font-size="16.0">graph neural network</text>
-  <text x="733.0" y="380.0" text-anchor="middle" class="paneltitle" style="fill:#B7791F">Constraint MLP</text>
-  <line x1="622.0" y1="406.8" x2="667.9" y2="392.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="406.8" x2="667.9" y2="418.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="406.8" x2="667.9" y2="444.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="406.8" x2="667.9" y2="470.7" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="433.0" x2="667.9" y2="392.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="433.0" x2="667.9" y2="418.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="433.0" x2="667.9" y2="444.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="433.0" x2="667.9" y2="470.7" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="459.2" x2="667.9" y2="392.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="459.2" x2="667.9" y2="418.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="459.2" x2="667.9" y2="444.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="622.0" y1="459.2" x2="667.9" y2="470.7" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="392.0" x2="713.8" y2="406.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="392.0" x2="713.8" y2="433.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="392.0" x2="713.8" y2="459.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="418.2" x2="713.8" y2="406.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="418.2" x2="713.8" y2="433.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="418.2" x2="713.8" y2="459.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="444.5" x2="713.8" y2="406.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="444.5" x2="713.8" y2="433.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="444.5" x2="713.8" y2="459.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="470.7" x2="713.8" y2="406.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="470.7" x2="713.8" y2="433.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="667.9" y1="470.7" x2="713.8" y2="459.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <circle cx="622.0" cy="406.8" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="622.0" cy="433.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="622.0" cy="459.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="667.9" cy="392.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="667.9" cy="418.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="667.9" cy="444.5" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="667.9" cy="470.7" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="713.8" cy="406.8" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="713.8" cy="433.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <circle cx="713.8" cy="459.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
-  <path d="M886.0,284.0 L928.0,284.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <path d="M800.0,432.0 L928.0,410.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
-  <rect x="934.0" y="244.0" width="18.0" height="83.2" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <rect x="934.0" y="327.2" width="18.0" height="59.4" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <rect x="934.0" y="386.6" width="18.0" height="55.4" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <path d="M952.0,342.0 L1006.0,342.0" fill="none" stroke="#172033" stroke-width="2.2" marker-end="url(#arrow-gray)"/>
-  <rect x="1008.0" y="236.0" width="134.0" height="132.0" rx="16.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
-  <text x="1075.0" y="281.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Multimodal</text>
-  <text x="1075.0" y="311.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">multi-head</text>
-  <text x="1075.0" y="341.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">attention</text>
-  <path d="M1142.0,302.0 L1196.0,302.0" fill="none" stroke="#4A235A" stroke-width="2.2" marker-end="url(#arrow-gray)"/>
-  <line x1="1216.0" y1="262.0" x2="1259.7" y2="248.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="262.0" x2="1259.7" y2="273.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="262.0" x2="1259.7" y2="297.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="262.0" x2="1259.7" y2="322.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="287.0" x2="1259.7" y2="248.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="287.0" x2="1259.7" y2="273.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="287.0" x2="1259.7" y2="297.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="287.0" x2="1259.7" y2="322.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="312.0" x2="1259.7" y2="248.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="312.0" x2="1259.7" y2="273.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="312.0" x2="1259.7" y2="297.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1216.0" y1="312.0" x2="1259.7" y2="322.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="248.0" x2="1303.4" y2="262.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="248.0" x2="1303.4" y2="287.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="248.0" x2="1303.4" y2="312.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="273.0" x2="1303.4" y2="262.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="273.0" x2="1303.4" y2="287.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="273.0" x2="1303.4" y2="312.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="297.9" x2="1303.4" y2="262.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="297.9" x2="1303.4" y2="287.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="297.9" x2="1303.4" y2="312.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="322.9" x2="1303.4" y2="262.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="322.9" x2="1303.4" y2="287.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1259.7" y1="322.9" x2="1303.4" y2="312.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <circle cx="1216.0" cy="262.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1216.0" cy="287.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1216.0" cy="312.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1259.7" cy="248.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1259.7" cy="273.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1259.7" cy="297.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1259.7" cy="322.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1303.4" cy="262.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1303.4" cy="287.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1303.4" cy="312.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <text x="1372.0" y="282.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="18.0">Actor</text>
-  <text x="1372.0" y="308.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="18.0">Critic</text>
-  <text x="1372.0" y="344.0" text-anchor="start" class="method" style="fill:#0B5CAD" font-weight="700" font-size="16.0">action a_t</text>
-  <text x="1372.0" y="368.0" text-anchor="start" class="method" style="fill:#0F766E" font-weight="700" font-size="16.0">Q(s,a)</text>
-  <path d="M1400,374 C1460,448 1340,550 190,550" fill="none" stroke="#B7791F" stroke-width="1.8" stroke-dasharray="8,6" opacity="0.62" marker-end="url(#arrow-gold)"/>
-  <text x="770.0" y="570.0" text-anchor="middle" class="tiny" style="fill:#B7791F" font-weight="700" font-size="11.0">deployment feedback updates the next state and reward</text>
-  <rect x="58.0" y="572.0" width="316.0" height="128.0" rx="14.0" fill="#F5FAF2" stroke="#172033" opacity="1.000"/>
-  <text x="88.0" y="598.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="17.0">Graph construction inset</text>
-  <rect x="78.0" y="620.0" width="86.0" height="28.0" rx="8.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <text x="121.0" y="640.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">State</text>
-  <path d="M164.0,634.0 L224.0,634.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
-  <text x="232.0" y="640.0" text-anchor="start" class="small" style="fill:#0F766E" font-weight="700">node features</text>
-  <rect x="78.0" y="662.0" width="86.0" height="28.0" rx="8.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <text x="121.0" y="682.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">Topology</text>
-  <line x1="155.4" y1="677.8" x2="177.0" y2="650.4" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="177.0" y1="650.4" x2="207.3" y2="659.0" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="207.3" y1="659.0" x2="227.4" y2="685.0" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="177.0" y1="650.4" x2="185.7" y2="696.5" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="185.7" y1="696.5" x2="227.4" y2="685.0" stroke="#0B5CAD" stroke-width="3.00"/>
-  <line x1="155.4" y1="677.8" x2="185.7" y2="696.5" stroke="#0B5CAD" stroke-width="3.00"/>
-  <circle cx="155.4" cy="677.8" r="5.8" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="177.0" cy="650.4" r="5.8" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="207.3" cy="659.0" r="5.8" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="227.4" cy="685.0" r="5.8" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <circle cx="185.7" cy="696.5" r="5.8" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
-  <text x="258.0" y="668.0" text-anchor="start" class="small" style="fill:#0B5CAD" font-weight="700">edges:</text>
-  <text x="258.0" y="688.0" text-anchor="start" class="small">link / interference</text>
-  <rect x="302.0" y="618.0" width="52.0" height="34.0" rx="8.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="328.0" y="640.0" text-anchor="middle" class="method" style="fill:#0B5CAD" font-weight="700" font-size="15.0">G_t</text>
-  <rect x="418.0" y="572.0" width="314.0" height="128.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="440.0" y="598.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="16.0">Operating-condition evidence</text>
-  <rect x="440.0" y="618.0" width="88.0" height="70.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
-  <circle cx="450.0" cy="630.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="487.0" cy="633.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="456.0" cy="636.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="493.0" cy="639.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="462.0" cy="642.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="499.0" cy="645.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="468.0" cy="648.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="505.0" cy="651.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="474.0" cy="654.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="511.0" cy="657.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="480.0" cy="660.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="517.0" cy="663.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="486.0" cy="666.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="455.0" cy="669.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="492.0" cy="672.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="461.0" cy="675.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="498.0" cy="678.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="467.0" cy="631.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="504.0" cy="634.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="473.0" cy="637.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="510.0" cy="640.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="479.0" cy="643.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="516.0" cy="646.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="485.0" cy="649.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="454.0" cy="652.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="491.0" cy="655.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="460.0" cy="658.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="497.0" cy="661.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="466.0" cy="664.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="503.0" cy="667.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="472.0" cy="670.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="509.0" cy="673.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="478.0" cy="676.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="515.0" cy="679.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="484.0" cy="632.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="453.0" cy="635.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="490.0" cy="638.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="459.0" cy="641.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="496.0" cy="644.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="465.0" cy="647.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="502.0" cy="650.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="471.0" cy="653.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="508.0" cy="656.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="477.0" cy="659.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="514.0" cy="662.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="483.0" cy="665.0" r="1.8" fill="#B64040" opacity="0.65"/>
-  <circle cx="452.0" cy="668.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <circle cx="489.0" cy="671.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
-  <path d="M530.0,642.0 L580.0,614.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" stroke-dasharray="5,5" marker-end="url(#arrow-blue)"/>
-  <path d="M530.0,666.0 L580.0,686.0" fill="none" stroke="#B64040" stroke-width="2.2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-  <rect x="590.0" y="608.0" width="96.0" height="38.0" rx="10.0" fill="#ECF8F6" stroke="#0F766E" opacity="0.820"/>
-  <text x="638.0" y="632.0" text-anchor="middle" class="method" style="fill:#0F766E" font-weight="700" font-size="14.0">low-cost</text>
-  <rect x="590.0" y="660.0" width="96.0" height="38.0" rx="10.0" fill="#FDECEC" stroke="#B64040" opacity="0.820"/>
-  <text x="638.0" y="684.0" text-anchor="middle" class="method" style="fill:#B64040" font-weight="700" font-size="14.0">high-risk</text>
-  <rect x="700.0" y="632.0" width="82.0" height="44.0" rx="10.0" fill="#FFF4CD" stroke="#B7791F" opacity="1.000"/>
-  <text x="741.0" y="658.0" text-anchor="middle" class="method" style="fill:#B7791F" font-weight="700" font-size="14.0">reward</text>
-  <rect x="824.0" y="572.0" width="632.0" height="178.0" rx="14.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
-  <text x="846.0" y="598.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="16.0">Pretraining to transfer learning</text>
-  <text x="958.0" y="610.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="13.0">Pre-train</text>
-  <rect x="914.0" y="620.0" width="88.0" height="30.0" rx="9.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <text x="958.0" y="641.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">State</text>
-  <rect x="914.0" y="662.0" width="88.0" height="30.0" rx="9.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <text x="958.0" y="683.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">Graph</text>
-  <rect x="914.0" y="704.0" width="88.0" height="30.0" rx="9.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <text x="958.0" y="725.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">Limits</text>
-  <path d="M1002.0,677.0 L1042.0,677.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <rect x="1046.0" y="632.0" width="18.0" height="37.8" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <rect x="1046.0" y="669.8" width="18.0" height="27.0" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <rect x="1046.0" y="696.8" width="18.0" height="25.2" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <rect x="1084.0" y="622.0" width="44.0" height="112.0" rx="8.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
-  <line x1="1154.0" y1="646.1" x2="1179.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="646.1" x2="1179.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="646.1" x2="1179.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="646.1" x2="1179.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="660.5" x2="1179.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="660.5" x2="1179.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="660.5" x2="1179.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="660.5" x2="1179.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="674.9" x2="1179.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="674.9" x2="1179.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="674.9" x2="1179.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1154.0" y1="674.9" x2="1179.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="638.0" x2="1204.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="638.0" x2="1204.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="638.0" x2="1204.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="652.4" x2="1204.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="652.4" x2="1204.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="652.4" x2="1204.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="666.8" x2="1204.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="666.8" x2="1204.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="666.8" x2="1204.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="681.2" x2="1204.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="681.2" x2="1204.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1179.2" y1="681.2" x2="1204.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <circle cx="1154.0" cy="646.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1154.0" cy="660.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1154.0" cy="674.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1179.2" cy="638.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1179.2" cy="652.4" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1179.2" cy="666.8" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1179.2" cy="681.2" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1204.4" cy="646.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1204.4" cy="660.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1204.4" cy="674.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <rect x="1068.0" y="610.0" width="186" height="136" fill="none" stroke="#172033" stroke-width="1.6" stroke-dasharray="6,5"/>
-  <rect x="1060.0" y="728.0" width="64.0" height="22.0" rx="0.0" fill="#EEEEEE" stroke="#172033" opacity="1.000"/>
-  <text x="1092.0" y="744.0" text-anchor="middle" class="tiny" style="fill:#172033" font-weight="700" font-size="10.0">fine-tune</text>
-  <rect x="1134.0" y="728.0" width="72.0" height="22.0" rx="0.0" fill="#EEEEEE" stroke="#172033" opacity="1.000"/>
-  <text x="1170.0" y="744.0" text-anchor="middle" class="tiny" style="fill:#172033" font-weight="700" font-size="10.0">re-init</text>
-  <text x="1212.0" y="610.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="13.0">Transfer</text>
-  <rect x="1168.0" y="620.0" width="88.0" height="30.0" rx="9.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <text x="1212.0" y="641.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">State</text>
-  <rect x="1168.0" y="662.0" width="88.0" height="30.0" rx="9.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <text x="1212.0" y="683.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">Graph</text>
-  <rect x="1168.0" y="704.0" width="88.0" height="30.0" rx="9.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <text x="1212.0" y="725.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="11.0">Limits</text>
-  <path d="M1256.0,677.0 L1296.0,677.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
-  <rect x="1300.0" y="632.0" width="18.0" height="37.8" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
-  <rect x="1300.0" y="669.8" width="18.0" height="27.0" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
-  <rect x="1300.0" y="696.8" width="18.0" height="25.2" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
-  <rect x="1338.0" y="622.0" width="44.0" height="112.0" rx="8.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
-  <line x1="1408.0" y1="646.1" x2="1433.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="646.1" x2="1433.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="646.1" x2="1433.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="646.1" x2="1433.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="660.5" x2="1433.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="660.5" x2="1433.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="660.5" x2="1433.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="660.5" x2="1433.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="674.9" x2="1433.2" y2="638.0" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="674.9" x2="1433.2" y2="652.4" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="674.9" x2="1433.2" y2="666.8" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1408.0" y1="674.9" x2="1433.2" y2="681.2" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="638.0" x2="1458.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="638.0" x2="1458.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="638.0" x2="1458.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="652.4" x2="1458.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="652.4" x2="1458.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="652.4" x2="1458.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="666.8" x2="1458.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="666.8" x2="1458.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="666.8" x2="1458.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="681.2" x2="1458.4" y2="646.1" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="681.2" x2="1458.4" y2="660.5" stroke="#D8E0EA" stroke-width="0.80"/>
-  <line x1="1433.2" y1="681.2" x2="1458.4" y2="674.9" stroke="#D8E0EA" stroke-width="0.80"/>
-  <circle cx="1408.0" cy="646.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1408.0" cy="660.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1408.0" cy="674.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1433.2" cy="638.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1433.2" cy="652.4" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1433.2" cy="666.8" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1433.2" cy="681.2" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1458.4" cy="646.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1458.4" cy="660.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <circle cx="1458.4" cy="674.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
-  <text x="1450.0" y="738.0" text-anchor="middle" class="tiny" style="fill:#4A235A" font-weight="700" font-size="10.5">task action</text>
+  <text x="434.0" y="466.0" text-anchor="start" class="small">QoS threshold</text>
+  <line x1="432.8" y1="287.2" x2="467.3" y2="243.5" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="467.3" y1="243.5" x2="515.6" y2="257.3" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="515.6" y1="257.3" x2="547.8" y2="298.7" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="467.3" y1="243.5" x2="481.1" y2="317.1" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="481.1" y1="317.1" x2="547.8" y2="298.7" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="432.8" y1="287.2" x2="481.1" y2="317.1" stroke="#0B5CAD" stroke-width="3.00"/>
+  <circle cx="432.8" cy="287.2" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="467.3" cy="243.5" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="515.6" cy="257.3" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="547.8" cy="298.7" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="481.1" cy="317.1" r="9.2" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <path d="M380.0,141.0 L414.0,141.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <path d="M380.0,273.0 L414.0,273.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M380.0,408.0 L414.0,408.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
+  <path d="M548.0,141.0 L606.0,151.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <path d="M548.0,278.0 L606.0,278.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M560.0,422.0 L606.0,408.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
+  <text x="694.0" y="94.0" text-anchor="middle" class="paneltitle" style="fill:#0F766E">Temporal autoencoder</text>
+  <path d="M626,90 L706,122 L706,180 L626,212 Z" fill="#DCECD1" stroke="#172033" stroke-width="2"/>
+  <text x="666.0" y="157.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="22.0">F_time</text>
+  <rect x="746.0" y="115.0" width="18.0" height="94.0" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <path d="M804,122 L884,90 L884,212 L804,180 Z" fill="#DCECD1" stroke="#172033" stroke-width="2"/>
+  <text x="844.0" y="157.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="22.0">G_time</text>
+  <rect x="934.0" y="122.0" width="18.0" height="118.0" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <path d="M706,152 L746,152" fill="none" stroke="#172033" stroke-width="2"/>
+  <path d="M764,152 L804,152" fill="none" stroke="#172033" stroke-width="2"/>
+  <path d="M884,152 L934,180" fill="none" stroke="#172033" stroke-width="2"/>
+  <path d="M610,54 L610,28 L930,28 L930,94" fill="none" stroke="#B64040" stroke-width="1.8" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+  <text x="768.0" y="22.0" text-anchor="middle" class="small" style="fill:#B64040" font-weight="700" font-size="14.0">reconstruction</text>
+  <rect x="620.0" y="246.0" width="266.0" height="72.0" rx="10.0" fill="#CDE5F7" stroke="#0B5CAD" opacity="1.000"/>
+  <text x="753.0" y="290.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="20.0">Graph encoder  F_graph</text>
+  <text x="753.0" y="234.0" text-anchor="middle" class="method" style="fill:#0B5CAD" font-weight="700" font-size="16.0">graph neural network</text>
+  <text x="733.0" y="378.0" text-anchor="middle" class="paneltitle" style="fill:#B7791F">Constraint MLP</text>
+  <line x1="622.0" y1="404.8" x2="667.9" y2="390.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="404.8" x2="667.9" y2="416.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="404.8" x2="667.9" y2="442.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="404.8" x2="667.9" y2="468.7" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="431.0" x2="667.9" y2="390.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="431.0" x2="667.9" y2="416.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="431.0" x2="667.9" y2="442.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="431.0" x2="667.9" y2="468.7" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="457.2" x2="667.9" y2="390.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="457.2" x2="667.9" y2="416.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="457.2" x2="667.9" y2="442.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="622.0" y1="457.2" x2="667.9" y2="468.7" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="390.0" x2="713.8" y2="404.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="390.0" x2="713.8" y2="431.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="390.0" x2="713.8" y2="457.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="416.2" x2="713.8" y2="404.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="416.2" x2="713.8" y2="431.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="416.2" x2="713.8" y2="457.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="442.5" x2="713.8" y2="404.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="442.5" x2="713.8" y2="431.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="442.5" x2="713.8" y2="457.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="468.7" x2="713.8" y2="404.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="468.7" x2="713.8" y2="431.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="667.9" y1="468.7" x2="713.8" y2="457.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="622.0" cy="404.8" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="622.0" cy="431.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="622.0" cy="457.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="667.9" cy="390.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="667.9" cy="416.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="667.9" cy="442.5" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="667.9" cy="468.7" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="713.8" cy="404.8" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="713.8" cy="431.0" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <circle cx="713.8" cy="457.2" r="7.0" fill="#FFFFFF" stroke="#B7791F" stroke-width="2.0"/>
+  <path d="M886.0,282.0 L928.0,282.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <path d="M800.0,430.0 L928.0,408.0" fill="none" stroke="#B7791F" stroke-width="2.2" marker-end="url(#arrow-gold)"/>
+  <rect x="934.0" y="250.0" width="18.0" height="83.2" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <rect x="934.0" y="333.2" width="18.0" height="59.4" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <rect x="934.0" y="392.6" width="18.0" height="55.4" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <path d="M952.0,348.0 L1006.0,348.0" fill="none" stroke="#172033" stroke-width="2.2" marker-end="url(#arrow-gray)"/>
+  <rect x="1008.0" y="242.0" width="134.0" height="132.0" rx="16.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
+  <text x="1075.0" y="287.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Multimodal</text>
+  <text x="1075.0" y="317.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">multi-head</text>
+  <text x="1075.0" y="347.0" text-anchor="middle" class="method" style="fill:#172033" font-weight="700" font-size="18.0">attention</text>
+  <path d="M1142.0,308.0 L1196.0,308.0" fill="none" stroke="#4A235A" stroke-width="2.2" marker-end="url(#arrow-gray)"/>
+  <line x1="1216.0" y1="268.0" x2="1259.7" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="268.0" x2="1259.7" y2="279.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="268.0" x2="1259.7" y2="303.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="268.0" x2="1259.7" y2="328.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="293.0" x2="1259.7" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="293.0" x2="1259.7" y2="279.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="293.0" x2="1259.7" y2="303.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="293.0" x2="1259.7" y2="328.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="318.0" x2="1259.7" y2="254.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="318.0" x2="1259.7" y2="279.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="318.0" x2="1259.7" y2="303.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1216.0" y1="318.0" x2="1259.7" y2="328.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="254.0" x2="1303.4" y2="268.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="254.0" x2="1303.4" y2="293.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="254.0" x2="1303.4" y2="318.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="279.0" x2="1303.4" y2="268.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="279.0" x2="1303.4" y2="293.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="279.0" x2="1303.4" y2="318.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="303.9" x2="1303.4" y2="268.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="303.9" x2="1303.4" y2="293.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="303.9" x2="1303.4" y2="318.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="328.9" x2="1303.4" y2="268.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="328.9" x2="1303.4" y2="293.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1259.7" y1="328.9" x2="1303.4" y2="318.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="1216.0" cy="268.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1216.0" cy="293.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1216.0" cy="318.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1259.7" cy="254.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1259.7" cy="279.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1259.7" cy="303.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1259.7" cy="328.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1303.4" cy="268.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1303.4" cy="293.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1303.4" cy="318.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <text x="1372.0" y="288.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="18.0">Actor</text>
+  <text x="1372.0" y="314.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="18.0">Critic</text>
+  <text x="1372.0" y="350.0" text-anchor="start" class="method" style="fill:#0B5CAD" font-weight="700" font-size="16.0">action a_t</text>
+  <text x="1372.0" y="374.0" text-anchor="start" class="method" style="fill:#0F766E" font-weight="700" font-size="16.0">Q(s,a)</text>
+  <rect x="56.0" y="624.0" width="292.0" height="198.0" rx="14.0" fill="#F5FAF2" stroke="#172033" opacity="1.000"/>
+  <text x="100.0" y="650.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="20.0">Graph construction</text>
+  <rect x="76.0" y="678.0" width="86.0" height="30.0" rx="8.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <text x="119.0" y="699.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="13.0">State trace</text>
+  <path d="M164.0,693.0 L224.0,693.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <text x="232.0" y="699.0" text-anchor="start" class="small" style="fill:#0F766E" font-weight="700">node features</text>
+  <rect x="76.0" y="726.0" width="86.0" height="30.0" rx="8.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <text x="119.0" y="747.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="13.0">Topology</text>
+  <line x1="139.8" y1="787.0" x2="166.2" y2="753.6" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="166.2" y1="753.6" x2="203.1" y2="764.2" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="203.1" y1="764.2" x2="227.8" y2="795.8" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="166.2" y1="753.6" x2="176.7" y2="809.9" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="176.7" y1="809.9" x2="227.8" y2="795.8" stroke="#0B5CAD" stroke-width="3.00"/>
+  <line x1="139.8" y1="787.0" x2="176.7" y2="809.9" stroke="#0B5CAD" stroke-width="3.00"/>
+  <circle cx="139.8" cy="787.0" r="7.0" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="166.2" cy="753.6" r="7.0" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="203.1" cy="764.2" r="7.0" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="227.8" cy="795.8" r="7.0" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <circle cx="176.7" cy="809.9" r="7.0" fill="#D8EBCB" stroke="#0B5CAD" stroke-width="2.2"/>
+  <text x="242.0" y="750.0" text-anchor="start" class="small" style="fill:#0B5CAD" font-weight="700">edges</text>
+  <text x="242.0" y="773.0" text-anchor="start" class="small">physical link</text>
+  <text x="242.0" y="794.0" text-anchor="start" class="small">interference</text>
+  <text x="242.0" y="815.0" text-anchor="start" class="small">adjacency</text>
+  <rect x="370.0" y="696.0" width="86.0" height="42.0" rx="8.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <text x="413.0" y="721.0" text-anchor="middle" class="method" style="fill:#0B5CAD" font-weight="700" font-size="18.0">G_t</text>
+  <path d="M348.0,733.0 L368.0,718.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <text x="550.0" y="632.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="18.0">Operating-condition evidence</text>
+  <rect x="548.0" y="662.0" width="118.0" height="118.0" rx="0.0" fill="#FFFFFF" stroke="#D5DEE9" opacity="1.000"/>
+  <circle cx="562.0" cy="676.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="599.0" cy="729.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="636.0" cy="694.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="583.0" cy="747.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="620.0" cy="712.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="567.0" cy="677.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="604.0" cy="730.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="641.0" cy="695.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="588.0" cy="748.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="625.0" cy="713.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="572.0" cy="678.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="609.0" cy="731.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="646.0" cy="696.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="593.0" cy="749.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="630.0" cy="714.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="577.0" cy="679.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="614.0" cy="732.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="651.0" cy="697.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="598.0" cy="750.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="635.0" cy="715.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="582.0" cy="680.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="619.0" cy="733.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="566.0" cy="698.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="603.0" cy="751.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="640.0" cy="716.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="587.0" cy="681.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="624.0" cy="734.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="571.0" cy="699.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="608.0" cy="752.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="645.0" cy="717.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="592.0" cy="682.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="629.0" cy="735.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="576.0" cy="700.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="613.0" cy="753.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="650.0" cy="718.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="597.0" cy="683.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="634.0" cy="736.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="581.0" cy="701.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="618.0" cy="754.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="565.0" cy="719.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="602.0" cy="684.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="639.0" cy="737.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="586.0" cy="702.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="623.0" cy="755.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="570.0" cy="720.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="607.0" cy="685.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="644.0" cy="738.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="591.0" cy="703.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="628.0" cy="756.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="575.0" cy="721.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="612.0" cy="686.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="649.0" cy="739.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="596.0" cy="704.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="633.0" cy="757.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="580.0" cy="722.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="617.0" cy="687.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="564.0" cy="740.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="601.0" cy="705.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="638.0" cy="758.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="585.0" cy="723.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="622.0" cy="688.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="569.0" cy="741.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="606.0" cy="706.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="643.0" cy="759.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="590.0" cy="724.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="627.0" cy="689.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="574.0" cy="742.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="611.0" cy="707.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="648.0" cy="760.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="595.0" cy="725.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <circle cx="632.0" cy="690.0" r="1.8" fill="#B64040" opacity="0.65"/>
+  <circle cx="579.0" cy="743.0" r="1.8" fill="#0B5CAD" opacity="0.65"/>
+  <text x="574.0" y="654.0" text-anchor="start" class="small" style="fill:#5F6B7A">policy risk</text>
+  <path d="M666.0,698.0 L770.0,646.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" stroke-dasharray="5,5" marker-end="url(#arrow-blue)"/>
+  <path d="M666.0,748.0 L770.0,798.0" fill="none" stroke="#B64040" stroke-width="2.2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+  <rect x="786.0" y="616.0" width="132.0" height="82.0" rx="12.0" fill="#ECF8F6" stroke="#0F766E" opacity="0.820"/>
+  <text x="852.0" y="646.0" text-anchor="middle" class="method" style="fill:#0F766E" font-weight="700" font-size="18.0">low-cost</text>
+  <text x="852.0" y="672.0" text-anchor="middle" class="small">stable action</text>
+  <rect x="786.0" y="748.0" width="132.0" height="82.0" rx="12.0" fill="#FDECEC" stroke="#B64040" opacity="0.820"/>
+  <text x="852.0" y="778.0" text-anchor="middle" class="method" style="fill:#B64040" font-weight="700" font-size="18.0">high-risk</text>
+  <text x="852.0" y="804.0" text-anchor="middle" class="small">constraint violation</text>
+  <rect x="952.0" y="678.0" width="102.0" height="70.0" rx="12.0" fill="#FFF4CD" stroke="#B7791F" opacity="1.000"/>
+  <text x="1003.0" y="708.0" text-anchor="middle" class="method" style="fill:#B7791F" font-weight="700" font-size="18.0">Reward</text>
+  <text x="1003.0" y="732.0" text-anchor="middle" class="small">cost + safety</text>
+  <path d="M918.0,656.0 L950.0,696.0" fill="none" stroke="#0F766E" stroke-width="2.2" marker-end="url(#arrow-teal)"/>
+  <path d="M918.0,790.0 L950.0,724.0" fill="none" stroke="#B64040" stroke-width="2.2" marker-end="url(#arrow-red)"/>
+  <text x="1022.0" y="668.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="17.0">Pre-train</text>
+  <rect x="1088.0" y="612.0" width="88.0" height="30.0" rx="9.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="633.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">State</text>
+  <rect x="1088.0" y="654.0" width="88.0" height="30.0" rx="9.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="675.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">Graph</text>
+  <rect x="1088.0" y="696.0" width="88.0" height="30.0" rx="9.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="717.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">Limits</text>
+  <path d="M1176.0,669.0 L1216.0,669.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <rect x="1220.0" y="624.0" width="18.0" height="37.8" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <rect x="1220.0" y="661.8" width="18.0" height="27.0" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <rect x="1220.0" y="688.8" width="18.0" height="25.2" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <rect x="1258.0" y="614.0" width="44.0" height="112.0" rx="8.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
+  <line x1="1328.0" y1="638.1" x2="1353.2" y2="630.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="638.1" x2="1353.2" y2="644.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="638.1" x2="1353.2" y2="658.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="638.1" x2="1353.2" y2="673.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="652.5" x2="1353.2" y2="630.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="652.5" x2="1353.2" y2="644.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="652.5" x2="1353.2" y2="658.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="652.5" x2="1353.2" y2="673.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="666.9" x2="1353.2" y2="630.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="666.9" x2="1353.2" y2="644.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="666.9" x2="1353.2" y2="658.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="666.9" x2="1353.2" y2="673.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="630.0" x2="1378.4" y2="638.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="630.0" x2="1378.4" y2="652.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="630.0" x2="1378.4" y2="666.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="644.4" x2="1378.4" y2="638.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="644.4" x2="1378.4" y2="652.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="644.4" x2="1378.4" y2="666.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="658.8" x2="1378.4" y2="638.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="658.8" x2="1378.4" y2="652.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="658.8" x2="1378.4" y2="666.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="673.2" x2="1378.4" y2="638.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="673.2" x2="1378.4" y2="652.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="673.2" x2="1378.4" y2="666.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="1328.0" cy="638.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1328.0" cy="652.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1328.0" cy="666.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="630.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="644.4" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="658.8" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="673.2" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="638.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="652.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="666.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <rect x="1242.0" y="602.0" width="186" height="136" fill="none" stroke="#172033" stroke-width="1.6" stroke-dasharray="6,5"/>
+  <text x="1394.0" y="679.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="14.0">generic score</text>
+  <rect x="1220.0" y="740.0" width="64.0" height="26.0" rx="0.0" fill="#EEEEEE" stroke="#172033" opacity="1.000"/>
+  <text x="1252.0" y="759.0" text-anchor="middle" class="tiny" style="fill:#172033" font-weight="700" font-size="11.0">fine-tune</text>
+  <rect x="1294.0" y="740.0" width="72.0" height="26.0" rx="0.0" fill="#EEEEEE" stroke="#172033" opacity="1.000"/>
+  <text x="1330.0" y="759.0" text-anchor="middle" class="tiny" style="fill:#172033" font-weight="700" font-size="11.0">re-init</text>
+  <text x="1022.0" y="824.0" text-anchor="start" class="method" style="fill:#172033" font-weight="700" font-size="17.0">Transfer</text>
+  <rect x="1088.0" y="768.0" width="88.0" height="30.0" rx="9.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="789.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">State</text>
+  <rect x="1088.0" y="810.0" width="88.0" height="30.0" rx="9.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="831.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">Graph</text>
+  <rect x="1088.0" y="852.0" width="88.0" height="30.0" rx="9.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <text x="1132.0" y="873.0" text-anchor="middle" class="small" style="fill:#172033" font-weight="700" font-size="12.0">Limits</text>
+  <path d="M1176.0,825.0 L1216.0,825.0" fill="none" stroke="#0B5CAD" stroke-width="2.2" marker-end="url(#arrow-blue)"/>
+  <rect x="1220.0" y="780.0" width="18.0" height="37.8" rx="0.0" fill="#DCECD1" stroke="#172033" opacity="1.000"/>
+  <rect x="1220.0" y="817.8" width="18.0" height="27.0" rx="0.0" fill="#CDE5F7" stroke="#172033" opacity="1.000"/>
+  <rect x="1220.0" y="844.8" width="18.0" height="25.2" rx="0.0" fill="#FFF0BF" stroke="#172033" opacity="1.000"/>
+  <rect x="1258.0" y="770.0" width="44.0" height="112.0" rx="8.0" fill="#E8D8EA" stroke="#4A235A" opacity="1.000"/>
+  <line x1="1328.0" y1="794.1" x2="1353.2" y2="786.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="794.1" x2="1353.2" y2="800.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="794.1" x2="1353.2" y2="814.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="794.1" x2="1353.2" y2="829.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="808.5" x2="1353.2" y2="786.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="808.5" x2="1353.2" y2="800.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="808.5" x2="1353.2" y2="814.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="808.5" x2="1353.2" y2="829.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="822.9" x2="1353.2" y2="786.0" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="822.9" x2="1353.2" y2="800.4" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="822.9" x2="1353.2" y2="814.8" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1328.0" y1="822.9" x2="1353.2" y2="829.2" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="786.0" x2="1378.4" y2="794.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="786.0" x2="1378.4" y2="808.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="786.0" x2="1378.4" y2="822.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="800.4" x2="1378.4" y2="794.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="800.4" x2="1378.4" y2="808.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="800.4" x2="1378.4" y2="822.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="814.8" x2="1378.4" y2="794.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="814.8" x2="1378.4" y2="808.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="814.8" x2="1378.4" y2="822.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="829.2" x2="1378.4" y2="794.1" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="829.2" x2="1378.4" y2="808.5" stroke="#D8E0EA" stroke-width="0.80"/>
+  <line x1="1353.2" y1="829.2" x2="1378.4" y2="822.9" stroke="#D8E0EA" stroke-width="0.80"/>
+  <circle cx="1328.0" cy="794.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1328.0" cy="808.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1328.0" cy="822.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="786.0" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="800.4" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="814.8" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1353.2" cy="829.2" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="794.1" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="808.5" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <circle cx="1378.4" cy="822.9" r="7.0" fill="#FFFFFF" stroke="#4A235A" stroke-width="2.0"/>
+  <text x="1394.0" y="835.0" text-anchor="start" class="method" style="fill:#4A235A" font-weight="700" font-size="14.0">task action</text>
 </svg>
