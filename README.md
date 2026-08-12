@@ -1,4 +1,4 @@
-![ieee-skills overview](assets/ieee-skills-overview.png)
+![ieee-skills 中文概览](assets/ieee-skills-overview-zh.png)
 
 # ieee-skills
 
@@ -16,8 +16,6 @@
 [English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [最近更新](#最近更新) | [IEEE SubmitCheck](#ieee-submitcheck) | [为什么需要它](#为什么需要它) | [示例交付物](#示例交付物) | [快速开始](#快速开始) | [安装方法](#安装) | [支持项目](#支持项目)
 
 ## 最近更新
-
-**2026-08-12：新增项目支持入口。** README 和在线介绍页现已加入微信与支付宝收款码；所有 skills 仍然完整开源，打赏完全自愿。
 
 **2026-08-12：采纳 Issue #1，新增 `ieee-summarize`。** 这个 skill 放在 `ieee-writing` 之前，用来把一个文件夹里的杂乱 idea 记录、实验日志、代码、AI 对话导出、文献总结、related-work 候选和截图式笔记整理成 `IEEE Research Brief`。同时补充了 `ieee-polishing` 的 AI-like prose 修复，以及 `ieee-reviewer` / `ieee-response` 的审稿意见质量审计：识别泛泛、矛盾、无依据或疑似模板化的审稿意见，但不轻率指控审稿人使用 AI。
 

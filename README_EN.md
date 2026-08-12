@@ -17,8 +17,6 @@ This is a Codex skill collection for **IEEE-style conference, journal, Transacti
 
 ## Latest Update
 
-**2026-08-12: added optional project support.** The README and project page now include WeChat Pay and Alipay QR codes. All skills remain fully open source, and donations are entirely optional.
-
 **2026-08-12: adopted Issue #1 and added `ieee-summarize`.** This skill sits before `ieee-writing` and turns messy folders of idea notes, experiment logs, source code, AI chat exports, literature summaries, related-work candidates, and screenshot-style notes into an `IEEE Research Brief`. The update also adds AI-like prose repair to `ieee-polishing` and reviewer-comment quality audits to `ieee-reviewer` / `ieee-response` for generic, contradictory, unsupported, or template-like review comments without making unsupported accusations about AI use.
 
 **2026-08-02: added a multimodal DRL / neural-network framework diagram demo.** `ieee-figure-table` now includes a four-panel composite framework figure closer to a real paper overview: the main panel shows state traces, topology graphs, and engineering constraints flowing into encoders, fusion, attention, and actor-critic outputs; the subpanels add graph construction, operating-condition evidence, and pretraining/transfer learning. The demo can be adapted for communications resource allocation, robotics, power systems, edge intelligence, and smart manufacturing papers.
