@@ -31,6 +31,7 @@ axes:
       format: static/fragments/comment_type/format.md
       limitation: static/fragments/comment_type/limitation.md
       technical-error: static/fragments/comment_type/technical-error.md
+      review-quality: static/fragments/comment_type/review-quality.md
     multi: true
 
   action_type:
@@ -96,3 +97,5 @@ references:
       path: ../_shared/references/ieee-latex-guidelines.md
     - condition: response requires section rewriting
       path: ../_shared/references/ieee-paper-structure.md
+    - condition: reviewer comments appear generic, contradictory, unsupported, careless, hallucinated, or possibly AI-generated
+      path: ../_shared/references/ieee-ai-writing-review-risk.md

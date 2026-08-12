@@ -1,0 +1,64 @@
+name: ieee-summarize
+version: 0.1.0
+description: >
+  Router for turning messy research folders, notes, code, literature summaries,
+  AI chat exports, and experiment logs into IEEE-ready writing briefs.
+
+always_load:
+  - ../_shared/references/ieee-official-source-basis.md
+  - ../_shared/references/ieee-engineering-logic.md
+  - references/folder-ingestion.md
+  - references/research-brief-template.md
+
+axes:
+  material_scope:
+    detect: |
+      Detect the source material. Use folder when a directory path is provided;
+      code-and-logs when source code and experiment outputs dominate;
+      literature-pack when paper summaries, Zotero exports, references, or
+      related-work notes dominate; pasted-notes for inline notes; mixed when
+      multiple categories appear.
+    values:
+      folder: folder path or directory tree
+      pasted-notes: inline notes or pasted Markdown/text
+      code-and-logs: implementation files, configs, logs, result tables
+      literature-pack: related-work summaries, paper notes, intro excerpts, BibTeX
+      mixed: multiple material types
+    default: mixed
+    multi: false
+
+  output_target:
+    detect: |
+      Detect the intended normalized output. Use research-brief by default;
+      writing-input when the user will immediately use ieee-writing;
+      experiment-summary for result/log consolidation; related-work-seed for
+      paper-library filtering; claim-evidence-seed for pre-review checks.
+    values:
+      research-brief: full pre-writing brief
+      writing-input: section-ready input for ieee-writing
+      experiment-summary: experiment and result consolidation
+      related-work-seed: literature family and citation-role seed
+      claim-evidence-seed: claim-to-evidence matrix seed
+    default: research-brief
+    multi: false
+
+  cleanup_level:
+    detect: |
+      Use inventory for a quick file map; standard for normal synthesis; deep
+      when the user asks to read many files, reconcile contradictions, or
+      prepare a full writing pack.
+    values:
+      inventory: classify and prioritize files only
+      standard: extract and structure the main evidence
+      deep: reconcile notes, code, logs, and literature into a full brief
+    default: standard
+    multi: false
+
+references:
+  on_demand:
+    - condition: experiment evidence or claim-evidence mapping is central
+      path: ../_shared/references/ieee-experiment-checklist.md
+    - condition: related-work filtering, citation roles, or Zotero/library summaries are central
+      path: ../_shared/references/ieee-paper-structure.md
+    - condition: output will be handed directly to ieee-writing
+      path: ../_shared/references/ieee-paper-structure.md

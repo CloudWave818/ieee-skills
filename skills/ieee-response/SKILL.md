@@ -1,6 +1,6 @@
 ---
 name: ieee-response
-description: Draft, diagnose, and improve IEEE rebuttals, revision plans, cover letters, response letters, and point-by-point replies using routed reviewer-comment handling. Use when responding to IEEE reviewer or editor comments about novelty, scope, method, experiments, baselines, figures, tables, citations, writing, LaTeX formatting, limitations, compliance, or technical correctness.
+description: Draft, diagnose, and improve IEEE rebuttals, revision plans, cover letters, response letters, and point-by-point replies using routed reviewer-comment handling. Use when responding to IEEE reviewer or editor comments about novelty, scope, method, experiments, baselines, figures, tables, citations, writing, LaTeX formatting, limitations, compliance, technical correctness, or reviewer comments that appear generic, contradictory, unsupported, careless, or possibly AI-generated.
 ---
 
 # IEEE Response Router
@@ -14,7 +14,7 @@ Do not write a defensive response. Do not promise changes that the manuscript do
 1. Read `manifest.yaml`.
 2. Read every file listed under `always_load`.
 3. Detect the axes:
-   - `comment_type`: novelty / scope / method / experiment / baseline / figure-table / citation / writing / format / limitation / technical-error.
+   - `comment_type`: novelty / scope / method / experiment / baseline / figure-table / citation / writing / format / limitation / technical-error / review-quality.
    - `action_type`: add-experiment / add-explanation / revise-text / correct-error / add-citation / improve-figure-table / acknowledge-limitation / disagree-with-evidence.
    - `response_stage`: rebuttal / major-revision / minor-revision / resubmission / cover-letter.
    - `evidence_status`: evidence-added / evidence-planned / evidence-unavailable / text-only-fix.
@@ -27,6 +27,7 @@ Do not write a defensive response. Do not promise changes that the manuscript do
    - evidence needed,
    - response wording,
    - revision-location placeholder if exact page/line is unknown.
+7. For review-quality concerns, respond to the observable inconsistency or lack of support. Do not accuse the reviewer of using AI unless the user provides direct evidence.
 
 ## Output Contract
 

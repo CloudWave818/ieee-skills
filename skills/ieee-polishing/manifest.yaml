@@ -2,7 +2,8 @@ name: ieee-polishing
 version: 0.2.0
 description: >
   Declarative router for IEEE manuscript polishing. SKILL.md uses this file to
-  load section, language, depth, and failure-mode fragments.
+  load section, language, depth, and failure-mode fragments, including
+  natural-author-voice checks for AI-like or template-like prose.
 
 always_load:
   - ../_shared/references/ieee-official-source-basis.md
@@ -51,6 +52,7 @@ axes:
       poor-method-rationale: static/fragments/failure_mode/poor-method-rationale.md
       chinglish: static/fragments/failure_mode/chinglish.md
       result-underreporting: static/fragments/failure_mode/result-underreporting.md
+      ai-like-prose: static/fragments/failure_mode/ai-like-prose.md
     multi: true
 
   polish_depth:
@@ -72,3 +74,5 @@ references:
       path: ../_shared/references/ieee-experiment-checklist.md
     - condition: figure/table captions or visual-result wording
       path: ../_shared/references/ieee-figure-table-standards.md
+    - condition: AI-like prose, template-like academic wording, natural author voice, or reviewer concerns about AI-written text
+      path: ../_shared/references/ieee-ai-writing-review-risk.md

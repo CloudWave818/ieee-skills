@@ -3,7 +3,7 @@
 # ieee-skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B5CAD.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Codex%20skills-9-1F7A8C.svg)](skills)
+[![Skills](https://img.shields.io/badge/Codex%20skills-10-1F7A8C.svg)](skills)
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
@@ -11,11 +11,13 @@
 
 Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE reviewer is likely to buy the engineering evidence**: whether the object is clear, the operating condition is real, baselines are fair, experiments support the claims, figures survive IEEE column scaling, and revision responses provide concrete evidence.
 
-This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
+This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with research-material summarization, writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
 
 [中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Latest Update](#latest-update) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation)
 
 ## Latest Update
+
+**2026-08-12: adopted Issue #1 and added `ieee-summarize`.** This skill sits before `ieee-writing` and turns messy folders of idea notes, experiment logs, source code, AI chat exports, literature summaries, related-work candidates, and screenshot-style notes into an `IEEE Research Brief`. The update also adds AI-like prose repair to `ieee-polishing` and reviewer-comment quality audits to `ieee-reviewer` / `ieee-response` for generic, contradictory, unsupported, or template-like review comments without making unsupported accusations about AI use.
 
 **2026-08-02: added a multimodal DRL / neural-network framework diagram demo.** `ieee-figure-table` now includes a four-panel composite framework figure closer to a real paper overview: the main panel shows state traces, topology graphs, and engineering constraints flowing into encoders, fusion, attention, and actor-critic outputs; the subpanels add graph construction, operating-condition evidence, and pretraining/transfer learning. The demo can be adapted for communications resource allocation, robotics, power systems, edge intelligence, and smart manufacturing papers.
 
@@ -36,7 +38,10 @@ It is suitable for AI, communications, control, signal processing, power and ene
 `IEEE SubmitCheck` is the recommended flagship workflow for this repository. Instead of asking only for sentence polishing, run a manuscript through the evidence chain that IEEE reviewers usually inspect.
 
 ```text
-manuscript draft
+messy research materials
+  -> ieee-summarize
+  -> ieee-writing
+  -> manuscript draft
   -> ieee-reviewer
   -> ieee-experiment
   -> ieee-figure-table
@@ -48,6 +53,7 @@ manuscript draft
 A full check should produce:
 
 - `IEEE reviewer risk report`: rejection or major-revision risks ranked as Critical / Major / Minor
+- `IEEE research brief`: scattered notes organized into object, condition, method, experiments, literature, and contribution candidates
 - `claim-evidence matrix`: what evidence each central claim needs, what exists, and what experiment is missing
 - `baseline fairness checklist`: traditional baselines, recent strong baselines, data splits, and tuning fairness
 - `figure/table first-impression audit`: two-column readability, captions, grayscale accessibility, axes, and table precision
@@ -61,6 +67,7 @@ IEEE manuscript problems are often not only language problems. They are engineer
 
 | Common pain point | Reviewer risk | Skill |
 |---|---|---|
+| Ideas, code, AI chats, experiment logs, and paper summaries are scattered in a folder | writing input is unstructured and claims drift away from evidence | `ieee-summarize` |
 | Abstract/introduction lacks object, condition, and engineering harm | weak motivation, unclear contribution | `ieee-writing` / `ieee-polishing` |
 | Method section explains what was done but not why it fits the system | weak method rationale, module stacking | `ieee-writing` / `ieee-reviewer` |
 | Many experiments exist but do not prove the stated claims | insufficient experiments, unsupported claims | `ieee-experiment` |
@@ -68,6 +75,7 @@ IEEE manuscript problems are often not only language problems. They are engineer
 | Accuracy improves but complexity, latency, robustness, or deployment cost is hidden | weak engineering value | `ieee-experiment` / `ieee-figure-table` |
 | Figures fail after IEEE two-column scaling | weak presentation and poor first impression | `ieee-figure-table` |
 | IEEEtran, BibTeX, floats, equations, and tables keep breaking | formatting and submission friction | `ieee-latex` / `ieee-citation` |
+| Prose sounds too template-like, or reviewer comments are generic, contradictory, or unsupported | AI-like prose / low-quality review risk | `ieee-polishing` / `ieee-reviewer` / `ieee-response` |
 | Reviewer response explains but does not show concrete revision evidence | weak revision package | `ieee-response` |
 
 In short: **generic academic-writing skills mostly polish expression; ieee-skills checks the IEEE-specific chain of object, condition, baseline, experiment, figure, and reviewer evidence.**
@@ -76,6 +84,7 @@ In short: **generic academic-writing skills mostly polish expression; ieee-skill
 
 | Problem | Typical output |
 |---|---|
+| Messy research folder needs to become writing-ready input | [summarize-research-brief.md](examples/summarize-research-brief.md) |
 | Unsure whether reviewers will object before submission | [pre-submission-check.md](examples/pre-submission-check.md) |
 | Experiments do not clearly support claims | [claim-evidence-matrix.md](examples/claim-evidence-matrix.md) |
 | Abstract reads like a vague summary or overclaims | [abstract-polishing.md](examples/abstract-polishing.md) |
@@ -88,19 +97,22 @@ These files are templates and example report shapes, not claimed accepted-paper 
 ## Five-Stage Workflow
 
 ```text
-1. Frame the problem: object, condition, engineering harm, prior limitation
-2. Draft the paper: title, abstract, introduction, related work, method, conclusion
-3. Strengthen evidence: baselines, ablations, robustness, complexity, reproducibility
-4. Pre-review: novelty, validity, data, clarity, compliance, advancement
-5. Revise and respond: point-by-point response, added evidence, figures, cover letter
+1. Summarize materials: turn messy notes/code/logs/literature into an IEEE Research Brief
+2. Frame the problem: object, condition, engineering harm, prior limitation
+3. Draft the paper: title, abstract, introduction, related work, method, conclusion
+4. Strengthen evidence: baselines, ablations, robustness, complexity, reproducibility
+5. Pre-review: novelty, validity, data, clarity, compliance, advancement
+6. Revise and respond: point-by-point response, added evidence, figures, cover letter
 ```
 
 ## Quick Start
 
 | Goal | Skill | Prompt |
 |---|---|---|
+| Turn a messy research folder into writing input | `ieee-summarize` | `Use $ieee-summarize to turn this folder of idea notes, code, experiment logs, and paper summaries into an IEEE Research Brief.` |
 | Draft a paper section | `ieee-writing` | `Use $ieee-writing to draft an IEEE-style introduction from my problem statement and contributions.` |
 | Polish technical prose | `ieee-polishing` | `Use $ieee-polishing to polish this abstract into concise IEEE-style technical English.` |
+| Check template-like or AI-like wording | `ieee-polishing` | `Use $ieee-polishing to identify AI-like prose and revise it into natural, evidence-grounded IEEE writing.` |
 | Run a pre-submission review | `ieee-reviewer` | `Use $ieee-reviewer to evaluate this manuscript like an IEEE Transactions reviewer.` |
 | Strengthen experiments | `ieee-experiment` | `Use $ieee-experiment to check whether my experiments prove the claims in my abstract.` |
 | Audit figures and tables | `ieee-figure-table` | `Use $ieee-figure-table to audit my figures and result tables before submission.` |
@@ -113,9 +125,10 @@ These files are templates and example report shapes, not claimed accepted-paper 
 
 | Stage | Skill | Purpose |
 |---|---|---|
+| Stage 0 | `ieee-summarize` | Convert messy research folders, logs, code, AI chats, literature summaries, and related-work candidates into an IEEE Research Brief |
 | Stage 1 | `ieee-writing` | Draft and restructure IEEE-style titles, abstracts, introductions, related work, methods, experiments, conclusions, and contribution statements |
-| Stage 1 | `ieee-polishing` | Polish or translate technical prose into precise IEEE-style English |
-| Stage 1 | `ieee-reviewer` | Simulate IEEE-style technical review across scope, novelty, validity, data, clarity, compliance, and advancement |
+| Stage 1 | `ieee-polishing` | Polish or translate technical prose into precise IEEE-style English, including AI-like prose repair |
+| Stage 1 | `ieee-reviewer` | Simulate IEEE-style technical review and audit reviewer-comment quality across scope, novelty, validity, data, clarity, compliance, and advancement |
 | Stage 2 | `ieee-experiment` | Audit claim-evidence alignment, baselines, ablations, robustness, complexity, and reproducibility |
 | Stage 2 | `ieee-latex` | Fix IEEEtran LaTeX, floats, equations, tables, algorithms, BibTeX, and PDF checks |
 | Stage 2 | `ieee-response` | Draft point-by-point responses, rebuttals, revision plans, and cover letters |

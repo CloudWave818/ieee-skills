@@ -2,7 +2,8 @@ name: ieee-reviewer
 version: 0.2.0
 description: >
   Declarative router for IEEE-style review. SKILL.md loads official review
-  gates, venue expectations, domain gates, and scope-specific checks.
+  gates, venue expectations, domain gates, scope-specific checks, and
+  reviewer-comment quality audits.
 
 always_load:
   - ../_shared/references/ieee-official-source-basis.md
@@ -43,6 +44,7 @@ axes:
       experiments: static/fragments/review_scope/experiments.md
       figures-tables: static/fragments/review_scope/figures-tables.md
       rebuttal-readiness: static/fragments/review_scope/rebuttal-readiness.md
+      review-comment-audit: static/fragments/review_scope/review-comment-audit.md
     default: full-manuscript
     multi: false
 
@@ -84,3 +86,5 @@ references:
       path: ../_shared/references/ieee-official-source-basis.md
     - condition: full manuscript structure
       path: ../_shared/references/ieee-paper-structure.md
+    - condition: reviewer comments appear generic, contradictory, careless, hallucinated, or possibly AI-generated
+      path: ../_shared/references/ieee-ai-writing-review-risk.md

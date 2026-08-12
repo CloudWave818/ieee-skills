@@ -19,3 +19,11 @@ We agree that [limitation] is important. We have added a discussion of this limi
 ```
 
 Use placeholders instead of invented locations.
+
+Review-quality / editor-clarification pattern:
+
+```text
+We respectfully note a possible inconsistency in this comment. The comment states [reviewer claim], whereas the manuscript reports [manuscript evidence] in [Section/Fig./Table]. To make this easier to verify, we have revised [location] to explicitly clarify [change]. We would appreciate the editor's guidance if further action is expected.
+```
+
+Use this pattern for unsupported, contradictory, or apparently generic comments. Do not accuse a reviewer of using AI without direct evidence.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "IEEE Summarize"
+  short_description: "Summarize messy research records for IEEE writing."
+  default_prompt: "Use $ieee-summarize to turn this folder of notes, code, paper summaries, and experiment logs into an IEEE writing brief."

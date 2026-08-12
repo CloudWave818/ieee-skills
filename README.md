@@ -3,7 +3,7 @@
 # ieee-skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B5CAD.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/Codex%20skills-9-1F7A8C.svg)](skills)
+[![Skills](https://img.shields.io/badge/Codex%20skills-10-1F7A8C.svg)](skills)
 [![Language](https://img.shields.io/badge/Language-ZH%20%7C%20EN-4B5563.svg)](README_EN.md)
 [![GitHub Pages](https://img.shields.io/badge/Pages-ieee--skills-0B5CAD.svg)](https://cloudwave818.github.io/ieee-skills/)
 
@@ -11,11 +11,13 @@
 
 普通润色工具帮你改句子，**ieee-skills 更关心 IEEE 审稿人会不会买账**：对象是否明确，工况是否成立，baseline 是否公平，实验是否真的支撑 claim，图表双栏缩放后是否还能读，返修回复是否有证据。
 
-这是一组面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills，覆盖写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
+这是一组面向 **IEEE 会议、期刊、Transactions、Letters 和工程技术论文工作流** 的 Codex skills，覆盖研究材料整理、写作、润色、预审、实验设计、图表检查、审稿回复、LaTeX 排版、引用核验和论文阅读。它不是 IEEE 官方项目，而是一套非官方的 IEEE-style academic writing and review skills。
 
 [English README](README_EN.md) | [在线介绍页](https://cloudwave818.github.io/ieee-skills/) | [最近更新](#最近更新) | [IEEE SubmitCheck](#ieee-submitcheck) | [为什么需要它](#为什么需要它) | [示例交付物](#示例交付物) | [快速开始](#快速开始) | [安装方法](#安装)
 
 ## 最近更新
+
+**2026-08-12：采纳 Issue #1，新增 `ieee-summarize`。** 这个 skill 放在 `ieee-writing` 之前，用来把一个文件夹里的杂乱 idea 记录、实验日志、代码、AI 对话导出、文献总结、related-work 候选和截图式笔记整理成 `IEEE Research Brief`。同时补充了 `ieee-polishing` 的 AI-like prose 修复，以及 `ieee-reviewer` / `ieee-response` 的审稿意见质量审计：识别泛泛、矛盾、无依据或疑似模板化的审稿意见，但不轻率指控审稿人使用 AI。
 
 **2026-08-02：新增多模态 DRL / 神经网络框架图 demo。** `ieee-figure-table` 现在补充了一个更接近论文总图的四面板框架图示例：主面板展示时序状态、拓扑图、工程约束三路输入到 encoder、fusion、attention 和 actor-critic 输出；子面板补充图构建、工况证据和预训练/迁移学习。这个 demo 适合迁移到通信资源分配、机器人控制、电力系统、边缘智能和智能制造等 IEEE 论文场景。
 
@@ -36,7 +38,10 @@
 `IEEE SubmitCheck` 是这个仓库推荐的旗舰用法：不是单独问“帮我润色一下”，而是把一篇 IEEE 手稿按审稿人会看的证据链跑一遍。
 
 ```text
-manuscript draft
+messy research materials
+  -> ieee-summarize
+  -> ieee-writing
+  -> manuscript draft
   -> ieee-reviewer
   -> ieee-experiment
   -> ieee-figure-table
@@ -48,6 +53,7 @@ manuscript draft
 一次完整检查应该输出：
 
 - `IEEE reviewer risk report`：按 Critical / Major / Minor 排序的拒稿或大修风险
+- `IEEE research brief`：把散乱记录整理成对象、工况、方法、实验、文献和贡献候选
 - `claim-evidence matrix`：每个核心 claim 需要什么证据、现在有什么、还缺什么实验
 - `baseline fairness checklist`：传统 baseline、近期强 baseline、数据划分、调参预算是否公平
 - `figure/table first-impression audit`：图表双栏可读性、caption、灰度可读性、坐标轴和表格精度问题
@@ -61,6 +67,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 | 常见痛点 | 审稿人可能怎么看 | 对应 skill |
 |---|---|---|
+| idea、代码、AI 对话、实验记录和文献总结分散在一个文件夹里 | 写作输入不成体系，claim 和 evidence 很容易错位 | `ieee-summarize` |
 | 摘要和引言只说“提出新方法”，没有对象、工况和工程危害 | motivation 不够强，contribution 不清楚 | `ieee-writing` / `ieee-polishing` |
 | 方法部分只讲怎么做，没有解释为什么适合这个系统 | method rationale 弱，像堆模块 | `ieee-writing` / `ieee-reviewer` |
 | 实验很多，但没有逐条证明论文 claim | insufficient experiments，claims not supported | `ieee-experiment` |
@@ -68,6 +75,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 | 只看 accuracy，不展示复杂度、延迟、鲁棒性、部署代价 | 工程价值不足，real-time / low-complexity claim 站不住 | `ieee-experiment` / `ieee-figure-table` |
 | 图表双栏缩放后看不清、图例遮挡、caption 只描述现象 | 第一印象差，presentation weak | `ieee-figure-table` |
 | IEEEtran、BibTeX、浮动体、公式、表格反复出问题 | 格式不严谨，投稿前返工 | `ieee-latex` / `ieee-citation` |
+| 文字过于模板化，或审稿意见明显泛泛、矛盾、无依据 | AI-like prose / low-quality review risk | `ieee-polishing` / `ieee-reviewer` / `ieee-response` |
 | 审稿回复只解释，不给修改、实验和稿件位置 | response 不像 revision package | `ieee-response` |
 
 一句话：**普通 academic writing skill 主要改表达，ieee-skills 重点检查 IEEE 论文的对象、工况、baseline、实验、图表和审稿证据。**
@@ -76,6 +84,7 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 | 你要解决的问题 | 典型输出 |
 |---|---|
+| 一个文件夹里都是杂乱研究记录，不知道怎么喂给 writing skill | [summarize-research-brief.md](examples/summarize-research-brief.md) |
 | 投稿前不知道会不会被审稿人卡 | [pre-submission-check.md](examples/pre-submission-check.md) |
 | 实验和 claim 对不上 | [claim-evidence-matrix.md](examples/claim-evidence-matrix.md) |
 | 摘要像流水账或 claim 过大 | [abstract-polishing.md](examples/abstract-polishing.md) |
@@ -88,20 +97,23 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 ## 五阶段工作流
 
 ```text
-1. 定位问题：对象、工况、工程危害、现有方法局限
-2. 写作成稿：标题、摘要、引言、Related Work、方法、结论
-3. 证据补强：baseline、ablation、robustness、complexity、reproducibility
-4. 投稿前预审：审稿人视角检查 novelty、validity、data、clarity、compliance
-5. 返修回复：逐点回应、补实验、改图表、写 cover letter
+1. 材料整理：把零散 notes/code/logs/literature 变成 IEEE Research Brief
+2. 定位问题：对象、工况、工程危害、现有方法局限
+3. 写作成稿：标题、摘要、引言、Related Work、方法、结论
+4. 证据补强：baseline、ablation、robustness、complexity、reproducibility
+5. 投稿前预审：审稿人视角检查 novelty、validity、data、clarity、compliance
+6. 返修回复：逐点回应、补实验、改图表、写 cover letter
 ```
 
 ## 快速开始
 
 | 你想做什么 | 推荐 skill | 可以这样问 |
 |---|---|---|
+| 把杂乱研究文件夹整理成写作输入 | `ieee-summarize` | `Use $ieee-summarize 把这个文件夹里的 idea 记录、代码、实验日志和文献总结整理成 IEEE Research Brief。` |
 | 搭论文框架、写摘要/引言/方法 | `ieee-writing` | `Use $ieee-writing 把我的问题背景和贡献点改成 IEEE 风格 introduction。` |
 | 把中文或中式英文改成 IEEE 风格 | `ieee-polishing` | `Use $ieee-polishing 润色这段摘要，但不要夸大 claim。` |
 | 投稿前模拟审稿 | `ieee-reviewer` | `Use $ieee-reviewer 把我的论文当成 IEEE Transactions 审稿人预审一遍。` |
+| 判断文字是否太模板化或 AI 腔 | `ieee-polishing` | `Use $ieee-polishing 检查这段是否有 AI-like prose，并改成更自然但不夸大的 IEEE 表达。` |
 | 检查实验够不够 | `ieee-experiment` | `Use $ieee-experiment 检查我的实验是否支撑摘要里的 claim。` |
 | 检查图表是否像正式论文 | `ieee-figure-table` | `Use $ieee-figure-table 看看这张图双栏缩放后会不会被审稿人嫌弃。` |
 | 回复审稿意见 | `ieee-response` | `Use $ieee-response 按“修改动作 + 新证据 + 稿件位置”回复这些审稿意见。` |
@@ -113,9 +125,10 @@ IEEE 论文最容易卡住的地方，往往不是英文句子，而是工程证
 
 | 阶段 | Skill | 用途 |
 |---|---|---|
+| 第零阶段 | `ieee-summarize` | 把杂乱研究文件夹、实验记录、代码、AI 对话、文献总结和 related-work 候选整理成 IEEE Research Brief |
 | 第一阶段 | `ieee-writing` | 起草和重构 IEEE 论文标题、摘要、引言、Related Work、方法、实验、结论和贡献点 |
-| 第一阶段 | `ieee-polishing` | IEEE 风格英文润色、中文转英文、逻辑重构、空泛表达修复 |
-| 第一阶段 | `ieee-reviewer` | 模拟 IEEE 审稿人，检查 scope、novelty、validity、data、clarity、compliance、advancement |
+| 第一阶段 | `ieee-polishing` | IEEE 风格英文润色、中文转英文、逻辑重构、空泛表达和 AI-like prose 修复 |
+| 第一阶段 | `ieee-reviewer` | 模拟 IEEE 审稿人，检查 scope、novelty、validity、data、clarity、compliance、advancement，也可审计审稿意见质量 |
 | 第二阶段 | `ieee-experiment` | 设计和审查实验，构建 claim-evidence matrix，检查 baseline、ablation、robustness、complexity |
 | 第二阶段 | `ieee-latex` | 处理 IEEEtran、编译错误、浮动体、公式、表格、算法、BibTeX 和 PDF 检查 |
 | 第二阶段 | `ieee-response` | 生成审稿回复、revision plan、cover letter、point-by-point response |

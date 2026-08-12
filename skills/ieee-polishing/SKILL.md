@@ -1,6 +1,6 @@
 ---
 name: ieee-polishing
-description: Polish, translate, diagnose, and restructure technical manuscript text into IEEE-style academic English using routed failure-mode guidance. Use for IEEE abstracts, introductions, related work, methods, experiments, conclusions, figure captions, rebuttals, Chinese-to-English technical writing, and engineering prose that needs clearer problem logic, contribution framing, method rationale, evidence discipline, or reviewer-ready wording.
+description: Polish, translate, diagnose, and restructure technical manuscript text into IEEE-style academic English using routed failure-mode guidance. Use for IEEE abstracts, introductions, related work, methods, experiments, conclusions, figure captions, rebuttals, Chinese-to-English technical writing, AI-like or template-like academic prose, and engineering prose that needs clearer problem logic, contribution framing, method rationale, evidence discipline, natural author voice, or reviewer-ready wording.
 ---
 
 # IEEE Polishing Router
@@ -16,7 +16,7 @@ Do not polish only from memory. Follow the routing protocol and load the selecte
 3. Detect the axes:
    - `section`: title / abstract / introduction / related-work / method / experiments / conclusion / caption / response / standalone.
    - `language`: en / zh-to-en.
-   - `failure_mode`: vague-claims / unsupported-novelty / weak-contribution / poor-method-rationale / chinglish / result-underreporting.
+   - `failure_mode`: vague-claims / unsupported-novelty / weak-contribution / poor-method-rationale / chinglish / result-underreporting / ai-like-prose.
    - `polish_depth`: light / standard / structural.
 4. State the detected axes in one short line before editing.
 5. Load only the matching fragments.

@@ -1,6 +1,6 @@
 ---
 name: ieee-reviewer
-description: Review IEEE conference, journal, Transactions, Letters, or magazine manuscripts from a technical reviewer perspective using routed IEEE review gates. Use when evaluating scope fit, novelty, validity, data, clarity, compliance, advancement, engineering significance, method soundness, experiment sufficiency, baseline fairness, figure/table quality, formatting risks, rejection risk, major revision strategy, or pre-submission readiness.
+description: Review IEEE conference, journal, Transactions, Letters, or magazine manuscripts from a technical reviewer perspective using routed IEEE review gates. Use when evaluating scope fit, novelty, validity, data, clarity, compliance, advancement, engineering significance, method soundness, experiment sufficiency, baseline fairness, figure/table quality, formatting risks, rejection risk, major revision strategy, pre-submission readiness, or the quality and specificity of reviewer comments that may be generic, careless, contradictory, or possibly AI-generated.
 ---
 
 # IEEE Reviewer Router
@@ -15,7 +15,7 @@ Do not invent reviewer identities or editorial decisions. Review only the suppli
 2. Read every file listed under `always_load`.
 3. Detect the axes:
    - `venue_type`: transaction / journal / letter / conference / magazine / generic.
-   - `review_scope`: full-manuscript / abstract-intro / method / experiments / figures-tables / rebuttal-readiness.
+   - `review_scope`: full-manuscript / abstract-intro / method / experiments / figures-tables / rebuttal-readiness / review-comment-audit.
    - `domain`: ai-ml / communications / control / signal-processing / power-energy / circuits / robotics / embedded-systems / general-engineering.
    - `strictness`: quick / standard / harsh.
 4. State the detected axes in one short line.
@@ -29,7 +29,8 @@ Do not invent reviewer identities or editorial decisions. Review only the suppli
    - compliance,
    - advancement.
 7. Add first-impression checks for figures, tables, formatting, notation, and language.
-8. Return findings ordered by severity.
+8. For review-comment audits, judge observable quality problems rather than accusing a reviewer of using AI.
+9. Return findings ordered by severity.
 
 ## Output Contract
 
