@@ -188,6 +188,33 @@
         color: var(--muted);
       }
 
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 320px));
+        gap: 18px;
+        align-items: start;
+        margin-top: 18px;
+      }
+
+      .support-option {
+        margin: 0;
+        text-align: center;
+      }
+
+      .support-option img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: #fff;
+      }
+
+      .support-option figcaption {
+        margin-top: 8px;
+        font-weight: 700;
+      }
+
       .workflow {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -275,6 +302,10 @@
           grid-template-columns: 1fr 1fr;
         }
 
+        .support-grid {
+          grid-template-columns: minmax(0, 320px);
+        }
+
         table,
         thead,
         tbody,
@@ -311,6 +342,7 @@
           <a href="#skills">Skills</a>
           <a href="#install">Install</a>
           <a href="#basis">Source Basis</a>
+          <a href="#support">Support</a>
         </nav>
         <h1>ieee-skills</h1>
         <p class="lede">One IEEE manuscript, all reviewer-facing checks. Generic polishing tools improve sentences; ieee-skills checks whether the engineering evidence can survive IEEE-style review.</p>
@@ -332,6 +364,7 @@
 
       <section>
         <h2>Latest Update</h2>
+        <p><strong>2026-08-12:</strong> added optional project support through WeChat Pay and Alipay. All skills remain fully open source, and donations are entirely optional.</p>
         <p><strong>2026-08-12:</strong> adopted Issue #1 and added <code>ieee-summarize</code>, a pre-writing skill that turns messy folders of idea notes, experiment logs, source code, AI chat exports, paper summaries, and related-work candidates into an <code>IEEE Research Brief</code>. The update also adds AI-like prose repair and reviewer-comment quality audits for generic, contradictory, unsupported, or template-like comments.</p>
         <p><strong>2026-08-02:</strong> <code>ieee-figure-table</code> now includes a four-panel multimodal DRL / neural-network framework diagram demo for IEEE-style learning-based control, resource allocation, robotics, edge intelligence, and power-system papers.</p>
         <p><strong>2026-08-01:</strong> <code>ieee-figure-table</code> includes a polished IEEE matplotlib house-style helper, visual-style rules, plotting API guidance, a hybrid figure workflow, and rebuilt demo figures for SNR robustness, accuracy-latency Pareto evidence, and ablation tables. The new demos use multi-panel evidence layouts, dedicated legend/summary panels, text-safe margins, and visible baselines. Hybrid figures can combine Python/R base panels with Illustrator, Inkscape, PowerPoint, Figma, or draw.io finishing while keeping an edit log.</p>
@@ -473,6 +506,21 @@ bash scripts/update-codex-skills.sh</code></pre>
           <li><a href="https://journals.ieeeauthorcenter.ieee.org/your-role-in-article-production/ieee-editorial-style-manual/">IEEE Editorial Style Manual</a></li>
           <li><a href="https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/">Tools for IEEE Authors</a></li>
         </ul>
+      </section>
+
+      <section id="support">
+        <h2>Support the Project</h2>
+        <p>If <code>ieee-skills</code> has saved you time, you can support its continued maintenance. Donations are entirely optional and do not affect access to any feature or the open-source license.</p>
+        <div class="support-grid">
+          <figure class="support-option">
+            <img src="assets/support-wechat.jpg" alt="WeChat Pay QR code">
+            <figcaption>WeChat Pay</figcaption>
+          </figure>
+          <figure class="support-option">
+            <img src="assets/support-alipay.jpg" alt="Alipay QR code">
+            <figcaption>Alipay</figcaption>
+          </figure>
+        </div>
       </section>
 
       <footer>

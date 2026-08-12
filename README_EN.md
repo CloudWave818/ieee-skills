@@ -13,9 +13,11 @@ Generic polishing tools improve sentences. **ieee-skills checks whether an IEEE 
 
 This is a Codex skill collection for **IEEE-style conference, journal, Transactions, Letters, and engineering manuscript workflows**. It helps with research-material summarization, writing, polishing, reviewer-style assessment, experiments, figure/table quality, revision responses, LaTeX, citations, and paper reading. It is an unofficial IEEE-style skill collection, not an IEEE project.
 
-[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Latest Update](#latest-update) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation)
+[中文 README](README.md) | [Project Page](https://cloudwave818.github.io/ieee-skills/) | [Latest Update](#latest-update) | [IEEE SubmitCheck](#ieee-submitcheck) | [Why It Exists](#why-it-exists) | [Example Deliverables](#example-deliverables) | [Quick Start](#quick-start) | [Installation](#installation) | [Support](#support-the-project)
 
 ## Latest Update
+
+**2026-08-12: added optional project support.** The README and project page now include WeChat Pay and Alipay QR codes. All skills remain fully open source, and donations are entirely optional.
 
 **2026-08-12: adopted Issue #1 and added `ieee-summarize`.** This skill sits before `ieee-writing` and turns messy folders of idea notes, experiment logs, source code, AI chat exports, literature summaries, related-work candidates, and screenshot-style notes into an `IEEE Research Brief`. The update also adds AI-like prose repair to `ieee-polishing` and reviewer-comment quality audits to `ieee-reviewer` / `ieee-response` for generic, contradictory, unsupported, or template-like review comments without making unsupported accusations about AI use.
 
@@ -280,6 +282,21 @@ The project is organized around public IEEE author resources and common IEEE-sty
 ## Contributing
 
 GitHub Issues are welcome for new skills, workflow improvements, IEEE writing rules, LaTeX cases, citation checks, and concrete venue-specific examples.
+
+## Support the Project
+
+If `ieee-skills` has saved you time, you can support its continued maintenance. Donations are entirely optional and do not affect access to any feature or the open-source license.
+
+<table>
+  <tr>
+    <td align="center"><strong>WeChat Pay</strong></td>
+    <td align="center"><strong>Alipay</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/support-wechat.jpg" alt="WeChat Pay QR code" width="300"></td>
+    <td align="center"><img src="assets/support-alipay.jpg" alt="Alipay QR code" width="300"></td>
+  </tr>
+</table>
 
 ## Disclaimer
 
