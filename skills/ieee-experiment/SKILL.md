@@ -1,50 +1,24 @@
 ---
 name: ieee-experiment
-description: Design, audit, and strengthen experimental validation for IEEE manuscripts using routed claim-evidence checks. Use when planning experiments, selecting baselines, designing ablations, choosing metrics, checking fairness, adding robustness tests, explaining results, analyzing complexity, building claim-to-evidence matrices, or responding to reviewer concerns about insufficient experiments.
+description: Design or audit experiments that support IEEE manuscript claims, including baselines, ablations, robustness, complexity, and reproducibility.
 ---
 
-# IEEE Experiment Router
+# IEEE Experiment
 
-Use this skill to decide whether the experiments prove the paper's claims. The primary output is an evidence audit, not generic advice.
+Design or audit the evidence needed to support the paper's claims.
 
-Do not design experiments from memory alone. Follow the routing protocol and load the selected fragments.
+## Route
 
-## Routing Protocol
+Infer the technical task, evidence category, visible failure mode, and manuscript stage. Read `manifest.yaml` and load only the fragments needed for those dimensions. Load `static/core/claim-evidence-matrix.md` for multi-claim audits or explicit claim-evidence work rather than for every experiment request.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the axes:
-   - `task_type`: classification / detection / regression / control / signal-processing / communications / optimization / hardware-system / general.
-   - `evidence_type`: baseline / ablation / robustness / complexity / statistical / real-world / reproducibility.
-   - `failure_mode`: missing-traditional-baseline / unfair-comparison / weak-ablation / no-condition-test / overclaimed-results / insufficient-reproducibility.
-   - `stage`: planning / audit / result-writing / reviewer-response.
-4. State the detected axes in one short line.
-5. Load only the matching fragments.
-6. Build or update a claim-evidence matrix.
-7. Identify missing experiments by reviewer impact.
+User instructions take precedence over workflow preferences in this skill. Keep router metadata internal unless it resolves a material ambiguity.
 
-## Output Contract
+## Completion
 
-Default output:
+Prioritize the smallest set of experiments that closes the highest-impact proof gaps. For planning, specify baselines, metrics, controlled variables, conditions, and the claim each experiment tests. For audits, map claims to current evidence and missing evidence. For result writing, flag claims that exceed the supplied results.
 
-```text
-Detected axes: task_type=..., evidence_type=..., failure_mode=..., stage=...
+Verification effort should match the task. Avoid adding experiments or repeated checks that do not test a stated claim or resolve an identified review risk.
 
-Claim-evidence matrix
-Claim | Required evidence | Current evidence | Missing experiment | Review risk
+## Integrity
 
-Priority fixes
-1. ...
-```
-
-For experiment planning, return an experiment plan with baselines, metrics, variables, controlled conditions, and expected claims.
-
-For result writing, return IEEE-style result paragraphs and flag any claim that lacks evidence.
-
-## Red Lines
-
-Do not invent numerical results, datasets, baseline performance, p-values, hardware metrics, or statistical significance.
-
-Do not recommend unnecessary experiments that do not support a stated claim.
-
-Do not treat "more experiments" as automatically better. Prioritize experiments that close the reviewer's proof gap.
+Do not invent numerical results, datasets, baseline performance, p-values, hardware metrics, or statistical significance. Preserve negative results and fairness constraints.

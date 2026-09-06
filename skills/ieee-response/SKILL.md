@@ -1,64 +1,24 @@
 ---
 name: ieee-response
-description: Draft, diagnose, and improve IEEE rebuttals, revision plans, cover letters, response letters, and point-by-point replies using routed reviewer-comment handling. Use when responding to IEEE reviewer or editor comments about novelty, scope, method, experiments, baselines, figures, tables, citations, writing, LaTeX formatting, limitations, compliance, technical correctness, or reviewer comments that appear generic, contradictory, unsupported, careless, or possibly AI-generated.
+description: Draft or revise IEEE rebuttals, response letters, revision plans, cover letters, or point-by-point reviewer replies.
 ---
 
-# IEEE Response Router
+# IEEE Response
 
-Use this skill to convert reviewer criticism into manuscript actions and precise, respectful point-by-point replies.
+Turn reviewer or editor comments into concrete manuscript actions and evidence-grounded replies.
 
-Do not write a defensive response. Do not promise changes that the manuscript does not make. Follow the routing protocol and load the selected fragments.
+## Route
 
-## Routing Protocol
+Infer comment type, required action, response stage, evidence status, and tone. Read `manifest.yaml` and load only fragments needed for the comments at hand. Use the detailed response pattern for multi-comment revision packages or when the user asks for a structured point-by-point format.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the axes:
-   - `comment_type`: novelty / scope / method / experiment / baseline / figure-table / citation / writing / format / limitation / technical-error / review-quality.
-   - `action_type`: add-experiment / add-explanation / revise-text / correct-error / add-citation / improve-figure-table / acknowledge-limitation / disagree-with-evidence.
-   - `response_stage`: rebuttal / major-revision / minor-revision / resubmission / cover-letter.
-   - `evidence_status`: evidence-added / evidence-planned / evidence-unavailable / text-only-fix.
-   - `tone`: standard / concise / very-polite / firm.
-4. State the detected axes in one short line when useful.
-5. Load only the matching fragments.
-6. For each reviewer comment, produce:
-   - issue classification,
-   - required manuscript action,
-   - evidence needed,
-   - response wording,
-   - revision-location placeholder if exact page/line is unknown.
-7. For review-quality concerns, respond to the observable inconsistency or lack of support. Do not accuse the reviewer of using AI unless the user provides direct evidence.
+User instructions take precedence over workflow preferences in this skill. Classification is internal by default; surface it only when it helps the author decide what to change.
 
-## Output Contract
+## Completion
 
-Default point-by-point format:
+For each substantive comment, connect the reply to a concrete manuscript action, evidence, and revision location when known. Carry multi-comment work through a coherent response package rather than stopping after diagnosis. Use placeholders for page/line locations that the supplied manuscript does not establish.
 
-```text
-Reviewer comment:
+For review-quality concerns, address observable inconsistency, vagueness, or lack of support.
 
-Classification:
-- comment_type:
-- action_type:
-- evidence_status:
+## Integrity
 
-Response:
-[polite, specific response]
-
-Manuscript revision:
-[what changed and where]
-
-Evidence:
-[new experiment/result/citation/figure/textual clarification]
-```
-
-For multiple comments, add a `Revision action list` before the detailed responses.
-
-For cover letters, summarize major changes, added experiments, figure/table improvements, and remaining limitations without overselling.
-
-## Red Lines
-
-Do not invent page numbers, line numbers, experiments, results, citations, or editor instructions.
-
-Do not say "we have addressed all concerns" unless every concern is visibly addressed.
-
-Do not dismiss reviewer comments as misunderstandings without first improving manuscript clarity.
+Do not invent page numbers, line numbers, experiments, results, citations, editor instructions, or completed revisions. Do not accuse a reviewer of AI use without direct evidence. Do not promise a manuscript change that has not been made or clearly marked as planned.

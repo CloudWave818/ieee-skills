@@ -1,59 +1,22 @@
 ---
 name: ieee-paper-reader
-description: Read, decompose, and analyze IEEE-style papers using routed technical-reading workflows. Use when extracting problem setting, object-method-condition logic, contributions, method pipeline, equations, datasets, baselines, metrics, ablations, limitations, replication details, citation role, related-work positioning, implementation notes, or reviewer-style assessment from a paper, PDF, abstract, or manuscript excerpt.
+description: Analyze a paper for contributions, methods, equations, experiments, limitations, replication details, or citation positioning.
 ---
 
-# IEEE Paper Reader Router
+# IEEE Paper Reader
 
-Use this skill to turn an IEEE paper into a structured technical brief. Focus on contribution logic, method mechanics, evidence, and reuse value.
+Turn the supplied paper material into a source-bounded technical analysis.
 
-Do not provide only a generic summary. Follow the routing protocol and load the selected fragments.
+## Route
 
-## Routing Protocol
+Infer reading purpose, available scope, paper type, extraction focus, and desired depth. Read `manifest.yaml` and load only fragments that serve that purpose. A quick summary should remain lightweight; implementation, replication, or reviewer analysis may justify deeper fragments and references.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the axes:
-   - `reading_purpose`: literature-review / implementation / replication / reviewer-assessment / citation-positioning / quick-summary.
-   - `input_scope`: full-paper / abstract-only / introduction-related-work / method-only / experiments-only / figures-tables / excerpt.
-   - `paper_type`: algorithmic / system / hardware / control / communications / signal-processing / survey / general.
-   - `extraction_focus`: contribution / method-pipeline / equations / experiments / limitations / reproducibility / related-work.
-   - `output_depth`: brief / standard / deep.
-4. State the detected axes in one short line.
-5. Load only the matching fragments.
-6. Extract a source-bounded fact base before analysis.
-7. Mark missing information when the input is partial.
+User instructions take precedence over workflow preferences in this skill. Keep routing metadata internal unless the available source scope materially limits the answer.
 
-## Output Contract
+## Completion
 
-Default:
+Establish a fact base from the supplied paper before drawing conclusions. Extract the method mechanics and evidence relevant to the user's purpose. For implementation or replication, identify missing details that block reproduction. For citation positioning, explain the role the paper can support.
 
-```text
-Detected axes: reading_purpose=..., input_scope=..., paper_type=..., extraction_focus=..., output_depth=...
+## Integrity
 
-Paper kernel
-- Object:
-- Method:
-- Condition:
-- Prior limitation:
-- Main contribution:
-- Evidence:
-
-Structured notes
-[purpose-specific output]
-
-Limitations / missing information
-- ...
-```
-
-For implementation or replication, include a checklist of missing details.
-
-For citation positioning, include how the paper should and should not be cited.
-
-## Red Lines
-
-Do not invent paper content, equations, results, datasets, or limitations not present in the supplied material.
-
-Do not overquote source text. Summarize and paraphrase.
-
-If the input is only an abstract or excerpt, keep the assessment bounded.
+Do not invent paper content, equations, results, datasets, limitations, or implementation details. Mark claims that cannot be established from a partial paper. Paraphrase rather than reproducing long source passages.

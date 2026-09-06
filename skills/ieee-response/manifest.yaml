@@ -1,18 +1,11 @@
 name: ieee-response
-version: 0.2.0
+version: 0.3.0
 description: >
   Declarative router for IEEE response letters, rebuttals, and point-by-point
   reviewer replies. SKILL.md loads comment-type, action-type, stage, evidence,
   and tone fragments.
 
-always_load:
-  - ../_shared/references/ieee-official-source-basis.md
-  - ../_shared/references/ieee-reviewer-criteria.md
-  - ../_shared/references/ieee-style-guide.md
-  - static/core/stance.md
-  - static/core/workflow.md
-  - static/core/response-pattern.md
-  - static/core/output-format.md
+always_load: []
 
 axes:
   comment_type:

@@ -1,39 +1,26 @@
 ---
 name: ieee-writing
-description: Draft, restructure, and diagnose IEEE-style technical manuscript sections using a routed static/dynamic workflow. Use for IEEE conference, journal, Transactions, Letters, or magazine papers when writing titles, abstracts, introductions, related work, methods, experiments, conclusions, contribution statements, section outlines, or Chinese-to-English engineering paper drafts in AI, computer science, communications, control, signal processing, electrical/electronic engineering, power, robotics, circuits, and applied systems.
+description: Draft or restructure IEEE manuscript sections from supplied research material and evidence.
 ---
 
-# IEEE Writing Router
+# IEEE Writing
 
-Use this skill to draft or rebuild IEEE manuscript sections. This skill is split into a dynamic router and static fragments so each request loads only the IEEE rules it needs.
+Draft or rebuild the manuscript content the user requested.
 
-Do not draft only from memory. Follow the routing protocol and load the selected files.
+## Route
 
-## Routing Protocol
+Infer venue type, section, language, and technical domain from the request. Read `manifest.yaml` only when specialized guidance would materially improve the result, then load only the matching fragments or references. Do not pre-load unrelated core or shared files.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the request axes from the user's material:
-   - `venue_type`: transaction / journal / letter / conference / magazine / generic.
-   - `section`: title / abstract / introduction / related-work / method / experiments / conclusion.
-   - `language`: en / zh-to-en.
-   - `domain`: ai-ml / communications / control / signal-processing / power-energy / circuits / robotics / embedded-systems / general-engineering.
-4. State the detected axes in one short line before drafting.
-5. Load only the fragments mapped to the detected axis values.
-6. Draft using this priority order:
-   - official IEEE constraints and engineering logic,
-   - venue-type expectations,
-   - section-specific structure,
-   - domain-specific gates,
-   - language repair rules.
-7. If evidence, metrics, baselines, or constraints are missing, use explicit placeholders or list missing inputs. Do not invent results, datasets, citations, or numerical gains.
+User instructions take precedence over workflow preferences in this skill. Keep routing decisions internal unless ambiguity materially affects the result or the user asks to see them.
 
-## Output Contract
+Use the engineering chain `object -> condition -> harm -> prior limitation -> method rationale -> verification` when it helps the section's argument. Treat it as a reasoning aid rather than a mandatory prose template.
 
-For section drafting, return the drafted text first. Then add a compact `Author checks` note when the draft depends on missing evidence, unverified claims, or experiments that still need to be supplied.
+## Completion
 
-For outline requests, return a section plan with claim, evidence, and reviewer-risk notes.
+Carry the authorized drafting task through to usable manuscript text. Return the requested prose first. Add compact author checks only for missing evidence or facts that materially constrain a claim.
 
-## On-Demand References
+For outlines, organize claims around the evidence they require. Use deeper structure, style, or domain fragments only when the task actually needs them.
 
-Read files under `references/` only when the manifest says they are relevant or when the user asks for deeper examples, official-source basis, paper-level diagnosis, or a pre-submission audit.
+## Integrity
+
+Do not invent results, datasets, baselines, citations, equations, algorithms, numerical gains, or venue requirements. Keep claims falsifiable and bounded by supplied or verified evidence.

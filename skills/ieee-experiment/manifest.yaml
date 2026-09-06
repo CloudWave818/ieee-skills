@@ -1,17 +1,10 @@
 name: ieee-experiment
-version: 0.2.0
+version: 0.3.0
 description: >
   Declarative router for IEEE experiment design and audit. SKILL.md loads
   task-specific, evidence-specific, failure-mode, and workflow fragments.
 
-always_load:
-  - ../_shared/references/ieee-official-source-basis.md
-  - ../_shared/references/ieee-engineering-logic.md
-  - ../_shared/references/ieee-experiment-checklist.md
-  - static/core/stance.md
-  - static/core/workflow.md
-  - static/core/claim-evidence-matrix.md
-  - static/core/output-format.md
+always_load: []
 
 axes:
   task_type:
