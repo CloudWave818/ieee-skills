@@ -1,15 +1,10 @@
 name: ieee-writing
-version: 0.2.0
+version: 0.3.0
 description: >
   Declarative router for IEEE manuscript drafting. SKILL.md uses this file to
   load only the fragments needed for the current writing request.
 
-always_load:
-  - ../_shared/references/ieee-official-source-basis.md
-  - ../_shared/references/ieee-engineering-logic.md
-  - static/core/stance.md
-  - static/core/workflow.md
-  - static/core/output-format.md
+always_load: []
 
 axes:
   venue_type:

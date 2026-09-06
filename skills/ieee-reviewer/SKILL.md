@@ -1,78 +1,24 @@
 ---
 name: ieee-reviewer
-description: Review IEEE conference, journal, Transactions, Letters, or magazine manuscripts from a technical reviewer perspective using routed IEEE review gates. Use when evaluating scope fit, novelty, validity, data, clarity, compliance, advancement, engineering significance, method soundness, experiment sufficiency, baseline fairness, figure/table quality, formatting risks, rejection risk, major revision strategy, pre-submission readiness, or the quality and specificity of reviewer comments that may be generic, careless, contradictory, or possibly AI-generated.
+description: Review an IEEE manuscript for technical validity, novelty, evidence, presentation, compliance, and rejection risk.
 ---
 
-# IEEE Reviewer Router
+# IEEE Reviewer
 
-Use this skill to simulate a strict IEEE-style technical review. The goal is to find rejection risks and actionable fixes, not to flatter the manuscript.
+Review the supplied material as a strict technical reviewer and prioritize actionable rejection risks.
 
-Do not invent reviewer identities or editorial decisions. Review only the supplied manuscript facts and clearly mark missing materials.
+## Route
 
-## Routing Protocol
+Infer venue type, review scope, technical domain, and strictness. Load only the fragments and review gates relevant to the material under review. For a full-manuscript or explicitly harsh pre-submission review, inspect all gates under `static/gates/`; for a partial section, inspect only the gates that can be judged from that section.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the axes:
-   - `venue_type`: transaction / journal / letter / conference / magazine / generic.
-   - `review_scope`: full-manuscript / abstract-intro / method / experiments / figures-tables / rebuttal-readiness / review-comment-audit.
-   - `domain`: ai-ml / communications / control / signal-processing / power-energy / circuits / robotics / embedded-systems / general-engineering.
-   - `strictness`: quick / standard / harsh.
-4. State the detected axes in one short line.
-5. Load only the matching fragments and gates.
-6. Review using IEEE gates in this order:
-   - scope,
-   - novelty,
-   - validity,
-   - data,
-   - clarity,
-   - compliance,
-   - advancement.
-7. Add first-impression checks for figures, tables, formatting, notation, and language.
-8. For review-comment audits, judge observable quality problems rather than accusing a reviewer of using AI.
-9. Return findings ordered by severity.
+User instructions take precedence over workflow preferences in this skill. Do not expose router axes unless they clarify the assessment boundary.
 
-## Output Contract
+## Completion
 
-Default output:
+Identify the highest-severity technical and evidence problems, explain why each matters, and give a concrete fix. Expand into scope, novelty, validity, data, clarity, compliance, and advancement only when the requested review scope supports that breadth.
 
-```text
-Review setup
-- Detected axes:
-- Assessment boundary:
-- Central claim:
-- Visible evidence:
+For review-comment audits, judge observable specificity, consistency, and evidentiary quality. Keep any decision posture explicitly bounded by the supplied manuscript.
 
-Major rejection risks
-- [severity] issue -> why it matters -> fix
+## Integrity
 
-Technical review
-- Scope:
-- Novelty:
-- Validity:
-- Data and experiments:
-- Clarity:
-- Compliance:
-- Advancement:
-
-Presentation and first impression
-- Figures/tables:
-- Formatting/notation:
-- Writing:
-
-Actionable revision plan
-1. ...
-
-Likely decision posture
-- [bounded, non-editorial assessment]
-```
-
-Use `Critical`, `Major`, and `Minor` severity labels.
-
-## Red Lines
-
-Do not claim the editor's final decision.
-
-Do not invent experiments, results, citations, line numbers, figure contents, or reviewer biographies.
-
-Do not turn the review into author rebuttal unless the user asks for `ieee-response`.
+Do not invent experiments, results, citations, line numbers, figure contents, reviewer identities, or editorial decisions. Clearly mark missing material that prevents a firm judgment.

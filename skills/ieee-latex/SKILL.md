@@ -1,52 +1,24 @@
 ---
 name: ieee-latex
-description: Diagnose, fix, and improve IEEEtran LaTeX manuscripts using routed template, layout, float, equation, algorithm, table, bibliography, and PDF-compliance guidance. Use when fixing IEEE LaTeX compile errors, overfull boxes, float placement, two-column layout, figure sizing, tables, equations, algorithms, BibTeX, citation commands, template compliance, or final submission PDF checks.
+description: Fix IEEEtran LaTeX compilation, layout, floats, equations, tables, bibliography, or submission-PDF issues.
 ---
 
-# IEEE LaTeX Router
+# IEEE LaTeX
 
-Use this skill to fix IEEE LaTeX issues while preserving manuscript content and target-template compliance.
+Diagnose and apply the smallest IEEE-compatible fix to the requested LaTeX problem.
 
-Do not make broad package or template changes unless necessary. Follow the routing protocol and load the selected fragments.
+## Route
 
-## Routing Protocol
+Infer the task, venue/template, affected object, failure mode, and manuscript stage. Read `manifest.yaml` and load only guidance relevant to the visible problem. Inspect source, logs, or rendered output only to the extent needed to diagnose and verify the change.
 
-1. Read `manifest.yaml`.
-2. Read every file listed under `always_load`.
-3. Detect the axes:
-   - `task_type`: compile-debug / layout-fix / float-placement / table-formatting / equation-formatting / algorithm-formatting / bibliography / pdf-check.
-   - `venue_type`: transaction / journal / letter / conference / magazine / generic.
-   - `object_type`: figure / table / equation / algorithm / reference / class-file / whole-manuscript.
-   - `failure_mode`: overfull-hbox / float-too-large / figure-at-end / broken-citation / duplicate-label / package-conflict / unreadable-table / sparse-page.
-   - `stage`: drafting / pre-submission / revision / final-production.
-4. State the detected axes when useful.
-5. Load only the matching fragments.
-6. Inspect source, log, and rendered output when available. Do not judge final layout from `.tex` alone when a PDF can be rendered or inspected.
-7. Apply the smallest IEEE-compatible fix.
+User instructions take precedence over workflow preferences in this skill. Keep router metadata internal unless it helps explain a diagnosis.
 
-## Output Contract
+## Completion
 
-```text
-Diagnosis:
-- Cause:
-- Affected object:
+For direct edits, make the requested change and run checks proportionate to it when execution tools are available. Use rendered PDF inspection for layout judgments when a PDF exists. Broaden verification only when failures, changed dependencies, or submission-stage requirements justify it.
 
-Fix:
-[minimal LaTeX change or instructions]
+Return the fix or edited code first, followed by a short diagnosis or remaining check when useful.
 
-Why this works:
-[short explanation]
+## Integrity
 
-Follow-up checks:
-- [compile/render/check PDF]
-```
-
-For direct code edits, preserve author content and change only the necessary LaTeX structure.
-
-## Red Lines
-
-Do not switch away from the target IEEE template for convenience.
-
-Do not break IEEE bibliography style for cosmetic citation output.
-
-Do not use screenshots for plots when vector or high-resolution exports are possible.
+Preserve author content and the target IEEE template. Do not change bibliography style or package structure for cosmetic convenience. Prefer vector or suitable high-resolution figure assets over screenshots.

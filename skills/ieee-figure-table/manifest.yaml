@@ -1,19 +1,12 @@
 name: ieee-figure-table
-version: 0.4.3
+version: 0.5.0
 description: >
   Declarative router for IEEE figure, table, caption, plotting, redraw, export,
   visual polish, house-style plotting, and result-presentation workflows.
   SKILL.md loads visual-type, check-type, failure-mode, stage, and
   plotting-backend fragments.
 
-always_load:
-  - ../_shared/references/ieee-official-source-basis.md
-  - ../_shared/references/ieee-figure-table-standards.md
-  - static/core/figure-contract.md
-  - static/core/stance.md
-  - static/core/workflow.md
-  - static/core/first-impression.md
-  - static/core/output-format.md
+always_load: []
 
 axes:
   visual_type:
@@ -80,8 +73,9 @@ axes:
       table-only, or LaTeX-placement tasks. For pure plotting tasks, honor
       explicit Python/R requests first, then clearly language-specific files,
       then the saved preference returned by scripts/ieee_figure_backend.py get.
-      If no saved preference exists, ask once and stop. Save the answer with the
-      script before proceeding.
+      If no saved preference exists, infer from the available files and task;
+      when either backend is suitable, use Python and continue. Persist a backend
+      preference only when the user explicitly asks to save one.
     values:
       python: static/fragments/backend/python.md
       r: static/fragments/backend/r.md

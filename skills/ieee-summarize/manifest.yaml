@@ -1,14 +1,10 @@
 name: ieee-summarize
-version: 0.1.0
+version: 0.2.0
 description: >
   Router for turning messy research folders, notes, code, literature summaries,
   AI chat exports, and experiment logs into IEEE-ready writing briefs.
 
-always_load:
-  - ../_shared/references/ieee-official-source-basis.md
-  - ../_shared/references/ieee-engineering-logic.md
-  - references/folder-ingestion.md
-  - references/research-brief-template.md
+always_load: []
 
 axes:
   material_scope:
